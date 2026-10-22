@@ -23,7 +23,7 @@ async def main():
     for th in THEMES:
         files = sorted(glob.glob(f"{OUT}/{th}_*.png"))
         ims = [Image.open(f).convert("RGB") for f in files]
-        ims[0].save(f"{D}/The-Longevity-Masterclass-{th}.pdf", save_all=True, append_images=ims[1:], resolution=144, quality=92)
+        ims[0].save(f"{D}/The-Longevity-Masterclass-v2-{th}.pdf", save_all=True, append_images=ims[1:], resolution=144, quality=92)
         # contact sheet
         cols = 3; w, h = 640, 360; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (cols * w + (cols + 1) * 10, rows * h + (rows + 1) * 10), (30, 30, 30))
