@@ -1,0 +1,244 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Longevity Masterclass, the deck</title>
+<style>
+@font-face{font-family:'Playfair';src:url(../fonts/PlayfairDisplay-Italic.ttf);font-style:italic;font-weight:400}
+@font-face{font-family:'Inter';src:url(../fonts/Inter.ttf);font-weight:100 900}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#03070F;color:#F3EBDD;font-family:'Inter',system-ui,sans-serif;font-weight:300}
+.bar{display:flex;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.1);font-size:16px;color:#9DB3D6}
+.bar b{font-family:'Playfair';font-style:italic;font-weight:400;font-size:22px;color:#fff;margin-right:auto}
+.stage{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#03070F}
+.s{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;display:none;background:#06122B;color:#F3EBDD}
+.s.on{display:grid}
+.s.light{background:#F4F7FB;color:#0A1428}
+h1{font-family:'Playfair';font-style:italic;font-weight:400;font-size:104px;line-height:1.05;letter-spacing:-.01em}
+.lb{color:#8AD2FF}.light .lb{color:#006EFF}.mute{color:#9DB3D6}.light .mute{color:#5B6B85}.amber{color:#F0A35E}
+p{font-size:44px;line-height:1.3}
+.src{font-size:36px;line-height:1.3;color:#9DB3D6}.light .src{color:#5B6B85}
+.pg{position:absolute;right:90px;bottom:48px;font-size:30px;color:#9DB3D6}.light .pg{color:#5B6B85}
+.txt{display:flex;flex-direction:column;justify-content:center;gap:44px}
+.vis{display:flex;align-items:center;justify-content:center}
+.vis svg{width:100%;height:auto;max-height:100%}
+svg text{font-family:'Inter';font-weight:300}svg .pf{font-family:'Playfair';font-style:italic}
+/* layouts */
+.type{grid-template-columns:1fr;padding:120px 160px 140px}
+.type .txt{max-width:1600px}
+.two{grid-template-columns:1fr 1fr;gap:100px;padding:110px 120px 130px}
+.stack{grid-template-rows:auto 1fr auto;padding:100px 120px 120px;gap:40px}
+.stack .vis{min-height:0}
+.bleed{grid-template-columns:760px 1fr;gap:0}
+.bleed .img{width:760px;height:1080px;overflow:hidden;position:relative}
+.bleed .img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.bleed .img .dim{position:absolute;inset:0}
+.bleed .txt{padding:110px 140px 130px 120px}
+.bleedR{grid-template-columns:1fr 920px;gap:0}
+.bleedR .img{width:920px;height:1080px;overflow:hidden}
+.bleedR .img img{width:100%;height:100%;object-fit:cover;display:block}
+.bleedR .txt{padding:110px 100px 130px 160px}
+.layers{font-size:48px;line-height:1.15;display:flex;flex-direction:column;gap:28px;color:#6E7F9C}
+.layers .lit{color:#8AD2FF}.light .layers{color:#8C9AB3}.light .layers .lit{color:#006EFF}
+.big{font-family:'Playfair';font-style:italic;font-size:120px;line-height:1;letter-spacing:-.02em}
+.rows{display:flex;flex-direction:column;gap:30px}
+.rows p span{font-family:'Playfair';font-style:italic;font-size:64px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:22px;width:100%}
+.week div{height:320px;border-radius:22px;padding:30px 28px;font-size:36px;line-height:1.2;color:#0A1428}
+.week div span{display:block;font-size:30px;color:#4A5873;margin-bottom:14px}
+.w{background:#F6D7B0}.z{background:#CFE3C2}.v{background:#F3C4C4}.m{background:#D9CBEA}
+.floor{height:90px;border-radius:18px;background:#0A1428;color:#F3EBDD;font-size:40px;display:flex;align-items:center;padding:0 40px}
+.chk{display:flex;align-items:center;gap:40px;font-size:72px}
+.chk i{width:96px;height:96px;border:3px solid #006EFF;border-radius:18px;display:inline-block;position:relative;flex:none}
+.chk i:after{content:'';position:absolute;left:30px;top:10px;width:26px;height:52px;border-right:5px solid #006EFF;border-bottom:5px solid #006EFF;transform:rotate(45deg)}
+</style></head><body>
+<div class="bar"><b>The Longevity Masterclass, Julie Gibson Clark</b><span>Arrow keys or tap the right half. 29 frames, no builds. F for full screen.</span></div>
+<div class="stage" id="stage">
+
+<section class="s on bleedR" style="grid-template-columns:1fr 880px">
+<div class="txt"><img src="../img/logo-dark.png" alt="Longevity Life Academy" style="width:300px"><p class="mute" style="letter-spacing:.18em;font-size:36px">LIVE MASTERCLASS</p><h1 style="font-size:140px">The Longevity Masterclass</h1><p class="lb" style="font-size:56px">with Julie Gibson Clark</p></div>
+<div class="img"><video src="https://longevitylifeacademy.pages.dev/assets/v2-hero-aging-reversed.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover"></video></div>
+</section>
+
+<section class="s two">
+<div class="txt"><h1>Why I went down this path.</h1><p class="src" style="letter-spacing:.18em">RUNNING FROM</p><p class="mute" style="font-size:56px">Dementia. Alzheimer's.<br>The silent decade of decline.</p></div>
+<div class="txt"><p class="lb" style="letter-spacing:.18em;font-size:36px">RUNNING TO</p><p style="font-size:64px">My son. Here for him, all the days of his life.</p><p class="mute"><span class="lb">70</span>, still carrying the groceries.<br><span class="lb">90</span>, still holding a conversation.</p></div>
+<div class="pg">02 / 29</div></section>
+
+<section class="s type"><div class="txt"><h1 style="font-size:130px">Ten years pass. By this test, I age about six.</h1></div><div class="pg">03 / 29</div></section>
+
+<section class="s two">
+<div class="txt"><h1 class="lb" style="font-size:96px">The speed towards death.</h1><p>1.0 means one year of aging per calendar year. Most people sit near it.</p><p>Julie: <span class="lb">0.65</span> best, <span class="lb">0.665</span> across three tests, <span class="lb">0.76</span> on the latest.</p><p class="src">One test. One person. DunedinPACE, Belsky et al., eLife 2022.</p></div>
+<div class="vis"><svg viewBox="0 0 1000 760"><defs><radialGradient id="face"><stop offset="0" stop-color="#0B1E44"/><stop offset="1" stop-color="#040B1C"/></radialGradient></defs>
+<circle cx="500" cy="520" r="440" fill="url(#face)" stroke="#1B2E55" stroke-width="3"/>
+<path d="M 130 520 A 370 370 0 0 1 870 520" fill="none" stroke="#17294F" stroke-width="54"/>
+<path d="M 130 520 A 370 370 0 0 1 500 150" fill="none" stroke="#8AD2FF" stroke-width="54"/>
+<path d="M 500 150 A 370 370 0 0 1 870 520" fill="none" stroke="#F0A35E" stroke-width="54" opacity=".55"/>
+<text x="500" y="100" text-anchor="middle" fill="#F3EBDD" font-size="54">1.0</text>
+<text x="90" y="540" text-anchor="end" fill="#8AD2FF" font-size="46">0.5</text><text x="910" y="540" fill="#F0A35E" font-size="46">1.5</text>
+<text x="250" y="250" text-anchor="end" fill="#8AD2FF" font-size="40">slower</text><text x="750" y="250" fill="#F0A35E" font-size="40">faster</text>
+<g transform="rotate(-63 500 520)"><line x1="500" y1="520" x2="500" y2="175" stroke="#8AD2FF" stroke-width="10" stroke-linecap="round"/></g><circle cx="500" cy="520" r="26" fill="#8AD2FF"/>
+<text x="500" y="660" text-anchor="middle" fill="#F3EBDD" font-size="110" class="pf">0.665</text><text x="500" y="720" text-anchor="middle" fill="#9DB3D6" font-size="36">pace of aging, three tests averaged</text></svg></div>
+<div class="pg">04 / 29</div></section>
+
+<section class="s light stack">
+<h1>How is aging measured?</h1>
+<div class="vis"><svg viewBox="0 0 1700 420">
+<g><circle cx="220" cy="170" r="130" fill="#E6EEFB" stroke="#006EFF" stroke-width="4"/><path d="M220 95 q-60 90 0 150 q60-60 0-150z" fill="#006EFF" opacity=".85"/><text x="220" y="370" text-anchor="middle" fill="#0A1428" font-size="44">Blood sample</text></g>
+<path d="M380 170 H 620 M600 150 l30 20 l-30 20" fill="none" stroke="#0A1428" stroke-width="4"/>
+<g><circle cx="850" cy="170" r="130" fill="#E6EEFB" stroke="#006EFF" stroke-width="4"/><path d="M770 90 c60 50 100 110 160 160 M770 250 c60-50 100-110 160-160" fill="none" stroke="#006EFF" stroke-width="7" stroke-linecap="round"/><g stroke="#0A1428" stroke-width="4"><line x1="800" y1="120" x2="900" y2="120"/><line x1="790" y1="170" x2="910" y2="170"/><line x1="800" y1="220" x2="900" y2="220"/></g><circle cx="850" cy="120" r="9" fill="#F0A35E"/><circle cx="820" cy="220" r="9" fill="#F0A35E"/><text x="850" y="370" text-anchor="middle" fill="#0A1428" font-size="44">DNA methylation, 173 sites</text></g>
+<path d="M1010 170 H 1250 M1230 150 l30 20 l-30 20" fill="none" stroke="#0A1428" stroke-width="4"/>
+<g><circle cx="1480" cy="170" r="130" fill="#E6EEFB" stroke="#006EFF" stroke-width="4"/><path d="M1370 200 A 115 115 0 0 1 1590 200" fill="none" stroke="#0A1428" stroke-width="10" stroke-linecap="round"/><line x1="1480" y1="200" x2="1420" y2="120" stroke="#006EFF" stroke-width="8" stroke-linecap="round"/><text x="1480" y="370" text-anchor="middle" fill="#0A1428" font-size="44">Pace of aging</text></g></svg></div>
+<div><p>Not a biological age. A speed: how fast 19 organ systems are declining, read from one blood draw.</p><p class="src" style="margin-top:24px">Built from the Dunedin Study, a cohort followed from birth. Belsky et al., eLife 2022. Used in more than 65 cohort studies in 18 countries.</p></div>
+<div class="pg">05 / 29</div></section>
+
+<section class="s stack">
+<h1>Longevity is like a <span class="lb">cake</span>.</h1>
+<div class="vis"><svg viewBox="0 0 1700 520">
+<circle cx="850" cy="430" r="80" fill="#0E2250" stroke="#8AD2FF" stroke-width="4"/><text x="850" y="448" text-anchor="middle" fill="#F3EBDD" font-size="46" class="pf">Aging</text>
+<g stroke="#355089" stroke-width="4" fill="none"><path d="M850 350 C 850 210, 250 260, 250 120"/><path d="M850 350 C 850 210, 650 260, 650 120"/><path d="M850 350 C 850 210, 1050 260, 1050 120"/><path d="M850 350 C 850 210, 1450 260, 1450 120"/></g>
+<g fill="#F3EBDD" font-size="48" text-anchor="middle"><text x="250" y="80">Heart disease</text><text x="650" y="80">Cancer</text><text x="1050" y="80">Dementia</text><text x="1450" y="80">Type 2 diabetes</text></g></svg></div>
+<p class="src">One root, four branches. Slow the aging and you push all four back at once. The geroscience hypothesis; López-Otín et al., Cell 2023.</p>
+<div class="pg">06 / 29</div></section>
+
+<section class="s bleed"><div class="img"><img src="../img/cake-navy.jpg" alt="The six layer cake"></div>
+<div class="txt"><h1>Longevity is like a <span class="lb">cake</span>.</h1><div class="layers"><div class="lit" style="color:#F3EBDD">Therapies, the icing</div><div class="lit">Stress management</div><div class="lit">Movement</div><div class="lit">Food</div><div class="lit">Sleep</div><div class="lit" style="font-size:40px">Menopause therapy, the thin layer</div></div><p class="src">Nobody has eaten a bowl of icing and called it a cake.</p></div>
+<div class="pg">07 / 29</div></section>
+
+<section class="s bleed"><div class="img"><img src="../img/cake-navy.jpg" alt=""><div class="dim" style="background:linear-gradient(180deg,rgba(6,18,43,.84) 0%,rgba(6,18,43,.84) 12%,rgba(6,18,43,0) 13%,rgba(6,18,43,0) 21%,rgba(6,18,43,.84) 22%)"></div></div>
+<div class="txt"><h1>Not wrong. Not first.</h1><div class="layers"><div class="lit">Therapies, the icing</div><div>Stress management</div><div>Movement</div><div>Food</div><div>Sleep</div><div style="font-size:40px">Menopause therapy</div></div><p class="src">Sauna, peptides, stem cells, NAD drips, most supplements, the two-million-dollar program. Not first.</p></div>
+<div class="pg">08 / 29</div></section>
+
+<section class="s stack">
+<h1>Not wrong. Not first.</h1>
+<div class="vis"><svg viewBox="0 0 1700 640">
+<line x1="140" y1="560" x2="1640" y2="560" stroke="#355089" stroke-width="3"/><line x1="140" y1="560" x2="140" y2="40" stroke="#355089" stroke-width="3"/>
+<text x="1640" y="625" text-anchor="end" fill="#9DB3D6" font-size="34">cost, cheap to expensive</text>
+<text x="80" y="300" fill="#9DB3D6" font-size="34" transform="rotate(-90 80 300)" text-anchor="middle">human evidence, thin to strong</text>
+<g font-size="40" fill="#F3EBDD">
+<circle cx="330" cy="160" r="22" fill="#8AD2FF"/><text x="370" y="174">Sauna, near 30 years of data</text>
+<circle cx="420" cy="370" r="22" fill="#F3EBDD"/><text x="460" y="384">Prebiotics, most supplements</text>
+<circle cx="900" cy="460" r="22" fill="#F0A35E"/><text x="940" y="474">NAD drips</text>
+<circle cx="1120" cy="500" r="22" fill="#F0A35E"/><text x="1160" y="514">Peptides</text>
+<circle cx="1260" cy="430" r="22" fill="#F0A35E"/><text x="1300" y="444">Stem cells</text>
+<circle cx="1000" cy="280" r="22" fill="#F0A35E"/><text x="1040" y="294">Rapamycin, with a doctor</text>
+<text x="1640" y="90" text-anchor="end" fill="#9DB3D6">Two million dollars a year, off the chart</text>
+<circle cx="220" cy="520" r="40" fill="#F0C770"/><text x="280" y="534" class="pf" font-size="44">Twelve dollars a day</text></g></svg></div>
+<p class="src">Amber: leave it until the cake is baked. Kunutsor et al., Scandinavian Cardiovascular Journal 2024; Laukkanen et al., BMC Medicine 2018.</p>
+<div class="pg">09 / 29</div></section>
+
+<section class="s light type"><div class="txt"><h1>Not wrong. Not first.</h1><p style="font-family:'Playfair';font-style:italic;font-size:72px;line-height:1.2">The sauna is what gets me out of bed. The workout happens to be on the way.</p><p>Three to seven sessions a week, against two or fewer: 16% lower risk of dying from any cause. 2,575 men, almost 28 years.</p><p class="src">The one piece of icing with long-term human data. Kunutsor, Jae, Kurl and Laukkanen, 2024. Heart or blood pressure concerns: ask your doctor first.</p></div><div class="pg">10 / 29</div></section>
+
+<section class="s bleed"><div class="img"><img src="../img/cake-navy.jpg" alt=""><div class="dim" style="background:linear-gradient(180deg,rgba(6,18,43,.84) 0%,rgba(6,18,43,.84) 62%,rgba(6,18,43,0) 63%,rgba(6,18,43,0) 67%,rgba(6,18,43,.84) 68%)"></div></div>
+<div class="txt"><h1 style="font-size:92px">Menopause therapy is a layer, not icing.</h1><p>The window: menopause to ten years after. For healthy women with symptoms, the benefits generally outweigh the risks.</p><p class="src">The Menopause Society, 2022. FDA, November 2025: boxed warnings removed. Find a certified practitioner. Your doctor, not a webinar.</p></div>
+<div class="pg">11 / 29</div></section>
+
+<section class="s bleed"><div class="img"><img src="../img/cake-navy.jpg" alt=""><div class="dim" style="background:linear-gradient(180deg,rgba(6,18,43,.84) 0%,rgba(6,18,43,.84) 21%,rgba(6,18,43,0) 22%,rgba(6,18,43,0) 62%,rgba(6,18,43,.84) 63%)"></div></div>
+<div class="txt"><h1>Four layers hold up the cake.</h1><div class="layers"><div>Therapies, the icing</div><div class="lit">Stress management</div><div class="lit">Movement</div><div class="lit">Food</div><div class="lit">Sleep</div><div style="font-size:40px">Menopause therapy</div></div><p class="src">Everything in the next forty-five minutes is about those four.</p></div>
+<div class="pg">12 / 29</div></section>
+
+<section class="s light bleed"><div class="img"><img src="../img/cake-cream.jpg" alt=""><div class="dim" style="background:linear-gradient(180deg,rgba(244,247,251,.8) 0%,rgba(244,247,251,.8) 51%,rgba(244,247,251,0) 52%,rgba(244,247,251,0) 62%,rgba(244,247,251,.8) 63%)"></div></div>
+<div class="txt"><h1>Sleep is the repair shift.</h1><p>The brain flushes its waste while you sleep. Imaged in living people for the first time in 2024.</p><p>Regularity beat duration. The most regular sleepers: 20 to 48% lower risk of dying.</p><p class="src">Piantino et al., PNAS 2024. Windred et al., Sleep 2023, 60,977 adults.</p></div>
+<div class="pg">13 / 29</div></section>
+
+<section class="s stack">
+<h1>Sleep is the repair shift.</h1>
+<div class="vis"><svg viewBox="0 0 1700 480">
+<path d="M 120 400 A 730 730 0 0 1 1580 400" fill="none" stroke="#17294F" stroke-width="40"/>
+<path d="M 120 400 A 730 730 0 0 1 1580 400" fill="none" stroke="#8AD2FF" stroke-width="40" stroke-dasharray="1400 3000" stroke-dashoffset="-450"/>
+<circle cx="120" cy="400" r="40" fill="#F3EBDD"/><circle cx="1580" cy="400" r="40" fill="#F0C770"/>
+<text x="120" y="475" text-anchor="middle" fill="#F3EBDD" font-size="60" class="pf">9 PM</text><text x="1580" y="475" text-anchor="middle" fill="#F3EBDD" font-size="60" class="pf">5 AM</text>
+<text x="850" y="150" text-anchor="middle" fill="#F3EBDD" font-size="92" class="pf">8 hours</text><text x="850" y="215" text-anchor="middle" fill="#9DB3D6" font-size="36">an opportunity, cool and dark</text><text x="850" y="285" text-anchor="middle" fill="#8AD2FF" font-size="40">the repair shift</text></svg></div>
+<div><p>Last meal <span class="lb">3 hours</span> before bed. Screens off <span class="lb">1 hour</span> before. Same window, every night.</p><p class="src" style="margin-top:20px">Borrow the order, not the clock. Pick a bedtime you can repeat.</p></div>
+<div class="pg">14 / 29</div></section>
+
+<section class="s type"><div class="txt"><h1 style="font-size:120px">"I'll sleep when I die," said the person aging at twice the normal speed.</h1></div><div class="pg">15 / 29</div></section>
+
+<section class="s light two">
+<div class="txt"><h1>Take the religion out of your diet.</h1><p class="mute" style="font-size:40px">Vegan. Keto. Mediterranean. Carnivore. Not the type of diet. The plate.</p><p style="font-size:56px;line-height:1.3">Protein is <span class="lb">the floor</span>.<br>Fiber is <span class="lb">the lever</span>.<br>Whole food is <span class="lb">the default</span>.</p></div>
+<div class="vis"><svg viewBox="0 0 700 700" style="max-width:680px"><circle cx="350" cy="350" r="330" fill="#fff" stroke="#D8E0EE" stroke-width="6"/><path d="M350 350 L350 80 A270 270 0 0 1 584 485 Z" fill="#CFE3C2"/><path d="M350 350 L584 485 A270 270 0 0 1 116 485 Z" fill="#F6D7B0"/><path d="M350 350 L116 485 A270 270 0 0 1 350 80 Z" fill="#DCE7F7"/><text x="470" y="250" text-anchor="middle" fill="#0A1428" font-size="40">Fiber</text><text x="350" y="540" text-anchor="middle" fill="#0A1428" font-size="40">Protein</text><text x="215" y="250" text-anchor="middle" fill="#0A1428" font-size="40">Whole food</text></svg></div>
+<div class="pg">16 / 29</div></section>
+
+<section class="s light two">
+<div class="txt"><h1 style="font-size:92px">Take the religion out of your diet.</h1><div class="rows"><p><span class="lb">1 lb</span> of vegetables a day.</p><p><span class="lb">1 g</span> of protein per pound of goal bodyweight.</p><p>Eating window <span class="lb">8 to 6</span>.</p><p>Coffee cutoff <span class="lb">10 AM</span>.</p><p><span class="lb">Zero</span> alcohol on training days.</p></div></div>
+<div class="txt"><div class="big lb">25 to 38 g</div><p>of fiber a day. More than 90% of women and 97% of men miss it.</p><p class="src">Dietary Guidelines for Americans, 2020 to 2025. Her rules, not a prescription.</p></div>
+<div class="pg">17 / 29</div></section>
+
+<section class="s stack">
+<h1>The one thing every diet agrees on.</h1>
+<div class="vis"><svg viewBox="0 0 1700 520"><defs><linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#8AD2FF"/><stop offset="1" stop-color="#F0A35E"/></linearGradient></defs>
+<path d="M60 400 L300 400 C 380 400, 400 100, 480 100 C 560 100, 580 400, 660 400 L 1640 400" fill="none" stroke="url(#gl)" stroke-width="10" stroke-linecap="round"/>
+<text x="480" y="60" text-anchor="middle" fill="#F3EBDD" font-size="64" class="pf">Spike</text><text x="480" y="480" text-anchor="middle" fill="#9DB3D6" font-size="34">glucose after a sugary meal</text>
+<circle cx="900" cy="400" r="70" fill="none" stroke="#F3EBDD" stroke-width="6"/><circle cx="900" cy="400" r="30" fill="#8AD2FF"/><text x="900" y="280" text-anchor="middle" fill="#F3EBDD" font-size="64" class="pf">Signal</text><text x="900" y="510" text-anchor="middle" fill="#9DB3D6" font-size="34">insulin on, all day</text>
+<rect x="1250" y="310" width="320" height="24" rx="12" fill="#355089"/><rect x="1250" y="360" width="320" height="24" rx="12" fill="#355089"/><rect x="1250" y="410" width="320" height="24" rx="12" fill="#355089"/><circle cx="1320" cy="322" r="16" fill="#F0A35E"/><circle cx="1440" cy="372" r="16" fill="#F0A35E"/><circle cx="1510" cy="422" r="16" fill="#F0A35E"/><circle cx="1380" cy="422" r="16" fill="#F0A35E"/><text x="1410" y="280" text-anchor="middle" fill="#F3EBDD" font-size="64" class="pf">Scar</text><text x="1410" y="510" text-anchor="middle" fill="#9DB3D6" font-size="34">glycation, HbA1c</text></svg></div>
+<p class="src">Deregulated nutrient sensing is a hallmark of aging, López-Otín et al., Cell 2023. Each gram of added sugar, an older biological age: Chiu, Epel and Laraia, JAMA Network Open 2024. Ceiling: under 25 g a day, Huang et al., BMJ 2023.</p>
+<div class="pg">18 / 29</div></section>
+
+<section class="s light type"><div class="txt"><h1>Your two Monday changes.</h1><div class="chk"><i></i>Move dinner earlier.</div><div class="chk"><i></i>Rebuild one plate.</div><p class="src">That is the Monday plan. Keep it simple.</p></div><div class="pg">19 / 29</div></section>
+
+<section class="s stack">
+<h1>Same age.</h1>
+<div class="vis"><svg viewBox="0 0 1700 460">
+<text x="0" y="50" fill="#9DB3D6" font-size="40">years lived</text><rect x="0" y="80" width="1640" height="90" rx="18" fill="#355089"/>
+<text x="0" y="280" fill="#9DB3D6" font-size="40">years lived well</text><rect x="0" y="310" width="1380" height="90" rx="18" fill="#8AD2FF"/><rect x="1380" y="310" width="260" height="90" rx="18" fill="#F0A35E" opacity=".85"/>
+<text x="1510" y="455" text-anchor="middle" fill="#F3EBDD" font-size="56" class="pf">12.4 years</text></svg></div>
+<div><p>The gap between lifespan and healthspan in the United States, the widest in the world. Worldwide, 9.6 years. Those years are what movement is for.</p><p class="src" style="margin-top:20px">Garmany and Terzic, Mayo Clinic, JAMA Network Open, December 2024, 183 countries.</p></div>
+<div class="pg">20 / 29</div></section>
+
+<section class="s two" style="grid-template-columns:1fr 560px">
+<div class="txt"><h1 style="font-size:88px">Four types of movement, four parts of you.</h1>
+<p style="font-size:40px"><span class="lb">Weights</span>, for bones and muscle. The predictor: grip strength.</p>
+<p style="font-size:40px"><span class="lb">VO2 max</span>, for the heart. The predictor: fitness. Each step up, 11 to 17% lower risk of dying.</p>
+<p style="font-size:40px"><span class="lb">Zone 2</span>, for the heart and metabolism. The predictor: 7,000 steps a day.</p>
+<p style="font-size:40px"><span class="lb">Mobility and balance</span>, for the brain and the other three. The predictor: one leg, thirty seconds.</p>
+<p class="src" style="font-size:30px">López-Bueno 2022; Lang, BJSM 2024; Ding, Lancet Public Health 2025; Mayo Clinic, PLOS One 2024.</p></div>
+<div class="vis"><svg viewBox="-160 0 720 800" fill="none" stroke="#5E7FB5" stroke-width="2.5" stroke-linecap="round">
+<circle cx="200" cy="70" r="46"/><path d="M160 130 C 140 150, 130 180, 130 230 L 130 400 C 130 440, 140 470, 150 500 L 150 760 M240 130 C 260 150, 270 180, 270 230 L 270 400 C 270 440, 260 470, 250 500 L 250 760 M150 760 L 120 775 M250 760 L 280 775 M130 230 L 70 420 L 60 520 M270 230 L 330 420 L 340 520 M160 130 L 240 130 M150 500 L 250 500"/>
+<g fill="rgba(138,210,255,.15)" stroke="#8AD2FF"><circle cx="200" cy="70" r="26"/><circle cx="215" cy="230" r="26"/><circle cx="180" cy="300" r="22"/><circle cx="200" cy="470" r="26"/></g>
+<g fill="#9DB3D6" stroke="none" font-size="34"><text x="250" y="80">brain</text><text x="255" y="240">heart</text><text x="150" y="310" text-anchor="end">metabolism</text><text x="245" y="480">bones, muscle</text></g></svg></div>
+<div class="pg">21 / 29</div></section>
+
+<section class="s light stack">
+<h1 style="font-size:92px">Julie Gibson Clark's Weekly Longevity Protocol.</h1>
+<div class="vis" style="flex-direction:column;gap:30px;align-items:stretch;justify-content:center"><div class="week"><div class="w"><span>Mon</span>Weights, then sauna</div><div class="z"><span>Tue</span>Zone 2, a walk</div><div class="w"><span>Wed</span>Weights, then sauna</div><div class="v"><span>Thu</span>VO2 max, short bursts</div><div class="w"><span>Fri</span>Weights, then sauna</div><div class="z"><span>Sat</span>Zone 2, a long hike</div><div class="m"><span>Sun</span>Mobility and balance</div></div><div class="floor">Under all seven: an 8,000 step floor, and a walk after the biggest meal.</div></div>
+<p class="src">Three strength, two Zone 2, one interval session. More than you need on day one. A walk is a perfectly respectable place to begin.</p>
+<div class="pg">22 / 29</div></section>
+
+<section class="s bleed"><div class="img"><img src="../img/cake-navy.jpg" alt=""><div class="dim" style="background:linear-gradient(180deg,rgba(6,18,43,.84) 0%,rgba(6,18,43,.84) 21%,rgba(6,18,43,0) 22%,rgba(6,18,43,0) 30%,rgba(6,18,43,.84) 31%)"></div></div>
+<div class="txt"><h1>The layer people skip.</h1><div class="layers"><div>Therapies, the icing</div><div class="lit">Stress management</div><div>Movement</div><div>Food</div><div>Sleep</div><div style="font-size:40px">Menopause therapy</div></div><p class="src">Stress hormones are built for short bursts. When they never switch off, they wear the body down.</p></div>
+<div class="pg">23 / 29</div></section>
+
+<section class="s two">
+<div class="txt"><h1>The layer people skip.</h1><p style="font-family:'Playfair';font-style:italic;font-size:84px;line-height:1.1">In. In. Long out.</p><p>Two short breaths in through the nose, one long breath out through the mouth. Three times. Thirty seconds. Zero dollars.</p><p class="src">The physiological sigh. Balban, Spiegel and Huberman, Cell Reports Medicine 2023, 111 people, five minutes a day for a month.</p></div>
+<div class="vis"><svg viewBox="0 0 800 800" style="max-width:640px"><circle cx="400" cy="400" r="330" fill="none" stroke="#17294F" stroke-width="3"/><circle cx="400" cy="400" r="240" fill="rgba(138,210,255,.12)" stroke="#8AD2FF" stroke-width="4"/><circle cx="400" cy="400" r="90" fill="#8AD2FF"/></svg></div>
+<div class="pg">24 / 29</div></section>
+
+<section class="s bleed" style="grid-template-columns:860px 1fr"><div class="img" style="width:860px"><img src="../img/day-ring.jpg" alt="The day ring" style="object-position:center"></div>
+<div class="txt" style="gap:36px"><h1 style="font-size:84px">Julie Gibson Clark's Longevity Protocol.</h1><p class="lb" style="font-family:'Playfair';font-style:italic">The day is built backward from bedtime.</p>
+<p style="font-size:38px;line-height:1.5"><span class="lb">9 PM</span> lights out<br><span class="lb">5 AM</span> wake, water, light<br><span class="amber">7 AM</span> training, then sauna<br><span style="color:#7FB069">8 AM</span> eating window opens, coffee until 10<br><span style="color:#7FB069">midday</span> biggest meal, then a walk<br><span style="color:#B59BD8">3 PM</span> meditation<br><span style="color:#7FB069">6 PM</span> last meal, window closes<br><span class="lb">8 PM</span> screens off</p>
+<p class="src">Eating window 8 to 6. Borrow the order, not the clock. Screenshot this one.</p></div>
+<div class="pg">25 / 29</div></section>
+
+<section class="s light two">
+<div class="txt"><h1>Test. Then buy.</h1><p style="font-family:'Playfair';font-style:italic;font-size:72px;line-height:1.2">You don't need a lab. You need a notebook.</p><p class="src">A supplement is icing. A test tells you where the cake has a hole. Test first, then decide what to buy.</p></div>
+<div class="txt"><p class="src" style="letter-spacing:.16em">ASK YOUR DOCTOR ABOUT</p><p class="lb" style="font-size:64px;line-height:1.3">Vitamin D<br>Homocysteine<br>Red blood cell nutrient levels</p></div>
+<div class="pg">26 / 29</div></section>
+
+<section class="s two">
+<div class="txt"><h1>What one person chose.</h1><p style="font-size:56px;line-height:1.45">D3 with K2 <span class="mute">[monthly cost]</span><br>Magnesium <span class="mute">[monthly cost]</span><br>B-complex <span class="mute">[monthly cost]</span><br>Omega-3s <span class="mute">[monthly cost]</span><br>NOVOS <span class="mute">[monthly cost]</span></p></div>
+<div class="txt"><p class="lb">One total: <span style="color:#F3EBDD">[monthly total]</span></p><p class="src">After her own tests. An example, not a shopping list. Julie is affiliated with NOVOS. Full list on her website.</p></div>
+<div class="pg">27 / 29</div></section>
+
+<section class="s light two">
+<div class="txt"><h1>Why. Intention. Resources.</h1><p style="font-size:52px;line-height:1.35">What's my why?<br>What's my intention?<br>What are my resources?</p><p class="src">Take one away and the other two fall over. When all three are on, the center lights.</p></div>
+<div class="vis"><svg viewBox="0 0 800 700" style="max-width:720px"><g stroke="#D8E0EE" stroke-width="6"><line x1="400" y1="130" x2="150" y2="560"/><line x1="400" y1="130" x2="650" y2="560"/><line x1="150" y1="560" x2="650" y2="560"/></g><circle cx="400" cy="130" r="90" fill="#fff" stroke="#006EFF" stroke-width="5"/><circle cx="150" cy="560" r="90" fill="#fff" stroke="#006EFF" stroke-width="5"/><circle cx="650" cy="560" r="90" fill="#fff" stroke="#006EFF" stroke-width="5"/><text x="400" y="145" text-anchor="middle" fill="#0A1428" font-size="40" class="pf">Why</text><text x="150" y="575" text-anchor="middle" fill="#0A1428" font-size="40" class="pf">Intention</text><text x="650" y="575" text-anchor="middle" fill="#0A1428" font-size="40" class="pf">Resources</text><circle cx="400" cy="415" r="70" fill="#006EFF"/></svg></div>
+<div class="pg">28 / 29</div></section>
+
+<section class="s light bleedR"><div class="txt"><h1 style="font-size:120px">It's your life.<br>Live it well.</h1><img src="../img/logo-navy.png" alt="Longevity Life Academy" style="width:260px"></div><div class="img"><img src="../img/cake-white-sliced.jpg" alt="The white cake, sliced"></div></section>
+
+</div>
+<script>
+const S=[...document.querySelectorAll('.s')];let i=0;
+function fit(){const s=document.getElementById('stage').clientWidth/1920;S.forEach(x=>x.style.transform='scale('+s+')');}
+addEventListener('resize',fit);fit();
+function go(n){S[i].classList.remove('on');i=Math.max(0,Math.min(S.length-1,n));S[i].classList.add('on');}
+addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();go(i+1);}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(i-1);}if(e.key==='f'||e.key==='F'){document.getElementById('stage').requestFullscreen&&document.getElementById('stage').requestFullscreen();}});
+document.getElementById('stage').addEventListener('click',e=>{const r=e.currentTarget.getBoundingClientRect();(e.clientX-r.left)>r.width/2?go(i+1):go(i-1);});
+window.go=go;
+</script></body></html>
