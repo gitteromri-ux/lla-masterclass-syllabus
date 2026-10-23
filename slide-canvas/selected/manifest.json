@@ -1,0 +1,749 @@
+{
+  "title": "Selected slides · 39 choices + the new WHY slide",
+  "selectedCount": 40,
+  "originalSelectedCount": 39,
+  "groups": [
+    {
+      "id": "title",
+      "number": 1,
+      "title": "Title card",
+      "description": "Choose the opening card.",
+      "slides": [
+        {
+          "id": "github-deck2-dark-1",
+          "number": 0,
+          "build": null,
+          "title": "The Longevity Masterclass",
+          "image": "../images/github-deck2-dark-01.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/index.html",
+          "notes": " Approved concept in v2.2, as identified by Omri.",
+          "approved": true,
+          "originalDeck": "Deck 2 · v2.2 · dark",
+          "originalDeckId": "github-deck2-dark",
+          "originalTitle": "The Longevity Masterclass",
+          "userPickNumber": 22,
+          "selectionPosition": 1
+        },
+        {
+          "id": "github-round-8-1",
+          "number": 1,
+          "build": 1,
+          "title": "LONGEVITY LIFE ACADEMY PRESENTS The Longevity Masterclass",
+          "image": "../images/github-round-8-01.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/index.html",
+          "notes": "SLIDE 1 The site's own motion behind the title. She talks on camera; this is the card the room sees while she does. Original stored JPEG verified against current source DOM.",
+          "approved": false,
+          "originalDeck": "Round 8 : Last version",
+          "originalDeckId": "github-round-8",
+          "originalTitle": "LONGEVITY LIFE ACADEMY PRESENTS The Longevity Masterclass",
+          "userPickNumber": 48,
+          "selectionPosition": 2
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "number": 2,
+      "title": "Why this matters",
+      "description": "Running from decline. Running toward family.",
+      "slides": [
+        {
+          "id": "added-round10-why-light",
+          "number": 2,
+          "build": null,
+          "title": "I didn't do this to win.",
+          "image": "../images/added-why-light.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/slide-2-light.jpg",
+          "originalDeck": "Round 10 · Added WHY slide",
+          "originalDeckId": "added-round10-why-light",
+          "userPickNumber": "NEW",
+          "notes": "Added explicitly after the 39-slide selection. Standalone source image supplied by Omri; also identified as slide 2 in Round 10.",
+          "selectionPosition": 3
+        }
+      ]
+    },
+    {
+      "id": "pace",
+      "number": 3,
+      "title": "Pace of aging",
+      "description": "The test, the gauge, and what the result means.",
+      "slides": [
+        {
+          "id": "claude-b-3",
+          "number": 3,
+          "build": null,
+          "title": "The test",
+          "image": "../images/claude-b-03.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "The test I and many aging scientists settled on: DunedinPACE. It estimates the speed your body is aging. 1.0 means one year per calendar year. My best score was 0.65; the average of my three tests is 0.665. So I age about 6.5 years while the typical person ages 10. Built at Duke and Columbia from the Dunedin, New Zealand cohort followed since birth; published 2022; used in 65+ large studies in 18 countries. Nature Aging 2024: faster pace predicted shorter healthspans and lives. The part ads leave out: my score went back up to 0.76 after supplement mistakes and a chaotic menopausal stretch. Testing again at year end. One test, one person, one body: a story, not a clinical trial.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "The test",
+          "userPickNumber": 13,
+          "selectionPosition": 4
+        },
+        {
+          "id": "claude-a-dark-3",
+          "number": 3,
+          "build": null,
+          "title": "Ten years pass. By this test, I age about six.",
+          "image": "../images/claude-a-03.jpg",
+          "source": "https://claude.ai/artifact/DMx1Uj3YCvVhtDEXAcJRZc",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Claude A · Dark",
+          "originalDeckId": "claude-a-dark",
+          "originalTitle": "Ten years pass. By this test, I age about six.",
+          "userPickNumber": 1,
+          "selectionPosition": 5
+        },
+        {
+          "id": "github-deck1-light-3",
+          "number": 3,
+          "build": null,
+          "title": "The speed towards death.",
+          "image": "../images/github-deck1-light-03.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Original deck · light",
+          "originalDeckId": "github-deck1-light",
+          "originalTitle": "The speed towards death.",
+          "userPickNumber": 81,
+          "selectionPosition": 6
+        },
+        {
+          "id": "github-r7-last-6",
+          "number": 3,
+          "build": 3,
+          "title": "Ten years pass. By this test, I age about six.",
+          "image": "../images/github-r7-last-06.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r7/last-06.jpg",
+          "notes": "Archived r7 last; source filename last-06.jpg. Original archive frame 6; printed slide 3.",
+          "approved": false,
+          "originalDeck": "Round 7 · last",
+          "originalDeckId": "github-r7-last",
+          "originalTitle": "Ten years pass. By this test, I age about six.",
+          "userPickNumber": 53,
+          "selectionPosition": 7
+        }
+      ]
+    },
+    {
+      "id": "cake",
+      "number": 4,
+      "title": "The cake model",
+      "description": "Choose the main cake visual that introduces the framework.",
+      "slides": [
+        {
+          "id": "github-deck2-light-4",
+          "number": 3,
+          "build": null,
+          "title": "Longevity is like a cake.",
+          "image": "../images/github-deck2-light-04.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/index.html",
+          "notes": " Approved concept in v2.2, as identified by Omri.",
+          "approved": true,
+          "originalDeck": "Deck 2 · v2.2 · light",
+          "originalDeckId": "github-deck2-light",
+          "originalTitle": "Longevity is like a cake.",
+          "userPickNumber": 34,
+          "selectionPosition": 8
+        },
+        {
+          "id": "claude-a-light-21",
+          "number": 4,
+          "build": null,
+          "title": "Longevity is like a cake.",
+          "image": "../images/claude-a-21.jpg",
+          "source": "https://claude.ai/artifact/DMx1Uj3YCvVhtDEXAcJRZc",
+          "notes": "Source artifact position 21. Printed slide 4.",
+          "approved": false,
+          "originalDeck": "Claude A · Light",
+          "originalDeckId": "claude-a-light",
+          "originalTitle": "Longevity is like a cake.",
+          "userPickNumber": 8,
+          "selectionPosition": 9
+        },
+        {
+          "id": "claude-a-dark-4",
+          "number": 4,
+          "build": null,
+          "title": "Longevity is like a cake.",
+          "image": "../images/claude-a-04.jpg",
+          "source": "https://claude.ai/artifact/DMx1Uj3YCvVhtDEXAcJRZc",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Claude A · Dark",
+          "originalDeckId": "claude-a-dark",
+          "originalTitle": "Longevity is like a cake.",
+          "userPickNumber": 2,
+          "selectionPosition": 10
+        },
+        {
+          "id": "github-deck2-dark-4",
+          "number": 3,
+          "build": null,
+          "title": "Longevity is like a cake.",
+          "image": "../images/github-deck2-dark-04.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/index.html",
+          "notes": " Approved concept in v2.2, as identified by Omri.",
+          "approved": true,
+          "originalDeck": "Deck 2 · v2.2 · dark",
+          "originalDeckId": "github-deck2-dark",
+          "originalTitle": "Longevity is like a cake.",
+          "userPickNumber": 27,
+          "selectionPosition": 11
+        },
+        {
+          "id": "github-r1-v1-4",
+          "number": 4,
+          "build": null,
+          "title": "Longevity is like a cake.",
+          "image": "../images/github-r1-v1-04.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r1/v1-04.jpg",
+          "notes": "Archived r1 v1; source filename v1-04.jpg.",
+          "approved": false,
+          "originalDeck": "Round 1 · v1",
+          "originalDeckId": "github-r1-v1",
+          "originalTitle": "Slide 4",
+          "userPickNumber": 75,
+          "selectionPosition": 12
+        },
+        {
+          "id": "github-r3-v1-4",
+          "number": 4,
+          "build": null,
+          "title": "Longevity is like a cake.",
+          "image": "../images/github-r3-v1-04.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r3/v1-04.jpg",
+          "notes": "Archived r3 v1; source filename v1-04.jpg.",
+          "approved": false,
+          "originalDeck": "Round 3 · v1",
+          "originalDeckId": "github-r3-v1",
+          "originalTitle": "Slide 4",
+          "userPickNumber": 72,
+          "selectionPosition": 13
+        }
+      ]
+    },
+    {
+      "id": "icing",
+      "number": 5,
+      "title": "Foundations before icing",
+      "description": "The trade-off between cost, evidence, and priorities.",
+      "slides": [
+        {
+          "id": "github-r4-v1-5",
+          "number": 5,
+          "build": null,
+          "title": "Not wrong. Not first.",
+          "image": "../images/github-r4-v1-05.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r4/v1-05.jpg",
+          "notes": "Archived r4 v1; source filename v1-05.jpg.",
+          "approved": false,
+          "originalDeck": "Round 4 · v1",
+          "originalDeckId": "github-r4-v1",
+          "originalTitle": "Slide 5",
+          "userPickNumber": 66,
+          "selectionPosition": 14
+        },
+        {
+          "id": "claude-b-5",
+          "number": 5,
+          "build": null,
+          "title": "The icing",
+          "image": "../images/claude-b-05.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "Why start with the icing? Because it is everywhere and makes people feel behind. Affordable on the left: sauna, prebiotics, most supplements. Real money as you move right: NAD drips, peptides, stem cells, hyperbaric oxygen, rapamycin. At the far end a program costing about two million dollars a year with a medical team and blood transfusions. I am not saying don’t. I am saying not first. Nobody in the blue zones is in a hyperbaric chamber. What I do: a tested longevity supplement combination and sauna three to five days a week; the sauna is what gets me out of bed. Finnish data 2024: 2,575 men, 28 years; four to seven sessions a week, about 40 percent lower all-cause mortality than once a week. The coin on the far left is me: twelve dollars a day.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "The icing",
+          "userPickNumber": 14,
+          "selectionPosition": 15
+        }
+      ]
+    },
+    {
+      "id": "menopause",
+      "number": 6,
+      "title": "Menopause: the thin layer",
+      "description": "Hormone therapy belongs in the framework, not in the icing.",
+      "slides": [
+        {
+          "id": "github-round-9-11",
+          "number": 6,
+          "build": 2,
+          "title": "Menopause therapy is a layer, not icing.",
+          "image": "../images/github-round-9-11.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/round-9/index.html",
+          "notes": "SLIDE 6, build 2 Menopause to ten years after, drawn as a window, because the science she quotes is a window. Original stored JPEG verified against current source DOM.",
+          "approved": false,
+          "originalDeck": "Round 9",
+          "originalDeckId": "github-round-9",
+          "originalTitle": "Menopause therapy is a layer, not icing.",
+          "userPickNumber": 45,
+          "selectionPosition": 16
+        },
+        {
+          "id": "claude-a-light-23",
+          "number": 6,
+          "build": null,
+          "title": "Menopause therapy is a layer, not icing.",
+          "image": "../images/claude-a-23.jpg",
+          "source": "https://claude.ai/artifact/DMx1Uj3YCvVhtDEXAcJRZc",
+          "notes": "Source artifact position 23. Printed slide 6.",
+          "approved": false,
+          "originalDeck": "Claude A · Light",
+          "originalDeckId": "claude-a-light",
+          "originalTitle": "Menopause therapy is a layer, not icing.",
+          "userPickNumber": 9,
+          "selectionPosition": 17
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "number": 8,
+      "title": "Sleep: the repair shift",
+      "description": "The sleep layer and practical daily timing.",
+      "slides": [
+        {
+          "id": "github-r4-v1-7",
+          "number": 7,
+          "build": null,
+          "title": "Same bedtime, every day.",
+          "image": "../images/github-r4-v1-07.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r4/v1-07.jpg",
+          "notes": "Archived r4 v1; source filename v1-07.jpg.",
+          "approved": false,
+          "originalDeck": "Round 4 · v1",
+          "originalDeckId": "github-r4-v1",
+          "originalTitle": "Slide 7",
+          "userPickNumber": 69,
+          "selectionPosition": 18
+        },
+        {
+          "id": "claude-b-7",
+          "number": 7,
+          "build": null,
+          "title": "Sleep",
+          "image": "../images/claude-b-07.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "Bottom of the cake: sleep, the night shift. Your brain has a drainage system that flushes the day’s waste, mostly while you sleep: the glymphatic system, imaged in living people for the first time by OHSU in 2024. No middle-of-the-night shame spirals; I have had insomnia. Focus on what we control: timing and routine. 2023, 60,000-plus adults: sleep regularity predicted lifespan better than duration; the most regular sleepers had up to 48 percent lower mortality risk. My routine: last meal three hours before bed, ten-minute walk, screens off an hour before, brush, floss, wash, eye mask, cool room. Target window 9 PM to 5 AM. Borrow the order and the consistency, not my clock.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "Sleep",
+          "userPickNumber": 15,
+          "selectionPosition": 19
+        }
+      ]
+    },
+    {
+      "id": "sleep-quote",
+      "number": 9,
+      "title": "The sleep quote",
+      "description": "A separate emphasis slide after the sleep explanation.",
+      "slides": [
+        {
+          "id": "claude-b-8",
+          "number": 8,
+          "build": null,
+          "title": "Quote",
+          "image": "../images/claude-b-08.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "For anyone who lives by this line: you will die much earlier by it as well. I used to admire it. Then I started testing. The fastest way to speed up your pace is neglecting sleep. Be consistent. Everything else we cover tonight will help your sleep inside that window.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "Quote",
+          "userPickNumber": 16,
+          "selectionPosition": 20
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "number": 10,
+      "title": "Food without diet tribes",
+      "description": "The nutrition layer before the sugar discussion.",
+      "slides": [
+        {
+          "id": "github-r4-v1-9",
+          "number": 9,
+          "build": null,
+          "title": "Take the religion out of your diet.",
+          "image": "../images/github-r4-v1-09.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r4/v1-09.jpg",
+          "notes": "Archived r4 v1; source filename v1-09.jpg.",
+          "approved": false,
+          "originalDeck": "Round 4 · v1",
+          "originalDeckId": "github-r4-v1",
+          "originalTitle": "Slide 9",
+          "userPickNumber": 68,
+          "selectionPosition": 21
+        }
+      ]
+    },
+    {
+      "id": "sugar",
+      "number": 11,
+      "title": "Sugar and metabolic health",
+      "description": "The shared nutrition principle and the glucose story.",
+      "slides": [
+        {
+          "id": "github-r6-v2-10",
+          "number": 10,
+          "build": null,
+          "title": "The one thing every diet agrees on.",
+          "image": "../images/github-r6-v2-10.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r6/v2-10.jpg",
+          "notes": "Archived r6 v2; source filename v2-10.jpg.",
+          "approved": false,
+          "originalDeck": "Round 6 · v2",
+          "originalDeckId": "github-r6-v2",
+          "originalTitle": "Slide 10",
+          "userPickNumber": 60,
+          "selectionPosition": 22
+        }
+      ]
+    },
+    {
+      "id": "same-age",
+      "number": 12,
+      "title": "Same age, different healthspan",
+      "description": "The contrast that leads into movement.",
+      "slides": [
+        {
+          "id": "claude-b-11",
+          "number": 11,
+          "build": null,
+          "title": "Same age",
+          "image": "../images/claude-b-11.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "Third layer: movement. One picture of why it matters: two people, the same age in calendar years. One strong, one on a walker. Mayo Clinic, December 2024, 183 countries: the gap between how long we live and how long we live in good health. Worldwide 9.6 years. United States 12.4 years, the widest gap in the world. I am in the middle of this with my parents: a decade of not getting to the store or the bathroom alone, losing email and the phone, forgetting finances and grandchildren, falling at night. Not everything is escapable. But exercise is the single most powerful intervention we have. Can we shrink that window to almost nothing? What movement?",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "Same age",
+          "userPickNumber": 17,
+          "selectionPosition": 23
+        },
+        {
+          "id": "github-deck2-dark-11",
+          "number": 10,
+          "build": null,
+          "title": "Same age.",
+          "image": "../images/github-deck2-dark-11.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Deck 2 · v2.2 · dark",
+          "originalDeckId": "github-deck2-dark",
+          "originalTitle": "Same age.",
+          "userPickNumber": 29,
+          "selectionPosition": 24
+        },
+        {
+          "id": "claude-a-dark-11",
+          "number": 11,
+          "build": null,
+          "title": "Same age.",
+          "image": "../images/claude-a-11.jpg",
+          "source": "https://claude.ai/artifact/DMx1Uj3YCvVhtDEXAcJRZc",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Claude A · Dark",
+          "originalDeckId": "claude-a-dark",
+          "originalTitle": "Same age.",
+          "userPickNumber": 3,
+          "selectionPosition": 25
+        }
+      ]
+    },
+    {
+      "id": "movement",
+      "number": 13,
+      "title": "Four types of movement",
+      "description": "Compare the movement categories and what each supports.",
+      "slides": [
+        {
+          "id": "github-r7-last-19",
+          "number": 12,
+          "build": 1,
+          "title": "Four types of movement, four parts of you.",
+          "image": "../images/github-r7-last-19.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r7/last-19.jpg",
+          "notes": "Archived r7 last; source filename last-19.jpg. Original archive frame 19; printed slide 12.",
+          "approved": false,
+          "originalDeck": "Round 7 · last",
+          "originalDeckId": "github-r7-last",
+          "originalTitle": "Four types of movement, four parts of you.",
+          "userPickNumber": 57,
+          "selectionPosition": 26
+        }
+      ]
+    },
+    {
+      "id": "movement-week",
+      "number": 14,
+      "title": "The movement week",
+      "description": "Choose the practical weekly schedule.",
+      "slides": [
+        {
+          "id": "github-deck2-dark-13",
+          "number": 12,
+          "build": null,
+          "title": "My weekly longevity protocol looks like this.",
+          "image": "../images/github-deck2-dark-13.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Deck 2 · v2.2 · dark",
+          "originalDeckId": "github-deck2-dark",
+          "originalTitle": "My weekly longevity protocol looks like this.",
+          "userPickNumber": 32,
+          "selectionPosition": 27
+        },
+        {
+          "id": "github-deck1-dark-13",
+          "number": 13,
+          "build": null,
+          "title": "What my week looks like.",
+          "image": "../images/github-deck1-dark-13.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Original deck · dark",
+          "originalDeckId": "github-deck1-dark",
+          "originalTitle": "What my week looks like.",
+          "userPickNumber": 79,
+          "selectionPosition": 28
+        },
+        {
+          "id": "claude-b-13",
+          "number": 13,
+          "build": null,
+          "title": "Movement week",
+          "image": "../images/claude-b-13.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "That is what my week looks like. How do you fit all this in? I did not build it in a day: twenty-five years of adding, subtracting and fine-tuning. Travel and deadlines change it, but the bones stay. It is an example of a diversified portfolio, not a test to pass tomorrow. Start small: short movement breaks, a few sets of air squats through the day, cut post-meal glucose spikes by over twenty percent; big leg muscles pull glucose straight out of the blood. A daily walk and air squats while the coffee brews is a very respectable start. Check with your doctor if you need to. The goal is to start moving.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "Movement week",
+          "userPickNumber": 21,
+          "selectionPosition": 29
+        }
+      ]
+    },
+    {
+      "id": "stress",
+      "number": 15,
+      "title": "Stress: the layer people skip",
+      "description": "The stress layer and the response over time.",
+      "slides": [
+        {
+          "id": "claude-b-14",
+          "number": 14,
+          "build": null,
+          "title": "Stress",
+          "image": "../images/claude-b-14.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "The fourth layer is the one almost everyone skips. I hate the phrase stress management; it sounds like an HR seminar. But stress is the silent saboteur: pristine diet, all the weights, 7,000 steps, and elevated cortisol undoes it from the inside. 2018, a stressful divorce: my cortisol curve was inverted, rock bottom in the morning, spiking at night. Supplements are a band-aid. I learned Transcendental Meditation; six months later the curve had normalized and has stayed that way. TM is not magic; breathwork, mindfulness, prayer, meditation all trigger the same reset. The best practice is the one you will do. Free five-minute tool: the physiological sigh, Stanford: five minutes a day improved mood and calmed the nervous system faster than standard meditation. Double inhale through the nose, long slow exhale through the mouth. Three together, now.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "Stress",
+          "userPickNumber": 19,
+          "selectionPosition": 30
+        }
+      ]
+    },
+    {
+      "id": "protocol",
+      "number": 16,
+      "title": "The daily protocol",
+      "description": "Choose the complete day view, ring, or timeline.",
+      "slides": [
+        {
+          "id": "claude-b-15",
+          "number": 15,
+          "build": null,
+          "title": "The protocol",
+          "image": "../images/claude-b-15.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "All four layers in a single day, so you can see where they fight for the same hour. 5 AM wake, water, prayer, light. 7 AM movement and sauna. 8 AM eating window opens: greens, protein, fiber, fruit. 9 AM caffeine cut-off. Eating window 8 to 6, ten hours: constraining eating to 8 to 10 hours improved blood sugar and body fat without changing what people ate; earlier windows do even better. Midday main meal and a walk. 1 PM stress reset. 6 PM kitchen closes, three hours before bed. 8 PM screens off. 9 PM lights out. Notice: the whole day is built backward from bedtime. Lights out at nine sets dinner at six; dinner at six sets the window opening at eight. Sleep is the master foundation. Life wins sometimes; I reset the next morning. What transfers is the order of operations: sleep, then food, movement, stress. My 5 AM might be your 6:30. Screenshot this slide and pick one or two anchors.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "The protocol",
+          "userPickNumber": 23,
+          "selectionPosition": 31
+        },
+        {
+          "id": "github-deck1-dark-15",
+          "number": 15,
+          "build": null,
+          "title": "Julie Gibson Clark's Longevity Protocol.",
+          "image": "../images/github-deck1-dark-15.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Original deck · dark",
+          "originalDeckId": "github-deck1-dark",
+          "originalTitle": "Julie Gibson Clark's Longevity Protocol.",
+          "userPickNumber": 83,
+          "selectionPosition": 32
+        },
+        {
+          "id": "github-deck2-light-15",
+          "number": 14,
+          "build": null,
+          "title": "Julie Gibson Clark's Longevity Protocol.",
+          "image": "../images/github-deck2-light-15.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/index.html",
+          "notes": " Approved concept in v2.2, as identified by Omri.",
+          "approved": true,
+          "originalDeck": "Deck 2 · v2.2 · light",
+          "originalDeckId": "github-deck2-light",
+          "originalTitle": "Julie Gibson Clark's Longevity Protocol.",
+          "userPickNumber": 35,
+          "selectionPosition": 33
+        },
+        {
+          "id": "github-deck1-light-15",
+          "number": 15,
+          "build": null,
+          "title": "Julie Gibson Clark's Longevity Protocol.",
+          "image": "../images/github-deck1-light-15.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Original deck · light",
+          "originalDeckId": "github-deck1-light",
+          "originalTitle": "Julie Gibson Clark's Longevity Protocol.",
+          "userPickNumber": 85,
+          "selectionPosition": 34
+        }
+      ]
+    },
+    {
+      "id": "home-measure",
+      "number": 17,
+      "title": "Measure at home",
+      "description": "Keep the notebook slide as a distinct step before testing.",
+      "slides": [
+        {
+          "id": "github-round-10-24",
+          "number": 15,
+          "build": 1,
+          "title": "You don’t need a lab. You need a notebook.",
+          "image": "../images/github-round-10-24.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/round-10/index.html",
+          "notes": "SLIDE 15, build 1 The open notebook full height; her line beside it. Original stored JPEG verified against current source DOM.",
+          "approved": false,
+          "originalDeck": "Round 10",
+          "originalDeckId": "github-round-10",
+          "originalTitle": "You don’t need a lab. You need a notebook.",
+          "userPickNumber": 41,
+          "selectionPosition": 35
+        }
+      ]
+    },
+    {
+      "id": "cake-recap",
+      "number": 19,
+      "title": "Return to the cake",
+      "description": "A recap before the closing intention and questions.",
+      "slides": [
+        {
+          "id": "github-r7-last-27",
+          "number": 17,
+          "build": 1,
+          "title": "That's the cake.",
+          "image": "../images/github-r7-last-27.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/rounds/r7/last-27.jpg",
+          "notes": "Archived r7 last; source filename last-27.jpg. Original archive frame 27; printed slide 17.",
+          "approved": false,
+          "originalDeck": "Round 7 · last",
+          "originalDeckId": "github-r7-last",
+          "originalTitle": "That's the cake.",
+          "userPickNumber": 59,
+          "selectionPosition": 36
+        },
+        {
+          "id": "github-round-9-27",
+          "number": 16,
+          "build": 1,
+          "title": "That’s the cake.",
+          "image": "../images/github-round-9-27.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/round-9/index.html",
+          "notes": "SLIDE 16 The white cake she would actually bake, cut once, every layer visible one last time. Original stored JPEG verified against current source DOM.",
+          "approved": false,
+          "originalDeck": "Round 9",
+          "originalDeckId": "github-round-9",
+          "originalTitle": "That’s the cake.",
+          "userPickNumber": 47,
+          "selectionPosition": 37
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "number": 21,
+      "title": "Why. Intention. Resources.",
+      "description": "Choose the closing three-question framework.",
+      "slides": [
+        {
+          "id": "claude-b-17",
+          "number": 17,
+          "build": null,
+          "title": "Three questions",
+          "image": "../images/claude-b-17.jpg",
+          "source": "https://claude.ai/artifact/JWRnnvBCWXs5cdCwsGGdMb",
+          "notes": "That is the cake. Numbers are not what kept me showing up for twenty-five years. Three questions did. Intention: the sentence on the wall. Mine: I want my healthspan to match my lifespan; drag the second line up to meet the first. Why: the feeling behind it, the engine that keeps you going when protocols become routine. Mine: being here to show my son a different possibility for how we age, and keeping Parkinson’s and dementia far away. Resources: time, energy, money, relationships, the real amounts. Mine: about an hour in the morning and twelve dollars a day. Resources filter out the adverts. No million-dollar budget? Great: let go of peptides and stem cells and focus on a solid gym routine. Friends who want this too? Start a group. When all three align you stop asking what should I do and start asking does this fit. A sauna session fits. A 9 PM bedtime fits. Not willpower: three honest questions doing the heavy lifting.",
+          "approved": false,
+          "originalDeck": "Claude B · Protocol",
+          "originalDeckId": "claude-b",
+          "originalTitle": "Three questions",
+          "userPickNumber": 25,
+          "selectionPosition": 38
+        },
+        {
+          "id": "github-deck1-light-17",
+          "number": 17,
+          "build": null,
+          "title": "Why. Intention. Resources.",
+          "image": "../images/github-deck1-light-17.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Original deck · light",
+          "originalDeckId": "github-deck1-light",
+          "originalTitle": "Why. Intention. Resources.",
+          "userPickNumber": 86,
+          "selectionPosition": 39
+        },
+        {
+          "id": "github-deck1-dark-17",
+          "number": 17,
+          "build": null,
+          "title": "Why. Intention. Resources.",
+          "image": "../images/github-deck1-dark-17.jpg",
+          "source": "https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck/index.html",
+          "notes": "",
+          "approved": false,
+          "originalDeck": "Original deck · dark",
+          "originalDeckId": "github-deck1-dark",
+          "originalTitle": "Why. Intention. Resources.",
+          "userPickNumber": 80,
+          "selectionPosition": 40
+        }
+      ]
+    }
+  ]
+}
