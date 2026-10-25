@@ -31,7 +31,7 @@ textarea:focus{outline:none;border-color:#006EFF;box-shadow:0 0 0 3px rgba(0,110
 #play .x{position:absolute;right:20px;top:16px;color:#fff;font-size:18px;opacity:.8;cursor:pointer}
 #play .c{position:absolute;left:20px;bottom:16px;color:#fff;font-size:16px;opacity:.7}
 @media(max-width:900px){.slot{grid-template-columns:1fr}.note{position:static}h1{font-size:36px}h2{font-size:26px}.top b{display:none}}
-#lb{position:fixed;inset:0;background:rgba(0,0,0,.96);display:none;align-items:center;justify-content:center;z-index:60;cursor:zoom-out}#lb.on{display:flex}#lb img{max-width:100vw;max-height:100vh}#lb .x{position:absolute;right:20px;top:16px;color:#fff;font-size:18px;opacity:.8}.opts figure,img.main{cursor:zoom-in}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.96);display:none;align-items:center;justify-content:center;z-index:60;cursor:zoom-out}#lb.on{display:flex}#lb img{max-width:100vw;max-height:100vh}#lb .x{position:absolute;right:20px;top:16px;color:#fff;font-size:18px;opacity:.8}.opts figure,img.main{cursor:zoom-in;touch-action:manipulation}.opts figure{position:relative;-webkit-tap-highlight-color:rgba(138,210,255,.3)}.opts figure span{pointer-events:none}
 </style></head><body>
 <div class="top"><b>The Longevity Masterclass, deck review</b><button class="btn p" onclick="startPlay()">Play the deck</button><button class="btn" onclick="sendAll()">Send my comments</button></div>
 <div class="wrap">
@@ -74,5 +74,6 @@ function startPlay(){k=0;show();document.getElementById('play').classList.add('o
 function stopPlay(){document.getElementById('play').classList.remove('on');document.fullscreenElement&&document.exitFullscreen();}
 addEventListener('keydown',e=>{if(!document.getElementById('play').classList.contains('on'))return;if(e.key==='ArrowRight'||e.key===' '){k=Math.min(P.length-1,k+1);show();}if(e.key==='ArrowLeft'){k=Math.max(0,k-1);show();}if(e.key==='Escape')stopPlay();});
 document.getElementById('play').addEventListener('click',e=>{if(e.target.classList.contains('x'))return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX-r.left>r.width/2){k=Math.min(P.length-1,k+1);}else{k=Math.max(0,k-1);}show();});
-document.querySelectorAll('.opts img, img.main').forEach(im=>{im.addEventListener('click',()=>{document.getElementById('lbimg').src=im.getAttribute('src');document.getElementById('lb').classList.add('on');});});addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').classList.remove('on');});
+function openLb(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('on');}
+document.addEventListener('click',e=>{const f=e.target.closest('.opts figure');const m=e.target.closest('img.main');if(f){const im=f.querySelector('img');if(im)openLb(im.getAttribute('src'));}else if(m){openLb(m.getAttribute('src'));}});addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').classList.remove('on');});
 </script></body></html>
