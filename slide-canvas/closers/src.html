@@ -1,0 +1,154 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;font-family:Outfit,system-ui,sans-serif;font-weight:300}
+.s{position:relative;width:1920px;height:1080px;overflow:hidden;background:#070E24;color:#F4F1EA;margin:0 0 40px}
+.s.light{background:#F6F8FC;color:#0B1A3A}
+.bg{position:absolute;inset:0}
+.pool{position:absolute;border-radius:50%;filter:blur(140px);pointer-events:none}
+.photo{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.28}
+.vig{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,14,36,.96) 0%,rgba(7,14,36,.85) 45%,rgba(7,14,36,.35) 100%)}
+.eye{position:absolute;left:120px;top:76px;font-size:26px;letter-spacing:.22em;color:#5EEAD4;display:flex;align-items:center;gap:16px;font-weight:400}
+.eye:before{content:'';width:14px;height:14px;border-radius:50%;background:#5EEAD4;box-shadow:0 0 18px #5EEAD4}
+h1{font-family:'Playfair Display',serif;font-weight:400;font-size:112px;line-height:1.04;letter-spacing:-.01em;position:absolute;left:120px;top:150px;width:1500px}
+h1 i{font-style:italic;background:linear-gradient(90deg,#A7B4FF,#5EEAD4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.light h1 i{background:linear-gradient(90deg,#2F6BFF,#0FA3A3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{position:absolute;left:120px;font-family:'Playfair Display',serif;font-style:italic;font-size:46px;line-height:1.3;color:#D9DEF0;width:1500px}
+.light .sub{color:#3B4A6B}
+.glass{position:absolute;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:30px;backdrop-filter:blur(26px);box-shadow:0 40px 100px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.14)}
+.light .glass{background:rgba(255,255,255,.72);border-color:rgba(11,26,58,.08);box-shadow:0 40px 100px rgba(11,26,58,.12),inset 0 1px 0 #fff}
+.lbl{font-size:24px;letter-spacing:.2em;color:#5EEAD4;font-weight:400}
+.big{font-family:'Playfair Display',serif;font-size:76px;line-height:1.05;color:#fff}
+.t{font-size:34px;line-height:1.4;color:#D9DEF0}
+.light .t{color:#3B4A6B}
+.bar{height:22px;border-radius:12px;background:linear-gradient(90deg,#6D7CFF,#5EEAD4);box-shadow:0 0 30px rgba(94,234,212,.35)}
+.logo{position:absolute;left:120px;bottom:70px;height:92px}
+.src{position:absolute;right:120px;bottom:78px;font-size:26px;color:#9AA6C8;text-align:right;line-height:1.4}
+.light .src{color:#6B7A99}
+.pg{position:absolute;right:120px;bottom:40px;font-size:24px;color:#6B789A}
+</style></head><body>
+
+<!-- OP-A opening light, centred -->
+<section class="s light" id="op-a">
+<div class="bg"><div class="pool" style="left:-200px;top:-200px;width:1100px;height:900px;background:rgba(47,107,255,.16)"></div><div class="pool" style="right:-250px;bottom:-300px;width:1100px;height:900px;background:rgba(15,163,163,.14)"></div></div>
+<img src="img/lla-logo-dark-text@2x.png" alt="Longevity Life Academy" style="position:absolute;left:50%;top:118px;transform:translateX(-50%);height:210px">
+<div style="position:absolute;left:0;right:0;top:400px;text-align:center;font-size:28px;letter-spacing:.26em;color:#2F6BFF;font-weight:400">LIVE MASTERCLASS</div>
+<h1 style="left:0;right:0;top:456px;width:auto;text-align:center;font-size:150px">The Longevity Masterclass</h1>
+<div style="position:absolute;left:0;right:0;top:820px;text-align:center;font-family:'Playfair Display',serif;font-size:56px;color:#0B1A3A">Julie Gibson Clark</div>
+<div style="position:absolute;left:0;right:0;top:900px;text-align:center;font-size:30px;letter-spacing:.14em;color:#3B4A6B">FOUNDING FACULTY, LONGEVITY LIFE ACADEMY</div>
+</section>
+
+<!-- OP-B opening light, left aligned with name block -->
+<section class="s light" id="op-b">
+<div class="bg"><div class="pool" style="right:-150px;top:-100px;width:1200px;height:1000px;background:rgba(47,107,255,.18)"></div><div class="pool" style="left:-300px;bottom:-400px;width:900px;height:800px;background:rgba(15,163,163,.12)"></div></div>
+<img src="img/lla-logo-dark-text@2x.png" alt="Longevity Life Academy" style="position:absolute;left:120px;top:96px;height:176px">
+<div style="position:absolute;left:120px;top:386px;font-size:28px;letter-spacing:.26em;color:#2F6BFF;font-weight:400">LONGEVITY LIFE ACADEMY · LIVE MASTERCLASS</div>
+<h1 style="top:440px;font-size:156px;width:1400px">The Longevity Masterclass</h1>
+<div class="glass" style="left:120px;top:830px;padding:30px 44px;display:flex;gap:40px;align-items:baseline"><span style="font-family:'Playfair Display',serif;font-size:52px;color:#0B1A3A">Julie Gibson Clark</span><span style="font-size:26px;letter-spacing:.14em;color:#3B4A6B">FOUNDING FACULTY</span></div>
+</section>
+
+<!-- S1-A first step -->
+<section class="s" id="s1-a">
+<div class="bg"><div class="photo" style="background-image:url(img/cake-navy.jpg);background-position:right center;opacity:.5"></div><div class="vig"></div><div class="pool" style="left:200px;top:300px;width:900px;height:700px;background:rgba(94,234,212,.14)"></div></div>
+<div class="eye">22 · THE FIRST STEP</div>
+<h1>You've already taken <i>the first step.</i></h1>
+<div class="sub" style="top:440px;width:1200px">You chose to spend an hour of your life on this. Many of you have already moved a meal, a bedtime, a walk.</div>
+<div class="t" style="position:absolute;left:120px;top:690px;width:1100px;font-size:38px">That is the cake. Not the icing. You did not need a lab to start it.</div>
+<img class="logo" src="img/lla-logo.png" alt="">
+<div class="pg">22 / 25</div>
+</section>
+
+<!-- S1-B first step, three things already done -->
+<section class="s" id="s1-b">
+<div class="bg"><div class="pool" style="left:-200px;top:-200px;width:1200px;height:1000px;background:rgba(109,124,255,.22)"></div><div class="pool" style="right:-200px;bottom:-300px;width:1100px;height:900px;background:rgba(94,234,212,.14)"></div></div>
+<div class="eye">22 · THE FIRST STEP</div>
+<h1 style="width:1300px">You've already taken <i>the first step.</i></h1>
+<div class="glass" style="left:120px;top:470px;width:1680px;height:440px;padding:56px 64px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px">
+<div><div class="lbl">AN HOUR</div><div class="big" style="font-size:60px;margin:22px 0 18px">You showed up.</div><div class="t" style="font-size:30px">Curiosity is the only entry ticket this ever needed.</div></div>
+<div><div class="lbl">A CHANGE</div><div class="big" style="font-size:60px;margin:22px 0 18px">Many of you have begun.</div><div class="t" style="font-size:30px">A meal moved earlier. A bedtime kept. A walk after dinner.</div></div>
+<div><div class="lbl">A REASON</div><div class="big" style="font-size:60px;margin:22px 0 18px">You know your why.</div><div class="t" style="font-size:30px">More healthy years, more good time with the people you love.</div></div>
+</div>
+<img class="logo" src="img/lla-logo.png" alt="">
+<div class="pg">22 / 25</div>
+</section>
+
+<!-- S2-A barriers, three glass cards -->
+<section class="s" id="s2-a">
+<div class="bg"><div class="pool" style="left:300px;top:-300px;width:1300px;height:900px;background:rgba(109,124,255,.2)"></div><div class="pool" style="right:-200px;bottom:-200px;width:900px;height:800px;background:rgba(94,234,212,.12)"></div></div>
+<div class="eye">23 · WHAT GETS IN THE WAY</div>
+<h1>So why is it so hard <i>to keep going?</i></h1>
+<div class="sub" style="top:430px;width:1500px">Three things stop almost everyone. None of them is willpower.</div>
+<div class="glass" style="left:120px;top:570px;width:530px;height:380px;padding:46px 50px"><div class="lbl">TIME</div><div class="big" style="font-size:58px;margin:26px 0 20px">"I don't have hours a day."</div><div class="t" style="font-size:28px">It looks like a life for people with nothing else to do.</div></div>
+<div class="glass" style="left:695px;top:570px;width:530px;height:380px;padding:46px 50px"><div class="lbl">TRUST</div><div class="big" style="font-size:58px;margin:26px 0 20px">"Who do I listen to?"</div><div class="t" style="font-size:28px">A thousand voices, few credentials, and no way to tell them apart.</div></div>
+<div class="glass" style="left:1270px;top:570px;width:530px;height:380px;padding:46px 50px"><div class="lbl">COST</div><div class="big" style="font-size:58px;margin:26px 0 20px">"It needs a lab and a budget."</div><div class="t" style="font-size:28px">The expensive end of the room gets all the attention.</div></div>
+<div class="pg">23 / 25</div>
+</section>
+
+<!-- S2-B barriers, three bars -->
+<section class="s" id="s2-b">
+<div class="bg"><div class="photo" style="background-image:url(img/h-dna.jpg);background-position:right center;opacity:.35"></div><div class="vig"></div></div>
+<div class="eye">23 · WHAT GETS IN THE WAY</div>
+<h1>So why is it so hard <i>to keep going?</i></h1>
+<div style="position:absolute;left:120px;top:470px;width:1200px;display:flex;flex-direction:column;gap:54px">
+<div><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px"><span class="big" style="font-size:54px">Time</span><span class="t" style="font-size:30px">"I don't have hours a day."</span></div><div class="bar" style="width:100%"></div></div>
+<div><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px"><span class="big" style="font-size:54px">Trust</span><span class="t" style="font-size:30px">"I don't know who to listen to."</span></div><div class="bar" style="width:82%"></div></div>
+<div><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px"><span class="big" style="font-size:54px">Cost</span><span class="t" style="font-size:30px">"It needs a lab and a budget."</span></div><div class="bar" style="width:64%"></div></div>
+</div>
+<div class="src" style="left:120px;right:auto;text-align:left;bottom:70px">None of the three is willpower. All three are design problems.</div>
+<div class="pg">23 / 25</div>
+</section>
+
+<!-- S3-A Blueprint hero with ring -->
+<section class="s" id="s3-a">
+<div class="bg"><div class="pool" style="right:0;top:0;width:1200px;height:1080px;background:rgba(240,199,112,.16)"></div><div class="pool" style="left:-200px;bottom:-300px;width:1000px;height:800px;background:rgba(94,234,212,.12)"></div></div>
+<img src="img/day-ring.jpg" alt="" style="position:absolute;right:-60px;top:40px;height:1000px;mask-image:radial-gradient(ellipse 60% 55% at 58% 50%,#000 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 60% 55% at 58% 50%,#000 55%,transparent 100%)">
+<div class="eye">24 · THE NEXT STEP</div>
+<h1 style="width:1100px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:420px;width:1000px;font-size:40px">Eighteen weeks. A class of eight to fifteen. Your own numbers. One written protocol you keep.</div>
+<div class="glass" style="left:120px;top:600px;width:1040px;padding:40px 48px;display:grid;grid-template-columns:150px 1fr;row-gap:26px;column-gap:28px;align-items:baseline">
+<div class="lbl">TIME</div><div class="t" style="font-size:30px">Fifty minutes a week, live. Recorded if you miss one.</div>
+<div class="lbl">TRUST</div><div class="t" style="font-size:30px">A certified instructor every week. I am founding faculty.</div>
+<div class="lbl">COST</div><div class="t" style="font-size:30px">Your intake and your existing bloodwork. A glucose monitor arrives before lesson five. No lab of your own.</div>
+</div>
+<div class="src" style="left:120px;right:auto;text-align:left;bottom:60px;font-family:'Playfair Display',serif;font-style:italic;font-size:32px;color:#D9DEF0">It took me twenty-four years to find this path. The Blueprint puts you on it in eighteen weeks.</div>
+<div class="pg">24 / 25</div>
+</section>
+
+<!-- S3-B Blueprint, 18-session track -->
+<section class="s" id="s3-b">
+<div class="bg"><div class="pool" style="left:200px;top:-300px;width:1500px;height:900px;background:rgba(109,124,255,.2)"></div><div class="pool" style="right:-200px;bottom:-200px;width:1100px;height:900px;background:rgba(240,199,112,.14)"></div></div>
+<div class="eye">24 · THE NEXT STEP</div>
+<h1 style="width:1400px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:420px;width:1600px;font-size:40px">Eighteen live sessions. Four phases. One protocol, written for your body and tested against your own numbers.</div>
+<div style="position:absolute;left:120px;top:600px;width:1680px">
+<div style="display:flex;justify-content:space-between;margin-bottom:22px"><span class="lbl">PHASE ONE</span><span class="lbl">PHASE TWO</span><span class="lbl">PHASE THREE</span><span class="lbl">PHASE FOUR</span></div>
+<div style="display:grid;grid-template-columns:repeat(18,1fr);gap:10px">
+<div style="height:30px;border-radius:8px;background:#6D7CFF"></div><div style="height:30px;border-radius:8px;background:#6D7CFF"></div><div style="height:30px;border-radius:8px;background:#6D7CFF"></div><div style="height:30px;border-radius:8px;background:#6D7CFF"></div><div style="height:30px;border-radius:8px;background:#65A9F0;box-shadow:0 0 24px rgba(94,234,212,.6)"></div><div style="height:30px;border-radius:8px;background:#65A9F0"></div><div style="height:30px;border-radius:8px;background:#65A9F0"></div><div style="height:30px;border-radius:8px;background:#65A9F0"></div><div style="height:30px;border-radius:8px;background:#65A9F0"></div><div style="height:30px;border-radius:8px;background:#5EEAD4"></div><div style="height:30px;border-radius:8px;background:#5EEAD4"></div><div style="height:30px;border-radius:8px;background:#5EEAD4"></div><div style="height:30px;border-radius:8px;background:#5EEAD4"></div><div style="height:30px;border-radius:8px;background:#5EEAD4"></div><div style="height:30px;border-radius:8px;background:#F0C770"></div><div style="height:30px;border-radius:8px;background:#F0C770"></div><div style="height:30px;border-radius:8px;background:#F0C770"></div><div style="height:30px;border-radius:8px;background:#F0C770;box-shadow:0 0 24px rgba(240,199,112,.7)"></div>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:18px"><span class="t" style="font-size:26px">Week 1</span><span class="t" style="font-size:26px;color:#5EEAD4">Week 5: your glucose monitor arrives</span><span class="t" style="font-size:26px">Week 18: your protocol, in writing</span></div>
+</div>
+<div class="glass" style="left:120px;top:800px;width:1680px;padding:34px 48px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px">
+<div class="t" style="font-size:28px"><span class="lbl" style="display:block;margin-bottom:10px">TIME</span>Fifty minutes a week, live, recorded if you miss one.</div>
+<div class="t" style="font-size:28px"><span class="lbl" style="display:block;margin-bottom:10px">TRUST</span>A certified instructor every week, in a class of eight to fifteen.</div>
+<div class="t" style="font-size:28px"><span class="lbl" style="display:block;margin-bottom:10px">COST</span>Your bloodwork, your intake, a glucose monitor included. No lab of your own.</div>
+</div>
+<div class="pg">24 / 25</div>
+</section>
+
+<!-- S4-A end card dark -->
+<section class="s" id="s4-a">
+<div class="bg"><div class="pool" style="left:50%;top:50%;transform:translate(-50%,-50%);width:1400px;height:900px;background:rgba(94,234,212,.16)"></div><div class="pool" style="left:-200px;bottom:-300px;width:900px;height:800px;background:rgba(109,124,255,.18)"></div></div>
+<h1 style="left:0;right:0;top:360px;width:auto;text-align:center;font-size:170px">It's your life.<br><i>Live it well.</i></h1>
+<img src="img/lla-logo.png" alt="Longevity Life Academy" style="position:absolute;left:50%;bottom:90px;transform:translateX(-50%);height:110px">
+</section>
+
+<!-- S4-B end card light with white cake -->
+<section class="s light" id="s4-b">
+<div class="bg"><div class="pool" style="left:-200px;top:-200px;width:1100px;height:900px;background:rgba(240,199,112,.22)"></div></div>
+<img src="img/cake-white-sliced.jpg" alt="" style="position:absolute;right:-220px;top:0;height:1080px;mask-image:linear-gradient(90deg,transparent 0%,#000 42%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 42%)">
+<h1 style="top:380px;width:820px;font-size:132px">It's your life.<br><i>Live it well.</i></h1>
+<img src="img/lla-logo-dark-text@2x.png" alt="Longevity Life Academy" style="position:absolute;left:120px;bottom:90px;height:120px">
+</section>
+
+</body></html>
