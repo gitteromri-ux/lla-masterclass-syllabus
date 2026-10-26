@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:Playfair;src:url(../../deck2/fonts/PlayfairDisplay.ttf)}
+@font-face{font-family:Playfair;font-style:italic;src:url(../../deck2/fonts/PlayfairDisplay-Italic.ttf)}
+@font-face{font-family:Inter;src:url(../../deck2/fonts/Inter.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#070e24}
+.slide{position:relative;width:1920px;height:1080px;overflow:hidden;font:300 30px/1.3 Outfit,Inter,sans-serif;color:#abc6d5}
+.art{position:absolute;inset:0;background-image:url(../closers/img/act-fork2.jpg);background-size:118% auto;background-position:center top;background-repeat:no-repeat}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,14,36,.76),rgba(7,14,36,.22) 28%,rgba(7,14,36,.12) 57%,rgba(7,14,36,.62)),linear-gradient(90deg,rgba(7,14,36,.42),transparent 43%)}
+.right-contrast{position:absolute;left:1060px;top:270px;width:860px;height:730px;background:radial-gradient(ellipse at 70% 55%,rgba(7,14,36,.38),transparent 75%)}
+.eye{position:absolute;left:110px;top:55px;color:#5eead4;font-size:25px;font-weight:400;letter-spacing:.2em}
+.eye:before{content:'';display:inline-block;width:12px;height:12px;margin-right:17px;background:#5eead4;border-radius:50%;box-shadow:0 0 16px #5eead4}
+h1{position:absolute;left:110px;top:110px;font:400 104px/1.04 Playfair,serif;letter-spacing:-.015em;color:#e6c899;text-shadow:0 5px 35px #06122baa}
+h1 i{font-weight:400;background:linear-gradient(95deg,#efd08c,#65dac5);background-clip:text;-webkit-background-clip:text;color:transparent}
+.destination{position:absolute;right:105px;top:238px;font:italic 40px/1.1 Playfair,serif;color:#edd18c;text-shadow:0 2px 3px #071326,0 0 20px #071326}
+.left-group{position:absolute;left:110px;top:410px;width:595px}
+.stat-row{display:flex;gap:24px;align-items:center}
+.stat-number{font:400 116px/.98 Playfair,serif;color:#dbbd83;letter-spacing:-.04em}
+.stat-caption{max-width:350px;font:italic 35px/1.2 Playfair,serif;color:#b6ced0}
+.citation{font-size:22px;line-height:1.35;color:#92aebf;margin-top:23px;max-width:575px}
+.inaction{margin-top:48px;padding-top:24px;border-top:1px solid rgba(135,166,190,.3)}
+.inaction h2{font:400 59px/1.1 Playfair,serif;color:#a7becd}
+.inaction p{font-size:28px;line-height:1.35;color:#9bb2c2;margin-top:14px;max-width:575px}
+.waypoint{position:absolute;text-shadow:0 4px 25px rgba(4,13,30,.98)}
+.waypoint h2{font:400 49px/1.07 Playfair,serif}
+.waypoint p{font-size:30px;line-height:1.25;color:#b7ccd8;margin-top:10px}
+.waypoint .below{display:block;margin-top:3px}
+.dot{position:absolute;left:-78px;top:27px;width:27px;height:27px;border-radius:50%;background:var(--accent);border:2px solid var(--accent);box-shadow:0 0 24px color-mix(in srgb,var(--accent) 70%,transparent)}
+.dot:after{content:'';position:absolute;left:26px;top:11px;width:39px;height:2px;background:var(--accent)}
+.course{left:1040px;top:810px;width:780px;--accent:#64dfc7}
+.course h2{color:#64dfc7;font-size:53px}
+.course p{font-size:32px;color:#b5d4cf}
+.sugar{left:1170px;top:625px;width:650px;--accent:#91c7ed}
+.sugar h2{color:#91c7ed}
+.sugar p{font-size:28px}
+.move{left:1295px;top:455px;width:535px;--accent:#b4d2bc}
+.move h2{color:#b4d2bc}
+.move p{font-size:28px}
+.sleep{left:1350px;top:310px;width:480px;--accent:#e9c777;isolation:isolate}
+.sleep:before{content:'';position:absolute;inset:-30px -35px;z-index:-1;background:radial-gradient(ellipse at center,rgba(7,14,36,.68),rgba(7,14,36,.3) 50%,transparent 75%);filter:blur(14px)}
+.sleep h2{color:#e9c777;font-size:44px}
+.sleep p{font-size:27px;color:#d2c19b}
+.pg{position:absolute;right:100px;bottom:28px;font-size:22px;color:#9eb6c8}
+</style>
+</head>
+<body>
+<main class="slide">
+ <div class="art"></div><div class="shade"></div><div class="right-contrast"></div>
+ <div class="eye">26 · THE ONE TAKEAWAY</div>
+ <h1>One takeaway. <i>Take action.</i></h1>
+ <div class="destination">A longer, better life.</div>
+ <section class="left-group">
+  <div class="stat-row"><div class="stat-number">47%</div><div class="stat-caption">of people who intend to change never start.</div></div>
+  <p class="citation">Sheeran, 2002. Meta-analysis of 422 studies, 82,107 people. For exercise, 54 percent of intenders never acted.</p>
+  <div class="inaction"><h2>Change nothing.</h2><p>The one road with a known ending. Decline is the default.</p></div>
+ </section>
+ <section class="waypoint course" data-step="1"><span class="dot"></span><h2>Your Blueprint course.</h2><p>Building your guided protocol in 18 weeks.</p></section>
+ <section class="waypoint sugar" data-step="2"><span class="dot"></span><h2>Watch <i>your sugar.</i></h2><p>Protein and fiber first. Fewer spikes.<span class="below">See your glucose response with a CGM.</span></p></section>
+ <section class="waypoint move" data-step="3"><span class="dot"></span><h2>Start <i>moving.</i></h2><p>A brisk walk after your biggest meal. Strength twice a week.</p></section>
+ <section class="waypoint sleep" data-step="4"><span class="dot"></span><h2>Protect <i>your sleep.</i></h2><p>Last meal three hours<br>before bed.</p></section>
+ <div class="pg">26 / 27</div>
+</main>
+</body>
+</html>
