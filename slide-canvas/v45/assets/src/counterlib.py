@@ -3,7 +3,7 @@ from PIL import Image,ImageDraw,ImageFont
 INTER='/workspace/lla-masterclass-syllabus/backup-deck/fonts/Inter.ttf'
 OUTFIT='/usr/share/fonts/truetype/sand-box/google/Outfit/Outfit-VariableFont_wght.ttf'
 def textmask(img,box,d=28,pad=4):
-    x0,y0,x1,y1=box;X0,Y0,X1,Y1=x0-20,y0-20,x1+20,y1+20
+    x0,y0,x1,y1=box;X0,Y0,X1,Y1=max(0,x0-20),max(0,y0-20),min(img.shape[1],x1+20),min(img.shape[0],y1+20)
     g=cv2.cvtColor(img[Y0:Y1,X0:X1],cv2.COLOR_BGR2GRAY).astype(int)
     bg=cv2.medianBlur(g.astype(np.uint8),31).astype(int)
     m=np.zeros(img.shape[:2],np.uint8)

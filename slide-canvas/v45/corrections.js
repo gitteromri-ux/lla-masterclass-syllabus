@@ -28,7 +28,7 @@ change(10,'assets/n10-plate.jpg',null,'The plate illustrates Julie’s script: p
 const food=slot(10).cloneNode(true);
 food.id='s10-food';
 food.querySelector('.num').textContent='10A';
-food.querySelector('.main').src='../images/claude-b-09.jpg';
+food.querySelector('.main').src='assets/n09-food.jpg';food.querySelector('h2').textContent='Food.';food.querySelector('textarea').dataset.t='Food.';
 food.querySelector('.why').textContent='Food foundations. Claude B, Protocol, slide 9. Followed by Julie’s plate.';
 food.querySelector('.opts')?.remove();
 food.querySelector('label').htmlFor='c10-food';
