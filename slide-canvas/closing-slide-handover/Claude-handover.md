@@ -38,7 +38,7 @@ The complete handover ZIP contains all PowerPoints, gallery images, references, 
 
 ## Sequence and chronology
 
-Revision groups are newest first by Git commit timestamp. Slides inside each group follow the original review-page order; files not shown in that page follow filename order. The combined export follows exactly the same group/slide sequence. The unchanged fork is repeated where it was part of the next three-concept round. Other repeated byte-identical artwork is deduplicated, while all full source snapshots preserve their original context.
+At Omri’s subsequent request, the latest original c26 (“It’s your life. Live it well.”) is pinned above the page header and is first in the combined 45-slide PowerPoint. All remaining revision groups are newest first by Git commit timestamp. Slides inside each group follow the original review-page order; files not shown in that page follow filename order. The combined export follows the displayed sequence, with pinned slide 26 removed from its former position to avoid duplication. The unchanged fork is repeated where it was part of the next three-concept round. Other repeated byte-identical artwork is deduplicated, while all full source snapshots preserve their original context.
 
 ## Provenance limitations
 
@@ -55,3 +55,7 @@ The exported conversation contains user requests and assistant answers, but not 
 ## Suggested working instruction
 
 Read Exact-user-prompts.md, especially turn 45 and corrections 46–49. Inspect the supplied reference images before proposing anything. Review the failed rounds only to understand what not to repeat. Produce three distinct concepts including a cinematic fork in the road, preserve the take-action message and course-as-one-option balance, and do not claim that any rejected archive version is approved. Keep all changes on a new review surface.
+
+## Full prompt copy page
+
+All 48 recovered user-message turns are available verbatim in `all-prompts.html` and `All-user-prompts.txt`. The dedicated page opens in a separate tab from the archive and provides Copy all prompts, Select all text and a plain-text download. The earlier scoped design-prompt file is also retained.
