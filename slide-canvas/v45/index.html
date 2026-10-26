@@ -65,17 +65,17 @@ textarea:focus{outline:none;border-color:#006EFF;box-shadow:0 0 0 3px rgba(0,110
 <button id="send" class="btn p" onclick="sendAll()">Send my comments</button>
 <div id="lb" onclick="this.classList.remove('on')"><img id="lbimg" src="" alt=""><div class="x">Close</div></div>
 <div id="play"><img id="pimg" src="" alt=""><div class="x" onclick="stopPlay()">Close, Esc</div><div class="c" id="pc"></div></div>
-<script src="corrections.js?v=20261026-finalcard"></script>
+<script src="corrections.js?v=20261026-renumbered"></script>
 <script>
 const P=allSlots.map(s=>s.querySelector('img.main').getAttribute('src'));let k=0;
 const T=[...document.querySelectorAll('textarea')];
 T.forEach(t=>{const key='v45-deck-c'+t.dataset.n;const own=localStorage.getItem(key);t.value=own===null?(localStorage.getItem('julie-deck-c'+t.dataset.n)||''):own;if(t.value)document.getElementById('v'+t.dataset.n).textContent=own===null?'Original review comment':'Saved';t.addEventListener('input',()=>{localStorage.setItem(key,t.value);document.getElementById('v'+t.dataset.n).textContent='Saved';});});
 function sendAll(){const lines=T.filter(t=>t.value.trim()).map(t=>'Slide '+(t.dataset.displayN||t.dataset.n)+', '+t.dataset.t+':\n'+t.value.trim());if(!lines.length){alert('No comments yet. Type into a box next to a slide first.');return;}const body=lines.join('\n\n')+'\n\n'+location.href;navigator.clipboard&&navigator.clipboard.writeText(body).catch(()=>{});location.href='mailto:gitter.omri@gita-agency.com?subject='+encodeURIComponent('Masterclass deck, my comments')+'&body='+encodeURIComponent(body);}
-function show(){document.getElementById('pimg').src=P[k];document.getElementById('pc').textContent='Slide '+slideRefs[k]+' · '+(k+1)+' / '+P.length;document.getElementById('play-link').style.display=deckLinks[k]?'block':'none';const variant=allSlots[k].dataset.variant;document.getElementById('play-variant').textContent=variant||'';document.getElementById('play-variant').style.display=variant?'block':'none';}
+function show(){document.getElementById('pimg').src=P[k];document.getElementById('pc').textContent='Slide '+slideRefs[k]+' · '+(k+1)+' / '+P.length;const variant=allSlots[k].dataset.variant;document.getElementById('play-variant').textContent=variant||'';document.getElementById('play-variant').style.display=variant?'block':'none';}
 function startPlay(){k=0;show();document.getElementById('play').classList.add('on');const el=document.documentElement;el.requestFullscreen&&el.requestFullscreen().catch(()=>{});}
 function stopPlay(){document.getElementById('play').classList.remove('on');document.fullscreenElement&&document.exitFullscreen();}
 addEventListener('keydown',e=>{if(!document.getElementById('play').classList.contains('on'))return;if(e.key==='ArrowRight'||e.key===' '){k=Math.min(P.length-1,k+1);show();}if(e.key==='ArrowLeft'){k=Math.max(0,k-1);show();}if(e.key==='Escape')stopPlay();});
 document.getElementById('play').addEventListener('click',e=>{if(e.target.classList.contains('x'))return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX-r.left>r.width/2){k=Math.min(P.length-1,k+1);}else{k=Math.max(0,k-1);}show();});
-function openLb(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('on');document.getElementById('lb-link').style.display=src.includes('stress.jpg')?'block':'none';}
+function openLb(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('on');}
 document.addEventListener('click',e=>{const f=e.target.closest('.opts figure');const m=e.target.closest('img.main');if(f){const im=f.querySelector('img');if(im)openLb(im.getAttribute('src'));}else if(m){openLb(m.getAttribute('src'));}});addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').classList.remove('on');});
 </script></body></html>

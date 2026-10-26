@@ -8,12 +8,23 @@ function change(n,src,title,note){
   if(note)s.querySelector('.why').textContent=note;
 }
 function noOptions(n){slot(n).querySelector('.opts')?.remove();}
-change(1,'assets/title.jpg',null,'Say: “This is not medical advice. Please talk to your doctor.” Then move to the next slide.');
-change(8,'assets/sleep.jpg',"I'll sleep when I die.",'Said the person aging at twice the normal speed. Sleep is the repair shift, followed by the night timeline.');
+
+// V45 renumbered copies of the original images (only the baked-in counter changed).
+change(2,'assets/n02-why.jpg');
+change(3,'assets/n03-dunedin.jpg');
+change(4,'assets/n04-cake.jpg');
+change(5,'assets/n05-icing.jpg');
+change(6,'assets/n06-menopause.jpg');
+change(7,'assets/n07-bridge.jpg');
+change(11,'assets/n11-sugar.jpg');
+change(20,'assets/n19-cake.jpg');
+change(21,'assets/n20-why.jpg');
+change(1,'assets/n01-title.jpg',null,'Say: “This is not medical advice. Please talk to your doctor.” Then move to the next slide.');
+change(8,'assets/n08-sleep.jpg',"I'll sleep when I die.",'Said the person aging at twice the normal speed. Sleep is the repair shift, followed by the night timeline.');
 noOptions(8);
 slot(9).remove();
 slot(12).remove();
-change(10,'assets/food-plate.jpg',null,'The plate illustrates Julie’s script: protein is the floor, fiber is the lever, whole food is the default. Her five personal rules stay on screen.');
+change(10,'assets/n10-plate.jpg',null,'The plate illustrates Julie’s script: protein is the floor, fiber is the lever, whole food is the default. Her five personal rules stay on screen.');
 const food=slot(10).cloneNode(true);
 food.id='s10-food';
 food.querySelector('.num').textContent='10A';
@@ -26,31 +37,23 @@ food.querySelector('textarea').dataset.n='10-food';
 food.querySelector('.saved').id='v10-food';
 slot(10).before(food);
 noOptions(10);
-change(13,'../images/claude-a-11.jpg',null,'Selected option 2: the two people, side by side.');
+change(13,'assets/n12-sameage.jpg',null,'Selected option 2: the two people, side by side.');
 noOptions(13);
-change(14,'assets/movement.jpg');
-change(15,'../images/claude-b-15.jpg',"Julie Gibson Clark’s Longevity Protocol.",'Main: The protocol. V2 below is the full-color Movement week alternative. Julie to update.');
+change(14,'assets/n13-movement.jpg',null,'Weights, VO2 max, Zone 2 (two people walking and talking), mobility and balance.');
+change(15,'assets/n14-movement-week.jpg',"Julie Gibson Clark’s Movement Week.",'Movement week, Claude B, Protocol, slide 13. Julie to update. The full protocol follows after the stress slide.');
 noOptions(15);
-const week=document.createElement('div');
-week.className='opts';
-week.style.gridTemplateColumns='1fr';
-week.innerHTML='<figure class="v2"><span>V2 · Julie to update</span><img src="../images/claude-b-13.jpg" alt="Movement week, option 2. Julie to update."></figure>';
-slot(15).querySelector('.left').append(week);
-change(16,'assets/stress.jpg');
-slot(16).dataset.link=courseUrl;
-const lp=document.createElement('a');
-lp.href=courseUrl;lp.target='_blank';lp.rel='noopener';lp.className='lp-link';
-lp.textContent='Longevity Life Academy · View the course';
-slot(16).querySelector('.why').after(lp);
-change(17,'../images/claude-b-15.jpg',null,'Selected Claude B, Protocol, slide 15.');
+
+change(16,'assets/n15-stress.jpg',null,'Layer four. Stress, your cortisol story, and the physiological sigh.');
+
+change(17,'assets/n16-protocol.jpg',null,'Selected Claude B, Protocol, slide 15.');
 noOptions(17);
-change(18,'assets/notebook.jpg?v=lla-phone');
-change(19,'assets/testing.jpg',null,'Selected option 2, with a testing-related background, three distinctly colored cards and DunedinPACE in the baseline-testing list.');
+change(18,'assets/n17-notebook.jpg');
+change(19,'assets/n18-testing.jpg',null,'Selected option 2, with a testing-related background, three distinctly colored cards and DunedinPACE in the baseline-testing list.');
 noOptions(19);
 const closing=slot(21).cloneNode(true);
 closing.id='s22';
 closing.querySelector('h2').textContent='One takeaway. Take action.';
-closing.querySelector('.main').src='../julie/additional-take-action-20261026.png';
+closing.querySelector('.main').src='assets/n21-takeaway.png';
 closing.querySelector('.main').alt='One takeaway. Take action.';
 closing.querySelector('.why').textContent='Closing slide. Exact original image.';
 closing.querySelector('.opts')?.remove();
@@ -72,14 +75,10 @@ allSlots.forEach((s,i)=>{
   s.querySelector('label').textContent='Your comment on slide '+slideRefs[i];
   s.querySelector('textarea').dataset.displayN=slideRefs[i];
 });
-document.querySelector('.lead').textContent='Original slide references are retained. Slides 9 and 12 are removed. Slide 10 is split: 10A Food foundations, then 10B the plate. Movement week is option 2 under slide 15, in full color and marked V2, Julie to update. Play presents the 21 main slides only, ending with One takeaway. Take action.';
+document.querySelector('.lead').textContent='Original slide references are retained. Slides 9 and 12 are removed. Slide 10 is split: 10A Food foundations, then 10B the plate. Slide 15 is Movement week (Julie to update) and the full protocol is slide 17. Play presents the 21 main slides only, ending with One takeaway. Take action.';
 const deckLinks=allSlots.map(s=>s.dataset.link||'');
 const variantTag=document.createElement('div');
 variantTag.id='play-variant';
 variantTag.style.cssText='display:none;position:absolute;top:20px;left:24px;padding:10px 16px;background:#08152D;color:#8AD2FF;font-size:22px;z-index:70;pointer-events:none';
 document.getElementById('play').append(variantTag);
-const link=document.createElement('a');
-link.id='play-link';link.href=courseUrl;link.target='_blank';link.rel='noopener';link.textContent='View the Longevity Life Academy course';
-link.addEventListener('click',e=>e.stopPropagation());
-document.getElementById('play').append(link);
-const lbLink=link.cloneNode(true);lbLink.id='lb-link';lbLink.addEventListener('click',e=>e.stopPropagation());document.getElementById('lb').append(lbLink);
+
