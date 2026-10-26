@@ -22,14 +22,11 @@ if want('5'):
     im=rd('n05-icing.jpg');im=erase(im,(1446,1012,1786,1044),d=22);im=erase(im,(112,1048,192,1080),d=22);wr(im,'n05-icing.jpg')
 if want('8'):
     im=rd('n08-sleep.jpg');im=erase_color(im,(1288,730,1364,760),d=10)
-    im=move(im,(104,690,262,772),0,22,d=16);wr(std_counter(im,8),'n08-sleep.jpg')
+    wr(std_counter(im,8),'n08-sleep.jpg')  # logo handled by build-logo.py
 if want('14'):
     im=rd('n14-movement-week.jpg');wr(std_counter(im,14),'n14-movement-week.jpg')
 if want('15'):
-    im=rd('n15-stress.jpg');im=move(im,(74,931,140,1034),0,26,d=16);im=move(im,(140,946,292,1034),0,26,d=16);im=erase_color(im,(108,939,300,960),d=5,grow=5)
-    x0,y0,x1,y1=150,944,340,962;L=im[y0:y1,x0-3:x0].astype(float).mean(1);R=im[y0:y1,x1:x1+3].astype(float).mean(1);t=np.linspace(0,1,x1-x0)[None,:,None]
-    patch=L[:,None]*(1-t)+R[:,None]*t;w=np.minimum(1,np.minimum(np.arange(y1-y0),np.arange(y1-y0)[::-1])/3)[:,None,None]
-    im[y0:y1,x0:x1]=(patch*w+im[y0:y1,x0:x1]*(1-w)).astype(np.uint8);wr(std_counter(im,15,bottom=1062),'n15-stress.jpg')
+    im=rd('n15-stress.jpg');wr(std_counter(im,15,bottom=1062),'n15-stress.jpg')
 if want('16'):
     im=rd('n16-protocol.jpg')
     bx=(517,707,643,732);im=erase(im,(512,703,648,736),d=30)
