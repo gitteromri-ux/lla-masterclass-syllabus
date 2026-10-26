@@ -44,7 +44,7 @@ lp.textContent='Longevity Life Academy · View the course';
 slot(16).querySelector('.why').after(lp);
 change(17,'../images/claude-b-15.jpg',null,'Selected Claude B, Protocol, slide 15.');
 noOptions(17);
-change(18,'assets/notebook.jpg');
+change(18,'assets/notebook.jpg?v=lla-phone');
 change(19,'assets/testing.jpg',null,'Selected option 2, with a testing-related background, three distinctly colored cards and DunedinPACE in the baseline-testing list.');
 noOptions(19);
 const closing=slot(21).cloneNode(true);
