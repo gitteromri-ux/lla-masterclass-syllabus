@@ -14,9 +14,9 @@ h1{font-family:Playfair;font-style:italic;font-weight:400;font-size:50px;line-he
 h2{font-family:Playfair;font-style:italic;font-weight:400;font-size:32px;line-height:1.15;margin:8px 0 18px}
 .main{width:100%;border-radius:14px;display:block;box-shadow:0 30px 80px rgba(0,0,0,.5)}
 .why{font-size:19px;line-height:1.5;color:#D6DEEC;margin-top:16px;max-width:1000px}
-.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:22px}
-.opts figure{position:relative}.opts img{width:100%;border-radius:10px;display:block;box-shadow:0 16px 40px rgba(0,0,0,.45)}
-.opts span{position:absolute;left:12px;top:12px;font-size:13px;letter-spacing:.14em;color:#F3EBDD;background:rgba(6,18,43,.85);padding:6px 10px;border-radius:6px;white-space:nowrap}
+.opts{display:grid!important;grid-template-columns:1fr!important;gap:28px;margin-top:28px;opacity:1!important;filter:none!important}
+.opts figure{position:relative;display:flex!important;flex-direction:column;opacity:1!important;filter:none!important}.opts img{width:100%;border-radius:10px;display:block!important;opacity:1!important;filter:none!important;visibility:visible!important;box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.opts span{position:static;order:-1;display:block;font-size:22px;letter-spacing:0;color:#8AD2FF;background:none;padding:0 0 12px;border-radius:0;white-space:nowrap}
 .note{position:sticky;top:90px;align-self:start;background:rgba(255,255,255,.05);border-radius:18px;padding:22px}
 .note label{display:block;font-size:15px;letter-spacing:.08em;color:#9DB3D6;margin-bottom:12px}
 textarea{width:100%;min-height:220px;resize:vertical;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(6,18,43,.7);color:#F3EBDD;font:300 18px/1.5 Inter,system-ui;padding:14px}
@@ -65,6 +65,7 @@ textarea:focus{outline:none;border-color:#006EFF;box-shadow:0 0 0 3px rgba(0,110
 <div id="lb" onclick="this.classList.remove('on')"><img id="lbimg" src="" alt=""><div class="x">Close</div></div>
 <div id="play"><img id="pimg" src="" alt=""><div class="x" onclick="stopPlay()">Close, Esc</div><div class="c" id="pc"></div></div>
 <script>
+document.querySelectorAll('.opts img').forEach(im=>{im.loading='eager';im.removeAttribute('disabled');});
 const P=["../images-logo/github-deck2-dark-01.jpg","../images-logo/added-why-light.jpg","../images-logo/github-r7-last-06.jpg","../images-logo/github-deck2-dark-04.jpg","../images-logo/github-r4-v1-05.jpg","../images-logo/github-round-9-11.jpg","../images-logo/github-round-10-12.jpg","../images-logo/claude-b-07.jpg","../images-logo/claude-b-08.jpg","../images-logo/github-round-10-15.jpg","../images-logo/github-r6-v2-10.jpg","../images-logo/github-round-10-17.jpg","../images-logo/github-deck2-dark-11.jpg","../images-logo/github-r7-last-19.jpg","../images-logo/github-deck2-dark-13.jpg","../images-logo/claude-b-14.jpg","../images-logo/github-deck2-light-15.jpg","../images-logo/github-round-10-24.jpg","../images-logo/github-round-10-25.jpg","../images-logo/github-round-9-27.jpg","../images-logo/github-deck1-dark-17.jpg","additional-take-action-20261026.png"];let k=0;
 const T=[...document.querySelectorAll('textarea')];
 T.forEach(t=>{const key='julie-deck-c'+t.dataset.n;t.value=localStorage.getItem(key)||'';if(t.value)document.getElementById('v'+t.dataset.n).textContent='Saved';t.addEventListener('input',()=>{localStorage.setItem(key,t.value);document.getElementById('v'+t.dataset.n).textContent='Saved';});});
