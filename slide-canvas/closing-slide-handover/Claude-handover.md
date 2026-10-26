@@ -9,7 +9,7 @@ Omri is transferring the work after rejecting repeated design rounds. This is an
 - 4 take-action revision groups, 12 preserved take-action slide images.
 - 11 related opener/course-bridge revision groups, 33 preserved slide images.
 - 15 original Git source snapshots, including source-only changes.
-- 6 original uploaded images, 86 slides from the user-shared shortlist, including 0 explicitly selected reference IDs preserved in source/user-shared-reference-selection.json.
+- 6 original uploaded images, 86 slides from the user-shared shortlist, including 15 explicitly selected reference IDs preserved in source/user-shared-reference-selection.json.
 - Exact user instructions and corrections: Exact-user-prompts.md. The central take-action brief is turn 45; its corrections are turns 46–49.
 - Earlier general deck instructions and closing/course-bridge brief are preserved, rather than replaced by this summary.
 - Original Word script is included. Version C and its on-screen instructions govern the teaching deck, subject to the user's explicit later overrides.

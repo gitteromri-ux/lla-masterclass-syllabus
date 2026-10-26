@@ -1,1 +1,46 @@
-{}
+{
+  "selected": {
+    "title": [
+      "[\"github-deck2-dark-1\",\"github-deck2-dark\",\"0\",\"\"]"
+    ],
+    "cake": [
+      "[\"github-deck2-light-4\",\"github-deck2-light\",\"3\",\"\"]"
+    ],
+    "icing": [
+      "[\"claude-b-5\",\"claude-b\",\"5\",\"\"]"
+    ],
+    "menopause": [
+      "[\"github-round-9-11\",\"github-round-9\",\"6\",\"2\"]"
+    ],
+    "sleep": [
+      "[\"github-r4-v1-7\",\"github-r4-v1\",\"7\",\"\"]"
+    ],
+    "sleep-quote": [
+      "[\"claude-b-8\",\"claude-b\",\"8\",\"\"]"
+    ],
+    "food": [
+      "[\"github-r4-v1-9\",\"github-r4-v1\",\"9\",\"\"]"
+    ],
+    "sugar": [
+      "[\"github-r6-v2-10\",\"github-r6-v2\",\"10\",\"\"]"
+    ],
+    "movement": [
+      "[\"github-r7-last-19\",\"github-r7-last\",\"12\",\"1\"]"
+    ],
+    "movement-week": [
+      "[\"github-deck2-dark-13\",\"github-deck2-dark\",\"12\",\"\"]"
+    ],
+    "stress": [
+      "[\"claude-b-14\",\"claude-b\",\"14\",\"\"]"
+    ],
+    "protocol": [
+      "[\"claude-b-15\",\"claude-b\",\"15\",\"\"]",
+      "[\"github-deck1-dark-15\",\"github-deck1-dark\",\"15\",\"\"]",
+      "[\"github-deck2-light-15\",\"github-deck2-light\",\"14\",\"\"]"
+    ],
+    "cake-recap": [
+      "[\"github-r7-last-27\",\"github-r7-last\",\"17\",\"1\"]"
+    ]
+  },
+  "group": "cake-recap"
+}
