@@ -16,7 +16,7 @@ body{background:#070e24}
 .eye{position:absolute;left:110px;top:58px;color:#8ad2ff;font-size:26px;font-weight:400;letter-spacing:.2em}
 .eye:before{content:none}
 h1{position:absolute;left:110px;top:112px;font:italic 400 124px/.98 Playfair,serif;letter-spacing:-.012em;color:#c4e4f7;text-shadow:0 5px 35px #06122b88}
-h1 i{font-weight:400;color:#8ad2ff}
+h1 i{font-weight:400;background:linear-gradient(95deg,#8ad2ff,#5eead4);background-clip:text;-webkit-background-clip:text;color:transparent}
 .destination{position:absolute;right:105px;top:250px;font:italic 36px/1.1 Playfair,serif;color:#8ad2ff;text-shadow:0 2px 3px #071326,0 0 20px #071326}
 .brand-logo{position:absolute;right:70px;top:35px;width:195px;height:auto;opacity:.96}
 .left-group{position:absolute;left:110px;top:410px;width:595px}
@@ -33,19 +33,28 @@ h1 i{font-weight:400;color:#8ad2ff}
 .waypoint .below{display:block;margin-top:3px}
 .dot{position:absolute;left:-78px;top:27px;width:27px;height:27px;border-radius:50%;background:var(--accent);border:2px solid #8ad2ff;box-shadow:0 0 22px rgba(0,110,255,.65),0 0 45px rgba(94,182,255,.3)}
 .dot:after{content:'';position:absolute;left:26px;top:11px;width:39px;height:2px;background:var(--accent)}
-.course{left:1040px;top:810px;width:780px;--accent:#5eb6ff}
-.course h2{color:#8ad2ff;font-size:60px}
-.course p{font-size:32px;color:#b9d9ed}
+.course{left:1110px;top:810px;width:730px;--accent:#f0c770;isolation:isolate}
+.course h2{color:#f3d28e;font-size:68px;text-shadow:0 3px 18px #071326,0 0 32px rgba(240,199,112,.2)}
+.course p{font-size:32px;color:#bddbcc}
+.course p strong{font-weight:500;color:#f3d28e}
+.course:before{content:'';position:absolute;inset:-45px -30px -45px -310px;z-index:-1;background:radial-gradient(ellipse at 27% 68%,rgba(94,234,212,.18),transparent 60%),radial-gradient(ellipse at 70% 55%,rgba(240,199,112,.14),transparent 67%);filter:blur(6px)}
+.course:after{content:'';position:absolute;left:0;right:15px;bottom:-20px;height:2px;background:linear-gradient(90deg,#f0c770,rgba(240,199,112,.08));box-shadow:0 0 14px rgba(240,199,112,.5)}
 .sugar{left:1170px;top:625px;width:650px;--accent:#5eb6ff}
 .sugar h2{color:#8ad2ff}
 .sugar p{font-size:32px}
-.move{left:1295px;top:455px;width:535px;--accent:#5eb6ff}
-.move h2{color:#8ad2ff}
+.move{left:1295px;top:455px;width:535px;--accent:#5eead4}
+.move h2{color:#5eead4}
 .move p{font-size:32px}
-.sleep{left:1350px;top:300px;width:480px;--accent:#5eb6ff;isolation:isolate}
+.sleep{left:1350px;top:300px;width:480px;--accent:#c9b3ea;isolation:isolate}
 .sleep:before{content:'';position:absolute;inset:-30px -35px;z-index:-1;background:radial-gradient(ellipse at center,rgba(7,14,36,.68),rgba(7,14,36,.3) 50%,transparent 75%);filter:blur(14px)}
-.sleep h2{color:#8ad2ff;font-size:48px}
+.sleep h2{color:#c9b3ea;font-size:48px}
 .sleep p{font-size:30px;color:#b9d4e8}
+.waypoint .dot{display:none}
+.action-graphic{position:absolute;object-fit:contain;pointer-events:none}
+.course .action-graphic{left:-294px;top:-33px;width:270px;height:210px;filter:drop-shadow(0 12px 12px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(94,234,212,.34))}
+.sugar .action-graphic{left:-184px;top:1px;width:154px;height:130px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.65)) drop-shadow(0 0 14px rgba(94,182,255,.26))}
+.move .action-graphic{left:-159px;top:-10px;width:126px;height:126px;filter:drop-shadow(0 10px 10px rgba(0,0,0,.6)) drop-shadow(0 0 16px rgba(94,234,212,.25))}
+.sleep .action-graphic{left:-170px;top:-14px;width:136px;height:136px;filter:drop-shadow(0 10px 12px rgba(0,0,0,.5)) drop-shadow(0 0 22px rgba(201,179,234,.38))}
 .pg{position:absolute;right:100px;bottom:28px;font-size:22px;color:#9eb6c8}
 </style>
 </head>
@@ -61,10 +70,10 @@ h1 i{font-weight:400;color:#8ad2ff}
   <p class="citation">Sheeran, 2002. Meta-analysis of 422 studies, 82,107 people. For exercise, 54 percent of intenders never acted.</p>
   <div class="inaction"><h2>Change nothing.</h2><p>The one road with a known ending. Decline is the default.</p></div>
  </section>
- <section class="waypoint course" data-step="1"><span class="dot"></span><h2>Your Blueprint course.</h2><p>Building your guided protocol in 18 weeks.</p></section>
- <section class="waypoint sugar" data-step="2"><span class="dot"></span><h2>Watch <i>your sugar.</i></h2><p>Protein and fiber first. Fewer spikes.<span class="below">See your glucose response with a CGM.</span></p></section>
- <section class="waypoint move" data-step="3"><span class="dot"></span><h2>Start <i>moving.</i></h2><p>A brisk walk after your biggest meal. Strength twice a week.</p></section>
- <section class="waypoint sleep" data-step="4"><span class="dot"></span><h2>Protect <i>your sleep.</i></h2><p>Last meal three hours<br>before bed.</p></section>
+ <section class="waypoint course" data-step="1"><img class="action-graphic" src="closing-graphics/protocol-book.png" alt=""><span class="dot"></span><h2>Your Blueprint course.</h2><p>Building your guided protocol in <strong>18 weeks.</strong></p></section>
+ <section class="waypoint sugar" data-step="2"><img class="action-graphic" src="closing-graphics/cgm.svg" alt=""><span class="dot"></span><h2>Watch <i>your sugar.</i></h2><p>Protein and fiber first. Fewer spikes.<span class="below">See your glucose response with a CGM.</span></p></section>
+ <section class="waypoint move" data-step="3"><img class="action-graphic" src="closing-graphics/kettlebell.png" alt=""><span class="dot"></span><h2>Start <i>moving.</i></h2><p>A brisk walk after your biggest meal. Strength twice a week.</p></section>
+ <section class="waypoint sleep" data-step="4"><img class="action-graphic" src="closing-graphics/moon.png" alt=""><span class="dot"></span><h2>Protect <i>your sleep.</i></h2><p>Last meal three hours<br>before bed.</p></section>
  <div class="pg">26 / 27</div>
 </main>
 </body>
