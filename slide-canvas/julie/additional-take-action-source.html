@@ -1,80 +1,63 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<html lang="en"><head><meta charset="utf-8">
 <style>
-@font-face{font-family:Playfair;src:url(../../deck2/fonts/PlayfairDisplay.ttf)}
 @font-face{font-family:Playfair;font-style:italic;font-weight:400 700;src:url(../../deck2/fonts/PlayfairDisplay-Italic.ttf)}
 @font-face{font-family:Inter;font-weight:100 900;src:url(../../deck2/fonts/Inter.ttf)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#070e24}
-.slide{position:relative;width:1920px;height:1080px;overflow:hidden;font:300 30px/1.32 Inter,sans-serif;color:#b8d8ec;background:linear-gradient(160deg,#0b1a33,#040a16);-webkit-font-smoothing:antialiased}
-.art{position:absolute;inset:0;background-image:url(../closers/img/act-fork2.jpg);background-size:118% auto;background-position:center top;background-repeat:no-repeat;filter:saturate(.84)}
-.shade{position:absolute;inset:0;background:radial-gradient(ellipse at 7% 5%,rgba(0,110,255,.17),transparent 43%),linear-gradient(180deg,rgba(4,10,22,.9),rgba(11,26,51,.26) 30%,rgba(4,10,22,.1) 58%,rgba(4,10,22,.6)),linear-gradient(90deg,rgba(11,26,51,.48),transparent 48%)}
-.right-contrast{position:absolute;left:1060px;top:270px;width:860px;height:730px;background:radial-gradient(ellipse at 70% 55%,rgba(7,14,36,.38),transparent 75%)}
+body{background:#040a16}
+.slide{position:relative;width:1920px;height:1080px;overflow:hidden;background:#051326;color:#bdd6e9;font:300 30px/1.32 Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.art{position:absolute;left:-20px;top:80px;width:1680px;height:945px;background:url(closing-graphics/composed-action-road.png) center/cover no-repeat}
+.blend{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,19,38,.12),transparent 39%,transparent 65%,rgba(5,19,38,.78) 72%,#051326 84%),linear-gradient(180deg,#051326,rgba(5,19,38,.9) 10%,transparent 29%,transparent 80%,#051326 95%)}
+.blue-light{position:absolute;inset:0;background:radial-gradient(ellipse at 12% 0,rgba(0,110,255,.12),transparent 44%);pointer-events:none}
+.brand-logo{position:absolute;right:70px;top:35px;width:195px;height:auto}
 .eye{position:absolute;left:110px;top:58px;color:#8ad2ff;font-size:26px;font-weight:400;letter-spacing:.2em}
-.eye:before{content:none}
-h1{position:absolute;left:110px;top:112px;font:italic 400 124px/.98 Playfair,serif;letter-spacing:-.012em;color:#c4e4f7;text-shadow:0 5px 35px #06122b88}
+h1{position:absolute;left:110px;top:112px;font:italic 400 124px/.98 Playfair,serif;letter-spacing:-.012em;color:#c4e4f7}
 h1 i{font-weight:400;background:linear-gradient(95deg,#8ad2ff,#5eead4);background-clip:text;-webkit-background-clip:text;color:transparent}
-.destination{position:absolute;right:105px;top:250px;font:italic 36px/1.1 Playfair,serif;color:#8ad2ff;text-shadow:0 2px 3px #071326,0 0 20px #071326}
-.brand-logo{position:absolute;right:70px;top:35px;width:195px;height:auto;opacity:.96}
-.left-group{position:absolute;left:110px;top:410px;width:595px}
-.stat-row{display:flex;gap:24px;align-items:center}
-.stat-number{font:italic 400 116px/.9 Playfair,serif;color:#5eb6ff;letter-spacing:-.02em;text-shadow:0 0 32px rgba(0,110,255,.28)}
-.stat-caption{max-width:350px;font:italic 35px/1.2 Playfair,serif;color:#b8d8ec}
-.citation{font-size:26px;line-height:1.4;color:#8ca9c1;margin-top:23px;max-width:575px}
-.inaction{margin-top:48px;padding-top:24px;border-top:1px solid rgba(135,166,190,.3)}
-.inaction h2{font:italic 400 64px/1 Playfair,serif;color:#95b9d4}
-.inaction p{font-size:32px;line-height:1.32;color:#9db8cf;margin-top:14px;max-width:575px}
-.waypoint{position:absolute;text-shadow:0 4px 25px rgba(4,13,30,.98)}
-.waypoint h2{font:italic 400 54px/1 Playfair,serif;letter-spacing:-.012em}
-.waypoint p{font-size:30px;line-height:1.32;color:#b9d4e8;margin-top:10px}
+.destination{position:absolute;right:80px;top:250px;font:italic 34px/1.1 Playfair,serif;color:#8ad2ff}
+.left-group{position:absolute;left:110px;top:485px;width:505px}
+.stat-row{display:flex;gap:20px;align-items:center}
+.stat-number{font:italic 400 112px/.9 Playfair,serif;letter-spacing:-.02em;color:#5eb6ff;text-shadow:0 0 32px rgba(0,110,255,.22)}
+.stat-caption{font:italic 33px/1.17 Playfair,serif;color:#b8d8ec;max-width:285px}
+.citation{font-size:24px;line-height:1.35;color:#8ca9c1;margin-top:22px;max-width:505px}
+.inaction{margin-top:32px;padding-top:22px;border-top:1px solid rgba(135,166,190,.23)}
+.inaction h2{font:italic 400 60px/1 Playfair,serif;color:#95b9d4}
+.inaction p{font-size:30px;line-height:1.3;color:#9db8cf;margin-top:12px;max-width:505px}
+.leaders{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}
+.waypoint{position:absolute}
+.waypoint h2{font:italic 400 50px/1 Playfair,serif;letter-spacing:-.012em}
+.waypoint p{font-size:28px;line-height:1.32;color:#bdd6e9;margin-top:10px}
 .waypoint .below{display:block;margin-top:3px}
-.dot{position:absolute;left:-78px;top:27px;width:27px;height:27px;border-radius:50%;background:var(--accent);border:2px solid #8ad2ff;box-shadow:0 0 22px rgba(0,110,255,.65),0 0 45px rgba(94,182,255,.3)}
-.dot:after{content:'';position:absolute;left:26px;top:11px;width:39px;height:2px;background:var(--accent)}
-.course{left:1110px;top:810px;width:730px;--accent:#f0c770;isolation:isolate}
-.course h2{color:#f3d28e;font-size:68px;text-shadow:0 3px 18px #071326,0 0 32px rgba(240,199,112,.2)}
-.course p{font-size:32px;color:#bddbcc}
-.course p strong{font-weight:500;color:#f3d28e}
-.course:before{content:'';position:absolute;inset:-45px -30px -45px -310px;z-index:-1;background:radial-gradient(ellipse at 27% 68%,rgba(94,234,212,.18),transparent 60%),radial-gradient(ellipse at 70% 55%,rgba(240,199,112,.14),transparent 67%);filter:blur(6px)}
-.course:after{content:'';position:absolute;left:0;right:15px;bottom:-20px;height:2px;background:linear-gradient(90deg,#f0c770,rgba(240,199,112,.08));box-shadow:0 0 14px rgba(240,199,112,.5)}
-.sugar{left:1170px;top:625px;width:650px;--accent:#5eb6ff}
-.sugar h2{color:#8ad2ff}
-.sugar p{font-size:32px}
-.move{left:1295px;top:455px;width:535px;--accent:#5eead4}
-.move h2{color:#5eead4}
-.move p{font-size:32px}
-.sleep{left:1350px;top:300px;width:480px;--accent:#c9b3ea;isolation:isolate}
-.sleep:before{content:'';position:absolute;inset:-30px -35px;z-index:-1;background:radial-gradient(ellipse at center,rgba(7,14,36,.68),rgba(7,14,36,.3) 50%,transparent 75%);filter:blur(14px)}
+.sleep{left:1400px;top:300px;width:440px}
 .sleep h2{color:#c9b3ea;font-size:48px}
-.sleep p{font-size:30px;color:#b9d4e8}
-.waypoint .dot{display:none}
-.action-graphic{position:absolute;object-fit:contain;pointer-events:none}
-.course .action-graphic{left:-294px;top:-33px;width:270px;height:210px;filter:drop-shadow(0 12px 12px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(94,234,212,.34))}
-.sugar .action-graphic{left:-184px;top:1px;width:154px;height:130px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.65)) drop-shadow(0 0 14px rgba(94,182,255,.26))}
-.move .action-graphic{left:-159px;top:-10px;width:126px;height:126px;filter:drop-shadow(0 10px 10px rgba(0,0,0,.6)) drop-shadow(0 0 16px rgba(94,234,212,.25))}
-.sleep .action-graphic{left:-170px;top:-14px;width:136px;height:136px;filter:drop-shadow(0 10px 12px rgba(0,0,0,.5)) drop-shadow(0 0 22px rgba(201,179,234,.38))}
+.sleep p{font-size:27px}
+.move{left:1380px;top:440px;width:460px}
+.move h2{color:#5eead4}
+.sugar{left:1360px;top:590px;width:480px}
+.sugar h2{color:#8ad2ff}
+.sugar p{font-size:27px}
+.course{left:1340px;top:770px;width:500px;isolation:isolate}
+.course h2{color:#f3d28e;font-size:64px;line-height:.99}
+.course p{font-size:30px;color:#bddbcc;margin-top:14px}
+.course p strong{font-weight:500;color:#f3d28e;white-space:nowrap}
+.course:before{content:'';position:absolute;inset:-30px -30px -25px -95px;z-index:-1;background:radial-gradient(ellipse at 45% 60%,rgba(240,199,112,.11),transparent 72%);filter:blur(7px)}
+.course:after{content:'';position:absolute;left:0;right:8px;bottom:-19px;height:2px;background:linear-gradient(90deg,#f0c770,rgba(240,199,112,.04));box-shadow:0 0 13px rgba(240,199,112,.35)}
 .pg{position:absolute;right:100px;bottom:28px;font-size:22px;color:#9eb6c8}
-</style>
-</head>
-<body>
+</style></head><body>
 <main class="slide">
- <div class="art"></div><div class="shade"></div><div class="right-contrast"></div>
+ <div class="art"></div><div class="blend"></div><div class="blue-light"></div>
  <img class="brand-logo" src="../closers/img/lla-logo.png" alt="Longevity Life Academy">
  <div class="eye">26 · THE ONE TAKEAWAY</div>
  <h1>One takeaway. <i>Take action.</i></h1>
  <div class="destination">A longer, better life.</div>
+ <svg class="leaders" viewBox="0 0 1920 1080" aria-hidden="true"><g fill="none" stroke-width="1.8" opacity=".7"><path d="M1280 355C1330 355 1340 325 1380 325" stroke="#c9b3ea"/><path d="M1208 432C1265 432 1290 465 1360 465" stroke="#5eead4"/><path d="M1135 540C1225 540 1240 615 1340 615" stroke="#8ad2ff"/></g><g><circle cx="1380" cy="325" r="3" fill="#c9b3ea"/><circle cx="1360" cy="465" r="3" fill="#5eead4"/><circle cx="1340" cy="615" r="3" fill="#8ad2ff"/></g></svg>
  <section class="left-group">
   <div class="stat-row"><div class="stat-number">47%</div><div class="stat-caption">of people who intend to change never start.</div></div>
   <p class="citation">Sheeran, 2002. Meta-analysis of 422 studies, 82,107 people. For exercise, 54 percent of intenders never acted.</p>
   <div class="inaction"><h2>Change nothing.</h2><p>The one road with a known ending. Decline is the default.</p></div>
  </section>
- <section class="waypoint course" data-step="1"><img class="action-graphic" src="closing-graphics/protocol-book.png" alt=""><span class="dot"></span><h2>Your Blueprint course.</h2><p>Building your guided protocol in <strong>18 weeks.</strong></p></section>
- <section class="waypoint sugar" data-step="2"><img class="action-graphic" src="closing-graphics/cgm.svg" alt=""><span class="dot"></span><h2>Watch <i>your sugar.</i></h2><p>Protein and fiber first. Fewer spikes.<span class="below">See your glucose response with a CGM.</span></p></section>
- <section class="waypoint move" data-step="3"><img class="action-graphic" src="closing-graphics/kettlebell.png" alt=""><span class="dot"></span><h2>Start <i>moving.</i></h2><p>A brisk walk after your biggest meal. Strength twice a week.</p></section>
- <section class="waypoint sleep" data-step="4"><img class="action-graphic" src="closing-graphics/moon.png" alt=""><span class="dot"></span><h2>Protect <i>your sleep.</i></h2><p>Last meal three hours<br>before bed.</p></section>
+ <section class="waypoint course" data-step="1"><h2>Your Blueprint course.</h2><p>Building your guided protocol in <strong>18 weeks.</strong></p></section>
+ <section class="waypoint sugar" data-step="2"><h2>Watch <i>your sugar.</i></h2><p>Protein and fiber first. Fewer spikes.<span class="below">See your glucose response with a CGM.</span></p></section>
+ <section class="waypoint move" data-step="3"><h2>Start <i>moving.</i></h2><p>A brisk walk after your biggest meal. Strength twice a week.</p></section>
+ <section class="waypoint sleep" data-step="4"><h2>Protect <i>your sleep.</i></h2><p>Last meal three hours<br>before bed.</p></section>
  <div class="pg">26 / 27</div>
-</main>
-</body>
-</html>
+</main></body></html>
