@@ -34,6 +34,8 @@ The course bridge must connect time, trust and cost barriers to actual course me
 
 The archive PowerPoints preserve the exact original artwork and aspect ratio. They use image-based slides, not editable text/shape reconstructions, so they do not silently redesign the original work. HTML/CSS, source assets and historical snapshots are included for editing. Build any new deliverable with native editable PowerPoint text and shapes if Omri wants editable slide content.
 
+The complete handover ZIP contains all PowerPoints, gallery images, references, prompts and this handover. To avoid repeating the same large source assets fifteen times, all fifteen original source ZIPs are nested in `source/Historical-source-snapshots.tar.xz`; extracting that archive restores the original ZIPs byte for byte. Individual source ZIP downloads remain available directly on the GitHub page. The latest source snapshot includes the current HTML/CSS and original image assets.
+
 ## Sequence and chronology
 
 Revision groups are newest first by Git commit timestamp. Slides inside each group follow the original review-page order; files not shown in that page follow filename order. The combined export follows exactly the same group/slide sequence. The unchanged fork is repeated where it was part of the next three-concept round. Other repeated byte-identical artwork is deduplicated, while all full source snapshots preserve their original context.
