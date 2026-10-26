@@ -2,145 +2,145 @@
   "texts": [
     {
       "text": "Take action.",
-      "x": 110,
-      "y": 65,
+      "x": 80,
+      "y": 48,
       "w": 900,
-      "h": 150,
+      "h": 145,
       "size": 118,
       "font": "Playfair Display",
-      "color": "F4F1EA"
+      "color": "0A1428"
     },
     {
       "text": "Even one thing.",
-      "x": 835,
-      "y": 79,
-      "w": 970,
+      "x": 810,
+      "y": 62,
+      "w": 1030,
       "h": 140,
       "size": 100,
       "font": "Playfair Display",
       "italic": true,
-      "color": "70E6D3"
+      "color": "087F78"
     },
     {
       "text": "Change nothing.",
-      "x": 105,
-      "y": 670,
-      "w": 640,
+      "x": 75,
+      "y": 720,
+      "w": 590,
       "h": 90,
-      "size": 64,
+      "size": 62,
       "font": "Playfair Display",
-      "color": "CFD7E7"
+      "color": "FFFFFF"
     },
     {
-      "text": "Keep the same habits.",
-      "x": 110,
-      "y": 760,
-      "w": 610,
-      "h": 58,
-      "size": 35,
+      "text": "Decline is the default.",
+      "x": 80,
+      "y": 810,
+      "w": 520,
+      "h": 60,
+      "size": 34,
       "font": "Inter",
-      "color": "AAB8CE"
+      "color": "FFFFFF"
     },
     {
       "text": "Choose action.",
-      "x": 1200,
-      "y": 290,
-      "w": 650,
-      "h": 85,
-      "size": 68,
+      "x": 1400,
+      "y": 225,
+      "w": 480,
+      "h": 80,
+      "size": 66,
       "font": "Playfair Display",
-      "color": "F4F1EA"
+      "color": "087F78"
     },
     {
-      "text": "Toward a longer, healthier life.",
-      "x": 1205,
-      "y": 378,
-      "w": 640,
-      "h": 50,
-      "size": 32,
+      "text": "Toward a longer, better life.",
+      "x": 1405,
+      "y": 305,
+      "w": 475,
+      "h": 48,
+      "size": 30,
       "font": "Inter",
-      "color": "BCEFE4"
+      "color": "294F5C"
     },
     {
-      "text": "Move more.",
-      "x": 1110,
-      "y": 875,
-      "w": 180,
-      "h": 60,
-      "size": 32,
+      "text": "Start moving.",
+      "x": 1400,
+      "y": 385,
+      "w": 480,
+      "h": 70,
+      "size": 49,
       "font": "Playfair Display",
-      "color": "F4F1EA"
+      "color": "0A1428"
     },
     {
-      "text": "Walk. Build strength.",
-      "x": 1110,
-      "y": 930,
-      "w": 180,
-      "h": 65,
-      "size": 23,
+      "text": "A brisk walk after your biggest meal. Strength twice a week.",
+      "x": 1405,
+      "y": 455,
+      "w": 475,
+      "h": 105,
+      "size": 30,
       "font": "Inter",
-      "color": "BED3E4"
-    },
-    {
-      "text": "Eat better.",
-      "x": 1295,
-      "y": 875,
-      "w": 180,
-      "h": 60,
-      "size": 32,
-      "font": "Playfair Display",
-      "color": "F4F1EA"
+      "color": "283E59"
     },
     {
       "text": "Watch your sugar.",
-      "x": 1295,
-      "y": 930,
-      "w": 180,
-      "h": 65,
-      "size": 23,
-      "font": "Inter",
-      "color": "BED3E4"
-    },
-    {
-      "text": "Sleep better.",
-      "x": 1480,
-      "y": 875,
-      "w": 180,
-      "h": 60,
-      "size": 32,
+      "x": 1400,
+      "y": 560,
+      "w": 480,
+      "h": 70,
+      "size": 49,
       "font": "Playfair Display",
-      "color": "F4F1EA"
+      "color": "0A1428"
     },
     {
-      "text": "Protect your rest.",
-      "x": 1480,
-      "y": 930,
-      "w": 180,
-      "h": 65,
-      "size": 23,
+      "text": "Protein and fiber first. Fewer spikes.",
+      "x": 1405,
+      "y": 630,
+      "w": 475,
+      "h": 80,
+      "size": 30,
       "font": "Inter",
-      "color": "BED3E4"
+      "color": "283E59"
     },
     {
-      "text": "Your protocol.",
-      "x": 1670,
+      "text": "Protect your sleep.",
+      "x": 1400,
+      "y": 720,
+      "w": 480,
+      "h": 70,
+      "size": 49,
+      "font": "Playfair Display",
+      "color": "0A1428"
+    },
+    {
+      "text": "Last meal three hours before bed.",
+      "x": 1405,
+      "y": 790,
+      "w": 475,
+      "h": 65,
+      "size": 30,
+      "font": "Inter",
+      "color": "283E59"
+    },
+    {
+      "text": "Your protocol, with us.",
+      "x": 1400,
       "y": 875,
-      "w": 230,
-      "h": 60,
-      "size": 32,
+      "w": 480,
+      "h": 65,
+      "size": 47,
       "font": "Playfair Display",
       "italic": true,
-      "color": "F2D59C"
+      "color": "087F78"
     },
     {
-      "text": "The Longevity Blueprint",
-      "x": 1670,
-      "y": 930,
-      "w": 210,
-      "h": 65,
-      "size": 23,
+      "text": "The Longevity Blueprint. Eighteen live weeks, your numbers, a written protocol you keep.",
+      "x": 1405,
+      "y": 945,
+      "w": 475,
+      "h": 120,
+      "size": 29,
       "font": "Inter",
-      "color": "BED3E4"
+      "color": "283E59"
     }
   ],
   "variants": [
