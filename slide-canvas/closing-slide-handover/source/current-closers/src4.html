@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;font-family:Outfit,system-ui,sans-serif;font-weight:300}
+.s{position:relative;width:1920px;height:1080px;overflow:hidden;background:#070E24;color:#F4F1EA;margin:0 0 40px;--ink:#fff;--body:#E6EAF5;--dim:#AEB8D6;--line:rgba(255,255,255,.14);--eye:#5EEAD4}
+.s.light{background:#F3EEE4;color:#0B1A3A;--ink:#0B1A3A;--body:#2A3550;--dim:#5B6882;--line:rgba(11,26,58,.14);--eye:#0F7F8C}
+.hero{position:absolute;right:-30px;top:0;height:1080px}
+.fade{position:absolute;left:1000px;top:0;width:320px;height:1080px;background:linear-gradient(90deg,#070E24 0%,rgba(7,14,36,.6) 55%,rgba(7,14,36,0) 100%)}
+.light .fade{background:linear-gradient(90deg,#F3EEE4 0%,rgba(243,238,228,.6) 55%,rgba(243,238,228,0) 100%)}
+.eye{position:absolute;left:120px;top:72px;font-size:26px;letter-spacing:.22em;color:var(--eye);display:flex;align-items:center;gap:16px;font-weight:400}
+.eye:before{content:'';width:14px;height:14px;border-radius:50%;background:var(--eye);box-shadow:0 0 18px var(--eye)}
+h1{font-family:'Playfair Display',serif;font-weight:400;font-size:108px;line-height:1.02;letter-spacing:-.01em;position:absolute;left:120px;top:120px;width:900px;color:var(--ink)}
+h1 i{font-style:italic;background:linear-gradient(90deg,#A9C6FF,#5EEAD4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.light h1 i{background:linear-gradient(90deg,#2F6BFF,#0F7F8C);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{position:absolute;left:120px;top:356px;font-family:'Playfair Display',serif;font-style:italic;font-size:40px;line-height:1.3;color:var(--body);width:900px}
+.node{position:absolute;left:120px;width:860px}
+.node .k{font-size:22px;letter-spacing:.22em;font-weight:400;display:flex;gap:18px;align-items:center}
+.node .k span{color:var(--dim)}
+.node .n{font-family:'Playfair Display',serif;font-size:42px;line-height:1.1;color:var(--ink);margin:8px 0 6px}
+.node .n i{font-style:italic}
+.node .d{font-size:26px;line-height:1.3;color:var(--body);max-width:800px}
+.lead{position:absolute;height:2px;background:linear-gradient(90deg,var(--c),rgba(255,255,255,0));opacity:.9}
+.lead:after{content:'';position:absolute;left:-6px;top:-6px;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 16px var(--c)}
+.tb{position:absolute;left:120px;right:120px;bottom:56px;display:grid;grid-template-columns:1.1fr 1.5fr 1fr 1.7fr 1.2fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tb div{padding:22px 26px 22px 0;border-right:1px solid var(--line);margin-right:26px}
+.tb div:last-child{border-right:0;margin-right:0}
+.tb .l{font-size:20px;letter-spacing:.2em;color:var(--dim);font-weight:400;margin-bottom:8px}
+.tb .v{font-family:'Playfair Display',serif;font-size:32px;line-height:1.15;color:var(--ink)}
+.logo{position:absolute;right:120px;bottom:56px;height:84px}
+.pg{position:absolute;left:560px;top:78px;font-size:22px;color:var(--dim)}
+</style></head><body>
+
+<section class="s" id="bp-d">
+<img class="hero" src="img/bp-dark.jpg" alt=""><div class="fade"></div>
+<div class="eye">24 · THE NEXT STEP</div>
+<h1>The Longevity <i>Blueprint.</i></h1>
+<div class="sub">The same cake, built week by week, on your own numbers.</div>
+<div class="node" style="top:470px;--c:#A9C6FF"><div class="k" style="color:#A9C6FF">01 <span>WEEKS 1 TO 3</span></div><div class="n">Foundation</div><div class="d">Your bloodwork is the baseline. Your why, written on day one.</div></div>
+<div class="lead" style="left:990px;top:506px;width:300px;--c:#A9C6FF"></div>
+<div class="node" style="top:612px;--c:#5EEAD4"><div class="k" style="color:#5EEAD4">02 <span>WEEKS 4 TO 7</span></div><div class="n">Your data</div><div class="d">A glucose monitor, included. Fourteen days reading your own curve.</div></div>
+<div class="lead" style="left:990px;top:648px;width:300px;--c:#5EEAD4"></div>
+<div class="node" style="top:754px;--c:#F0C770"><div class="k" style="color:#F0C770">03 <span>WEEKS 8 TO 13</span></div><div class="n">The four layers</div><div class="d">Sleep, food, movement, stress. One experiment a week, on you.</div></div>
+<div class="lead" style="left:990px;top:790px;width:300px;--c:#F0C770"></div>
+<div class="node" style="top:896px;--c:#C9B3EA;width:860px"><div class="k" style="color:#C9B3EA">04 <span>WEEKS 14 TO 18</span></div><div class="n">Your protocol</div><div class="d">Your panel read, your stack audited, your protocol written and kept.</div></div>
+<div class="lead" style="left:990px;top:932px;width:300px;--c:#C9B3EA"></div>
+<div class="tb" style="display:none"></div>
+<img class="logo" src="img/lla-logo.png" alt="">
+<div class="pg">24 / 25</div>
+</section>
+
+<section class="s light" id="bp-l">
+<img class="hero" src="img/bp-light.jpg" alt=""><div class="fade"></div>
+<div class="eye">24 · THE NEXT STEP</div>
+<h1>The Longevity <i>Blueprint.</i></h1>
+<div class="sub">The same cake, built week by week, on your own numbers.</div>
+<div class="node" style="top:470px;--c:#2F6BFF"><div class="k" style="color:#2F6BFF">01 <span>WEEKS 1 TO 3</span></div><div class="n">Foundation</div><div class="d">Your bloodwork is the baseline. Your why, written on day one.</div></div>
+<div class="lead" style="left:990px;top:506px;width:300px;--c:#2F6BFF"></div>
+<div class="node" style="top:612px;--c:#0F7F8C"><div class="k" style="color:#0F7F8C">02 <span>WEEKS 4 TO 7</span></div><div class="n">Your data</div><div class="d">A glucose monitor, included. Fourteen days reading your own curve.</div></div>
+<div class="lead" style="left:990px;top:648px;width:300px;--c:#0F7F8C"></div>
+<div class="node" style="top:754px;--c:#B8860B"><div class="k" style="color:#B8860B">03 <span>WEEKS 8 TO 13</span></div><div class="n">The four layers</div><div class="d">Sleep, food, movement, stress. One experiment a week, on you.</div></div>
+<div class="lead" style="left:990px;top:790px;width:300px;--c:#B8860B"></div>
+<div class="node" style="top:896px;--c:#7A5FB5"><div class="k" style="color:#7A5FB5">04 <span>WEEKS 14 TO 18</span></div><div class="n">Your protocol</div><div class="d">Your panel read, your stack audited, your protocol written and kept.</div></div>
+<div class="lead" style="left:990px;top:932px;width:300px;--c:#7A5FB5"></div>
+<img class="logo" src="img/lla-logo-dark-text@2x.png" alt="">
+<div class="pg">24 / 25</div>
+</section>
+
+<!-- companion spec slide: title block as its own frame, dark -->
+<section class="s" id="bp-spec">
+<img class="hero" src="img/bp-dark.jpg" alt="" style="right:auto;left:-120px;transform:scaleX(-1);opacity:.55"><div class="fade" style="left:420px;width:420px;background:linear-gradient(270deg,#070E24 0%,rgba(7,14,36,.7) 55%,rgba(7,14,36,0) 100%)"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,14,36,0) 0%,rgba(7,14,36,0) 40%,#070E24 60%)"></div>
+<div class="eye" style="left:900px">24 · THE NEXT STEP</div>
+<h1 style="left:900px;width:900px">Eighteen weeks. <i>One protocol.</i></h1>
+<div class="sub" style="left:900px;width:900px;top:380px">Built live, in a small class, on your own numbers.</div>
+<div style="position:absolute;left:900px;top:480px;width:900px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px">
+<div style="padding:26px 0;border-top:1px solid var(--line)"><div class="l" style="font-size:20px;letter-spacing:.2em;color:var(--dim);margin-bottom:10px">FORMAT</div><div style="font-family:'Playfair Display',serif;font-size:40px;line-height:1.1">18 live sessions</div><div style="font-size:26px;color:var(--body);margin-top:8px">Fifty minutes, one evening a week. Recorded if you miss one.</div></div>
+<div style="padding:26px 0;border-top:1px solid var(--line)"><div class="l" style="font-size:20px;letter-spacing:.2em;color:var(--dim);margin-bottom:10px">CLASS</div><div style="font-family:'Playfair Display',serif;font-size:40px;line-height:1.1">Eight to fifteen people</div><div style="font-size:26px;color:var(--body);margin-top:8px">A certified instructor every week. Classmates who know your name.</div></div>
+<div style="padding:26px 0;border-top:1px solid var(--line)"><div class="l" style="font-size:20px;letter-spacing:.2em;color:var(--dim);margin-bottom:10px">YOUR DATA</div><div style="font-family:'Playfair Display',serif;font-size:40px;line-height:1.1">Bloodwork and a glucose monitor</div><div style="font-size:26px;color:var(--body);margin-top:8px">Your labs as the baseline. The monitor included, applied live in week five.</div></div>
+<div style="padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="l" style="font-size:20px;letter-spacing:.2em;color:var(--dim);margin-bottom:10px">WHAT YOU LEAVE WITH</div><div style="font-family:'Playfair Display',serif;font-size:40px;line-height:1.1">A written protocol</div><div style="font-size:26px;color:var(--body);margin-top:8px">Nutrition, movement, sleep, stress, supplements, and the signals you keep watching.</div></div>
+</div>
+<div style="position:absolute;left:900px;bottom:64px;font-family:'Playfair Display',serif;font-style:italic;font-size:34px;color:#A9C6FF">Tonight was the map. The Blueprint is the walk.</div>
+<img class="logo" src="img/lla-logo.png" alt="" style="right:auto;left:120px;bottom:64px">
+<div class="pg">24 / 25</div>
+</section>
+
+
+<section class="s" id="bp-sell">
+<img class="hero" src="img/bp-dark.jpg" alt=""><div class="fade"></div>
+<div class="eye">24 · THE NEXT STEP</div>
+<h1 style="width:1000px;font-size:104px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:350px;width:980px;font-size:38px">Built to remove the three things that stop people.</div>
+<div style="position:absolute;left:120px;top:440px;width:900px;display:flex;flex-direction:column;gap:22px">
+<div style="display:grid;grid-template-columns:118px 1fr;column-gap:26px;align-items:baseline"><div style="font-size:22px;letter-spacing:.22em;color:#FF7AA8;font-weight:400">TIME</div><div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:28px;color:#8E9AB8">"I don't have hours a day."</div><div style="font-family:'Playfair Display',serif;font-size:35px;line-height:1.15;color:#fff;margin-top:4px">Fifty minutes, <i style="color:#FF7AA8">one evening a week.</i> Recorded if life gets in the way.</div></div></div>
+<div style="display:grid;grid-template-columns:118px 1fr;column-gap:26px;align-items:baseline"><div style="font-size:22px;letter-spacing:.22em;color:#F0C770;font-weight:400">TRUST</div><div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:28px;color:#8E9AB8">"Who do I listen to?"</div><div style="font-family:'Playfair Display',serif;font-size:35px;line-height:1.15;color:#fff;margin-top:4px">A certified instructor, live, <i style="color:#F0C770">in a class of eight to fifteen</i> who know your name.</div></div></div>
+<div style="display:grid;grid-template-columns:118px 1fr;column-gap:26px;align-items:baseline"><div style="font-size:22px;letter-spacing:.22em;color:#C9B3EA;font-weight:400">COST</div><div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:28px;color:#8E9AB8">"It needs a lab and a budget."</div><div style="font-family:'Playfair Display',serif;font-size:35px;line-height:1.15;color:#fff;margin-top:4px">No lab of your own. <i style="color:#C9B3EA">Your bloodwork, a glucose monitor included,</i> four supplements, not a shelf.</div></div></div>
+</div>
+<div style="position:absolute;left:120px;bottom:52px;width:900px"><div style="font-family:'Playfair Display',serif;font-size:32px;line-height:1.2;color:#fff">You leave with a <i style="font-style:italic;background:linear-gradient(90deg,#A9C6FF,#5EEAD4);-webkit-background-clip:text;background-clip:text;color:transparent">written protocol,</i> tested on your own body for eighteen weeks. Yours to keep.</div></div>
+<img class="logo" src="img/lla-logo.png" alt="">
+<div class="pg">24 / 25</div>
+</section>
+
+
+<section class="s" id="bp-big">
+<div style="position:absolute;inset:0;background:radial-gradient(1200px 700px at 70% 20%,rgba(79,123,255,.28),transparent 70%),radial-gradient(900px 600px at 15% 100%,rgba(94,234,212,.16),transparent 70%)"></div>
+<div class="eye" style="font-size:30px">24 · THE NEXT STEP</div>
+<h1 style="width:1400px;font-size:120px;top:118px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:262px;width:1700px;font-size:46px">Eighteen live sessions. Four phases. One protocol, written for your body and tested on your own numbers.</div>
+<div style="position:absolute;left:120px;top:410px;width:1680px;display:grid;grid-template-columns:3fr 4fr 6fr 5fr;gap:14px;font-size:30px;letter-spacing:.22em;font-weight:400">
+<div style="color:#A9B4FF">PHASE ONE</div><div style="color:#8FC6FF">PHASE TWO</div><div style="color:#5EEAD4">PHASE THREE</div><div style="color:#F0C770">PHASE FOUR</div></div>
+<div style="position:absolute;left:120px;top:470px;width:1680px;display:grid;grid-template-columns:repeat(18,1fr);gap:14px"><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#6D7CFF,#6D7CFFCC);box-shadow:0 0 60px #6D7CFF;outline:3px solid #fff;outline-offset:4px;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#6D7CFF,#6D7CFFCC);box-shadow:0 0 26px #6D7CFF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#6D7CFF,#6D7CFFCC);box-shadow:0 0 26px #6D7CFF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 26px #4FA3FF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 60px #4FA3FF;outline:3px solid #fff;outline-offset:4px;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 26px #4FA3FF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 26px #4FA3FF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 60px #F0C770;outline:3px solid #fff;outline-offset:4px;"></div></div>
+<div style="position:absolute;left:120px;top:600px;width:1680px;height:110px">
+<div style="position:absolute;left:0;width:330px"><div style="font-family:'Playfair Display',serif;font-size:44px;color:#fff">Week 1</div><div style="font-size:30px;color:#A9B4FF;line-height:1.25">your bloodwork,<br>your baseline</div></div>
+<div style="position:absolute;left:376px;width:560px"><div style="font-family:'Playfair Display',serif;font-size:44px;color:#fff">Week 5</div><div style="font-size:30px;color:#8FC6FF;line-height:1.25">your glucose monitor arrives, included</div></div>
+<div style="position:absolute;right:0;width:520px;text-align:right"><div style="font-family:'Playfair Display',serif;font-size:44px;color:#fff">Week 18</div><div style="font-size:30px;color:#F0C770;line-height:1.25">your protocol, in writing, yours to keep</div></div>
+</div>
+<div style="position:absolute;left:120px;top:760px;width:1680px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px">
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:64px;color:#FF7AA8;line-height:1">Time</div><div style="font-size:32px;line-height:1.3;color:#F4F1EA;margin-top:14px">Fifty minutes, one evening a week. Recorded if life gets in the way.</div></div>
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:64px;color:#F0C770;line-height:1">Trust</div><div style="font-size:32px;line-height:1.3;color:#F4F1EA;margin-top:14px">A certified instructor, live, in a class of eight to fifteen who know your name.</div></div>
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:64px;color:#C9B3EA;line-height:1">Cost</div><div style="font-size:32px;line-height:1.3;color:#F4F1EA;margin-top:14px">No lab of your own. Your bloodwork, a glucose monitor included, four supplements, not a shelf.</div></div>
+</div>
+<img class="logo" src="img/lla-logo.png" alt="" style="height:72px;bottom:24px;right:120px;left:auto">
+</section>
+
+
+<section class="s" id="bp-cake">
+<div style="position:absolute;inset:0;background:radial-gradient(1000px 900px at 20% 62%,rgba(79,123,255,.30),transparent 70%),radial-gradient(900px 700px at 92% 80%,rgba(240,199,112,.16),transparent 70%)"></div>
+<img src="img/cake-navy.jpg" alt="" style="position:absolute;left:0;top:190px;width:757px;height:1137px;object-fit:cover;mask-image:linear-gradient(180deg,#000 0%,#000 76%,transparent 86%);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 76%,transparent 86%)">
+<div class="eye">24 · THE NEXT STEP</div>
+<h1 style="width:1400px;font-size:104px;top:116px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:238px;width:1300px;font-size:40px">The same cake, built week by week, on your own numbers.</div>
+<div style="position:absolute;left:662px;top:376px;width:80px;height:2px;background:#F3EBDD;opacity:.9"></div><div style="position:absolute;left:654px;top:369px;width:16px;height:16px;border-radius:50%;background:#F3EBDD;box-shadow:0 0 16px #F3EBDD"></div><div style="position:absolute;left:764px;top:343px;width:620px"><div style="font-family:'Playfair Display',serif;font-size:36px;line-height:1;color:#F3EBDD">Therapies, the icing</div><div style="font-size:24px;line-height:1.3;color:#E6EAF5;margin-top:7px;white-space:nowrap">Sessions 14 and 15 · your panel read, your stack audited</div></div><div style="position:absolute;left:662px;top:479px;width:80px;height:2px;background:#C9B3EA;opacity:.9"></div><div style="position:absolute;left:654px;top:472px;width:16px;height:16px;border-radius:50%;background:#C9B3EA;box-shadow:0 0 16px #C9B3EA"></div><div style="position:absolute;left:764px;top:446px;width:620px"><div style="font-family:'Playfair Display',serif;font-size:36px;line-height:1;color:#C9B3EA">Stress</div><div style="font-size:24px;line-height:1.3;color:#E6EAF5;margin-top:7px;white-space:nowrap">Session 12 · stress seen on your own trace</div></div><div style="position:absolute;left:662px;top:587px;width:80px;height:2px;background:#F6B96B;opacity:.9"></div><div style="position:absolute;left:654px;top:580px;width:16px;height:16px;border-radius:50%;background:#F6B96B;box-shadow:0 0 16px #F6B96B"></div><div style="position:absolute;left:764px;top:554px;width:620px"><div style="font-family:'Playfair Display',serif;font-size:36px;line-height:1;color:#F6B96B">Movement</div><div style="font-size:24px;line-height:1.3;color:#E6EAF5;margin-top:7px;white-space:nowrap">Session 10 · the walk after your biggest meal, measured</div></div><div style="position:absolute;left:662px;top:706px;width:80px;height:2px;background:#8FCB7A;opacity:.9"></div><div style="position:absolute;left:654px;top:699px;width:16px;height:16px;border-radius:50%;background:#8FCB7A;box-shadow:0 0 16px #8FCB7A"></div><div style="position:absolute;left:764px;top:673px;width:620px"><div style="font-family:'Playfair Display',serif;font-size:36px;line-height:1;color:#8FCB7A">Food</div><div style="font-size:24px;line-height:1.3;color:#E6EAF5;margin-top:7px;white-space:nowrap">Sessions 6 to 8 · the plate rebuilt on your glucose curve</div></div><div style="position:absolute;left:662px;top:831px;width:80px;height:2px;background:#8AD2FF;opacity:.9"></div><div style="position:absolute;left:654px;top:824px;width:16px;height:16px;border-radius:50%;background:#8AD2FF;box-shadow:0 0 16px #8AD2FF"></div><div style="position:absolute;left:764px;top:798px;width:620px"><div style="font-family:'Playfair Display',serif;font-size:36px;line-height:1;color:#8AD2FF">Sleep</div><div style="font-size:24px;line-height:1.3;color:#E6EAF5;margin-top:7px;white-space:nowrap">Session 11 · one week of a sleep protocol, measured overnight</div></div><div style="position:absolute;left:662px;top:922px;width:80px;height:2px;background:#F4B0BE;opacity:.9"></div><div style="position:absolute;left:654px;top:915px;width:16px;height:16px;border-radius:50%;background:#F4B0BE;box-shadow:0 0 16px #F4B0BE"></div><div style="position:absolute;left:764px;top:889px;width:620px"><div style="font-family:'Playfair Display',serif;font-size:36px;line-height:1;color:#F4B0BE">The foundation</div><div style="font-size:24px;line-height:1.3;color:#E6EAF5;margin-top:7px;white-space:nowrap">Sessions 1 to 3 · your bloodwork, your why</div></div>
+<div style="position:absolute;left:1440px;top:326px;width:360px;display:flex;flex-direction:column;gap:32px">
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:56px;color:#FF7AA8;line-height:1">Time</div><div style="font-size:26px;line-height:1.3;color:#F4F1EA;margin-top:10px">Fifty minutes, one evening a week, for eighteen weeks. Recorded if life gets in the way.</div></div>
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:56px;color:#F0C770;line-height:1">Trust</div><div style="font-size:26px;line-height:1.3;color:#F4F1EA;margin-top:10px">A certified instructor, live, in a class of eight to fifteen who know your name.</div></div>
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:56px;color:#C9B3EA;line-height:1">Cost</div><div style="font-size:26px;line-height:1.3;color:#F4F1EA;margin-top:10px">No lab of your own. Your bloodwork, a glucose monitor included, four supplements, not a shelf.</div></div>
+<div style="font-family:'Playfair Display',serif;font-style:italic;font-size:30px;line-height:1.25;color:#A9C6FF">You leave with a written protocol, yours to keep.</div>
+</div>
+<img class="logo" src="img/lla-logo.png" alt="" style="height:72px;top:60px;bottom:auto;right:120px">
+</section>
+
+
+<section class="s" id="bp-site">
+<div style="position:absolute;inset:0;background:radial-gradient(1200px 700px at 70% 20%,rgba(0,110,255,.30),transparent 70%),radial-gradient(900px 600px at 15% 100%,rgba(94,182,255,.16),transparent 70%)"></div>
+<div class="eye" style="font-size:30px">24 · THE NEXT STEP</div>
+<h1 style="width:1400px;font-size:120px;top:118px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:262px;width:1700px;font-size:46px">18 live sessions. 4 phases. One protocol. Taught live, in small classes of 8 to 15.</div>
+<div style="position:absolute;left:120px;top:410px;width:1680px;display:grid;grid-template-columns:3fr 4fr 6fr 5fr;gap:14px;font-size:28px;letter-spacing:.2em;font-weight:400">
+<div style="color:#A9B4FF">FOUNDATION</div><div style="color:#8FC6FF">YOUR DATA</div><div style="color:#5EEAD4">LIFESTYLE SYSTEMS</div><div style="color:#F0C770">YOUR BLUEPRINT</div></div>
+<div style="position:absolute;left:120px;top:470px;width:1680px;display:grid;grid-template-columns:repeat(18,1fr);gap:14px"><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#6D7CFF,#6D7CFFCC);box-shadow:0 0 60px #6D7CFF;outline:3px solid #fff;outline-offset:4px;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#6D7CFF,#6D7CFFCC);box-shadow:0 0 26px #6D7CFF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#6D7CFF,#6D7CFFCC);box-shadow:0 0 26px #6D7CFF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 26px #4FA3FF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 60px #4FA3FF;outline:3px solid #fff;outline-offset:4px;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 26px #4FA3FF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#4FA3FF,#4FA3FFCC);box-shadow:0 0 26px #4FA3FF99;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#5EEAD4,#5EEAD4CC);box-shadow:0 0 26px #5EEAD499;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 26px #F0C77099;"></div><div style="height:96px;border-radius:16px;background:linear-gradient(180deg,#F0C770,#F0C770CC);box-shadow:0 0 60px #F0C770;outline:3px solid #fff;outline-offset:4px;"></div></div>
+<div style="position:absolute;left:120px;top:600px;width:1680px;height:110px">
+<div style="position:absolute;left:0;width:330px"><div style="font-family:'Playfair Display',serif;font-size:44px;color:#fff">Week 1</div><div style="font-size:30px;color:#A9B4FF;line-height:1.25">reframing aging,<br>your baseline</div></div>
+<div style="position:absolute;left:376px;width:620px"><div style="font-family:'Playfair Display',serif;font-size:44px;color:#fff">Week 5</div><div style="font-size:30px;color:#8FC6FF;line-height:1.25">glucose monitor, applied live in class</div></div>
+<div style="position:absolute;right:0;width:560px;text-align:right"><div style="font-family:'Playfair Display',serif;font-size:44px;color:#fff">Week 18</div><div style="font-size:30px;color:#F0C770;line-height:1.25">your written blueprint, your next 90 days</div></div>
+</div>
+<div style="position:absolute;left:120px;top:760px;width:1680px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:44px">
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:46px;color:#FF7AA8;line-height:1.05">Live, not recorded.</div><div style="font-size:28px;line-height:1.3;color:#F4F1EA;margin-top:12px">A certified instructor and your classmates, every week. Real questions, real answers.</div></div>
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:46px;color:#5EEAD4;line-height:1.05">Your data, your curriculum.</div><div style="font-size:28px;line-height:1.3;color:#F4F1EA;margin-top:12px">Your bloodwork, your glucose readings and your food experiments shape every session.</div></div>
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:46px;color:#F0C770;line-height:1.05">Small classes, real accountability.</div><div style="font-size:28px;line-height:1.3;color:#F4F1EA;margin-top:12px">Eight to fifteen people who know your name. Peer coaching in the final weeks.</div></div>
+<div><div style="font-family:'Playfair Display',serif;font-style:italic;font-size:46px;color:#C9B3EA;line-height:1.05">A written protocol you keep.</div><div style="font-size:28px;line-height:1.3;color:#F4F1EA;margin-top:12px">Tested on your body for eighteen weeks. The one deliverable built to outlast the course.</div></div>
+</div>
+<img class="logo" src="img/lla-logo.png" alt="" style="height:72px;top:60px;bottom:auto;right:120px">
+</section>
+
+
+<section class="s" id="bp-cur">
+<div style="position:absolute;inset:0;background:radial-gradient(1200px 700px at 72% 15%,rgba(0,110,255,.28),transparent 70%),radial-gradient(900px 600px at 10% 100%,rgba(94,234,212,.14),transparent 70%)"></div>
+<div class="eye" style="font-size:28px">24 · THE NEXT STEP</div>
+<h1 style="width:1400px;font-size:104px;top:112px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:236px;width:1700px;font-size:38px">Eighteen live sessions, fifty minutes each, in a class of eight to fifteen with a certified instructor. Four phases, one protocol.</div>
+<div style="position:absolute;left:120px;top:370px;width:1680px;display:grid;grid-template-columns:1fr 1fr 1.15fr 1.15fr;gap:44px"><div><div style="height:8px;border-radius:4px;background:#A9B4FF;box-shadow:0 0 28px #A9B4FF"></div>
+<div style="display:flex;align-items:baseline;gap:16px;margin-top:22px"><span style="font-family:'Playfair Display',serif;font-size:44px;color:#A9B4FF">01</span><span style="font-family:'Playfair Display',serif;font-size:40px;color:#fff">Foundation</span></div>
+<div style="font-size:23px;letter-spacing:.18em;color:#A9B4FF;margin:4px 0 18px;font-weight:400">SESSIONS 1 TO 3</div>
+<div style="display:flex;flex-direction:column;gap:9px"><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#A9B4FF;margin-top:13px"></span><span>Aging as a trajectory you can change</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#A9B4FF;margin-top:13px"></span><span>Lifespan, healthspan, and your why</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#A9B4FF;margin-top:13px"></span><span>Your baseline: grip, sit to stand, resting heart rate</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#A9B4FF;margin-top:13px"></span><span>Blood sugar as the central signal</span></div></div></div><div><div style="height:8px;border-radius:4px;background:#5EB6FF;box-shadow:0 0 28px #5EB6FF"></div>
+<div style="display:flex;align-items:baseline;gap:16px;margin-top:22px"><span style="font-family:'Playfair Display',serif;font-size:44px;color:#5EB6FF">02</span><span style="font-family:'Playfair Display',serif;font-size:40px;color:#fff">Your data</span></div>
+<div style="font-size:23px;letter-spacing:.18em;color:#5EB6FF;margin:4px 0 18px;font-weight:400">SESSIONS 4 TO 7</div>
+<div style="display:flex;flex-direction:column;gap:9px"><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EB6FF;margin-top:13px"></span><span>Glucose variability and metabolic flexibility</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EB6FF;margin-top:13px"></span><span>Your glucose monitor, applied live in class</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EB6FF;margin-top:13px"></span><span>Fourteen days reading your own curve</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EB6FF;margin-top:13px"></span><span>Plate architecture: protein, fiber, processing</span></div></div></div><div><div style="height:8px;border-radius:4px;background:#5EEAD4;box-shadow:0 0 28px #5EEAD4"></div>
+<div style="display:flex;align-items:baseline;gap:16px;margin-top:22px"><span style="font-family:'Playfair Display',serif;font-size:44px;color:#5EEAD4">03</span><span style="font-family:'Playfair Display',serif;font-size:40px;color:#fff">The four layers</span></div>
+<div style="font-size:23px;letter-spacing:.18em;color:#5EEAD4;margin:4px 0 18px;font-weight:400">SESSIONS 8 TO 13</div>
+<div style="display:flex;flex-direction:column;gap:9px"><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EEAD4;margin-top:13px"></span><span>Meal timing and fasting, matched to your data</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EEAD4;margin-top:13px"></span><span>Gut health and fiber diversity</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EEAD4;margin-top:13px"></span><span>Movement as a glucose tool, the post-meal walk</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EEAD4;margin-top:13px"></span><span>Sleep, circadian rhythm, overnight glucose</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EEAD4;margin-top:13px"></span><span>Stress and the spikes that are not food</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#5EEAD4;margin-top:13px"></span><span>Cardiovascular longevity: cholesterol, fitness</span></div></div></div><div><div style="height:8px;border-radius:4px;background:#F0C770;box-shadow:0 0 28px #F0C770"></div>
+<div style="display:flex;align-items:baseline;gap:16px;margin-top:22px"><span style="font-family:'Playfair Display',serif;font-size:44px;color:#F0C770">04</span><span style="font-family:'Playfair Display',serif;font-size:40px;color:#fff">Your blueprint</span></div>
+<div style="font-size:23px;letter-spacing:.18em;color:#F0C770;margin:4px 0 18px;font-weight:400">SESSIONS 14 TO 18</div>
+<div style="display:flex;flex-direction:column;gap:9px"><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#F0C770;margin-top:13px"></span><span>Reading your blood panel: normal versus optimal</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#F0C770;margin-top:13px"></span><span>Supplements and tests through the evidence hierarchy</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#F0C770;margin-top:13px"></span><span>Social health and purpose as longevity drivers</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#F0C770;margin-top:13px"></span><span>Your personal longevity blueprint, written and peer reviewed</span></div><div style="display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.3;color:#E6EAF5"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#F0C770;margin-top:13px"></span><span>Your next ninety days</span></div></div></div></div>
+<div style="position:absolute;left:120px;bottom:48px;width:1680px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;font-family:'Playfair Display',serif;font-size:33px;line-height:1.25;color:#fff">You leave with <i style="background:linear-gradient(90deg,#A9C6FF,#5EEAD4);-webkit-background-clip:text;background-clip:text;color:transparent">a written protocol</i> across nutrition, movement, sleep, stress and supplements, tested on your own numbers for eighteen weeks, with a ninety-day plan and a class that holds you to it.</div>
+<img class="logo" src="img/lla-logo.png" alt="" style="height:72px;top:60px;bottom:auto;right:120px">
+</section>
+
+
+<section class="s" id="bp-4">
+<div class="photo" style="background-image:url(img/bg-desk.jpg);background-position:center 30%;opacity:.75"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,14,36,.55) 0%,rgba(7,14,36,.86) 55%,rgba(7,14,36,.96) 100%)"></div>
+<div style="position:absolute;inset:0;background:radial-gradient(1100px 700px at 75% 10%,rgba(0,110,255,.28),transparent 70%)"></div>
+<div class="eye" style="font-size:28px">24 · THE NEXT STEP</div>
+<h1 style="width:1400px;font-size:108px;top:112px">The Longevity <i>Blueprint.</i></h1>
+<div class="sub" style="top:238px;width:1700px;font-size:40px">Eighteen live sessions. A class of eight to fifteen. One written protocol.</div>
+<div style="position:absolute;left:120px;top:360px;width:1680px;display:grid;grid-template-columns:repeat(4,1fr);gap:48px"><div style="position:relative;padding-top:30px">
+<div style="position:absolute;left:0;top:0;width:100%;height:8px;border-radius:4px;background:#A9B4FF;box-shadow:0 0 34px #A9B4FF"></div>
+<div style="font-family:'Playfair Display',serif;font-size:176px;line-height:.9;color:#A9B4FF;text-shadow:0 0 50px #A9B4FF66;letter-spacing:-.03em">01</div>
+<div style="font-family:'Playfair Display',serif;font-size:50px;line-height:1.05;color:#fff;margin-top:22px">Foundation</div>
+<div style="font-size:24px;letter-spacing:.2em;color:#A9B4FF;margin:10px 0 22px;font-weight:400">SESSIONS 1 TO 3</div>
+<div style="font-size:34px;line-height:1.35;color:#F4F1EA">Your baseline and your why.<br>Blood sugar as the signal.</div></div><div style="position:relative;padding-top:30px">
+<div style="position:absolute;left:0;top:0;width:100%;height:8px;border-radius:4px;background:#5EB6FF;box-shadow:0 0 34px #5EB6FF"></div>
+<div style="font-family:'Playfair Display',serif;font-size:176px;line-height:.9;color:#5EB6FF;text-shadow:0 0 50px #5EB6FF66;letter-spacing:-.03em">02</div>
+<div style="font-family:'Playfair Display',serif;font-size:50px;line-height:1.05;color:#fff;margin-top:22px">Your data</div>
+<div style="font-size:24px;letter-spacing:.2em;color:#5EB6FF;margin:10px 0 22px;font-weight:400">SESSIONS 4 TO 7</div>
+<div style="font-size:34px;line-height:1.35;color:#F4F1EA">Your glucose monitor, live in class.<br>The plate rebuilt on your curve.</div></div><div style="position:relative;padding-top:30px">
+<div style="position:absolute;left:0;top:0;width:100%;height:8px;border-radius:4px;background:#5EEAD4;box-shadow:0 0 34px #5EEAD4"></div>
+<div style="font-family:'Playfair Display',serif;font-size:176px;line-height:.9;color:#5EEAD4;text-shadow:0 0 50px #5EEAD466;letter-spacing:-.03em">03</div>
+<div style="font-family:'Playfair Display',serif;font-size:50px;line-height:1.05;color:#fff;margin-top:22px">The four layers</div>
+<div style="font-size:24px;letter-spacing:.2em;color:#5EEAD4;margin:10px 0 22px;font-weight:400">SESSIONS 8 TO 13</div>
+<div style="font-size:34px;line-height:1.35;color:#F4F1EA">Sleep, food, movement, stress.<br>One experiment a week, on you.</div></div><div style="position:relative;padding-top:30px">
+<div style="position:absolute;left:0;top:0;width:100%;height:8px;border-radius:4px;background:#F0C770;box-shadow:0 0 34px #F0C770"></div>
+<div style="font-family:'Playfair Display',serif;font-size:176px;line-height:.9;color:#F0C770;text-shadow:0 0 50px #F0C77066;letter-spacing:-.03em">04</div>
+<div style="font-family:'Playfair Display',serif;font-size:50px;line-height:1.05;color:#fff;margin-top:22px">Your blueprint</div>
+<div style="font-size:24px;letter-spacing:.2em;color:#F0C770;margin:10px 0 22px;font-weight:400">SESSIONS 14 TO 18</div>
+<div style="font-size:34px;line-height:1.35;color:#F4F1EA">Your panel read, your stack audited.<br>Your protocol, written and kept.</div></div></div>
+<div style="position:absolute;left:120px;bottom:52px;width:1680px;font-family:'Playfair Display',serif;font-style:italic;font-size:38px;line-height:1.2;color:#fff">You leave with <span style="background:linear-gradient(90deg,#A9C6FF,#5EEAD4);-webkit-background-clip:text;background-clip:text;color:transparent">a written protocol</span>, tested on your own numbers for eighteen weeks. Yours to keep.</div>
+<img class="logo" src="img/lla-logo.png" alt="" style="height:72px;top:60px;bottom:auto;right:120px">
+</section>
+
+</body></html>
