@@ -65,9 +65,9 @@ textarea:focus{outline:none;border-color:#006EFF;box-shadow:0 0 0 3px rgba(0,110
 <button id="send" class="btn p" onclick="sendAll()">Send my comments</button>
 <div id="lb" onclick="this.classList.remove('on')"><img id="lbimg" src="" alt=""><div class="x">Close</div></div>
 <div id="play"><img id="pimg" src="" alt=""><div class="x" onclick="stopPlay()">Close, Esc</div><div class="c" id="pc"></div></div>
-<script src="corrections.js?v=20261026-order2"></script>
+<script src="corrections.js?v=20261026-order3"></script>
 <script>
-const P=[...document.querySelectorAll('.slot img.main')].map(im=>im.getAttribute('src'));let k=0;
+const P=allSlots.map(s=>s.querySelector('img.main').getAttribute('src'));let k=0;
 const T=[...document.querySelectorAll('textarea')];
 T.forEach(t=>{const key='v45-deck-c'+t.dataset.n;const own=localStorage.getItem(key);t.value=own===null?(localStorage.getItem('julie-deck-c'+t.dataset.n)||''):own;if(t.value)document.getElementById('v'+t.dataset.n).textContent=own===null?'Original review comment':'Saved';t.addEventListener('input',()=>{localStorage.setItem(key,t.value);document.getElementById('v'+t.dataset.n).textContent='Saved';});});
 function sendAll(){const lines=T.filter(t=>t.value.trim()).map(t=>'Slide '+(t.dataset.displayN||t.dataset.n)+', '+t.dataset.t+':\n'+t.value.trim());if(!lines.length){alert('No comments yet. Type into a box next to a slide first.');return;}const body=lines.join('\n\n')+'\n\n'+location.href;navigator.clipboard&&navigator.clipboard.writeText(body).catch(()=>{});location.href='mailto:gitter.omri@gita-agency.com?subject='+encodeURIComponent('Masterclass deck, my comments')+'&body='+encodeURIComponent(body);}
