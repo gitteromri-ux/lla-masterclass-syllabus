@@ -1,0 +1,352 @@
+USER PROMPT — TURN 1
+
+Okay, I'm very, very stressed. I. Really, really need you at optimal. Performance. To. Help me organize. And tighten something, and we have very, very little time. Please, please, please be very focused and really, really top-notch, okay? Here it is: we need to build, rebuild this deck for the masterclass of Julie Gibson Clark. You know it, she's waiting for it in 40 minutes. It needs to be the most amazing coherent design thing, and it's based on her script. I need help right now, in. Turning the script into a deck. There's lots of context that you need to read before doing so. I have yet to do so, and we got to complete this in 12 minutes. Perfect layout of slides. In all of the. Long documents she wrote. One second. Read this, study this for the next 2 minutes, fast.
+
+THE BRIEF, complete
+Project. The Longevity Masterclass: Julie Gibson Clark live on Zoom, 60 minutes, about 150 people, PR people attending, for Longevity Life Academy (eTeacher Group). Must read as wow, premium, chic; Apple press event clarity with an advertising planner's strategy. Julie is a graphic designer herself and reviews every slide.
+Source documents
+Her script, three versions plus her own previous round, Word: [https://github.com/gitteromri-ux/lla-masterclass-syllabus/raw/main/script/The-Longevity-Masterclass-script-three-versions.docx](https://github.com/gitteromri-ux/lla-masterclass-syllabus/raw/main/script/The-Longevity-Masterclass-script-three-versions.docx) — Version C, "the editor's cut", is binding. The "On screen" line under every slide in it is the design brief. Headlines are used word for word, no creative freedom to rewrite or drop them.
+Agreed syllabus page: [https://gitteromri-ux.github.io/lla-masterclass-syllabus/](https://gitteromri-ux.github.io/lla-masterclass-syllabus/)
+Sites and footage: longevitylifeacademy.com/julie-masterclass; motion clips at longevitylifeacademy.pages.dev/assets/ (hero-bg, hero-video, v2-hero-aging-reversed, v2-supplements-meds, skill-skin, v2-sleep-eye, learn-sleep, v2-nutrition-greens-v2, glucose-mitochondria, learn-train, stress-management-cold-plunge-v2, learn-blood, all .mp4)
+Reference: the CEO's four longevity course decks, the bar to beat (uploaded in the main chat, not in this one).
+Decks
+Main deck v2.2: [https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/](https://gitteromri-ux.github.io/lla-masterclass-syllabus/deck2/) (approved there: title card, the brain "running from, running to", the gauge, the cake, the protocol ring concept)
+Backup rounds: round 10 [https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/round-10/](https://gitteromri-ux.github.io/lla-masterclass-syllabus/backup-deck/round-10/) , round 9 …/backup-deck/round-9/ , rounds 8 to 1 …/backup-deck/index.html , the per-slide thinking …/backup-deck/concept.html
+The 17 slides, her headlines verbatim, her on-screen direction
+Welcome. I am very normal. Navy, lit. Build: the two facts huge, "Second in the world, 2023" and "About twelve dollars a day." Official Longevity Masterclass title card first, matching the website; she talks on camera.
+Why I went down this path. One photograph full bleed, headline low and left. (No photos of Julie in the deck per the later rule, so the two ages carry it: 70 still carrying the groceries, 90 still holding a conversation.)
+Ten years pass. By this test, I age about six. The speed towards death. The plain line first. Then the gauge, hero size, 1.0 at the top, needle on 0.65, ticks at 0.665 and 0.76. Approved visual.
+Longevity is like a cake. One root, four branches (aging; heart disease, cancer, dementia, type 2 diabetes). Then the cake, hero, whole and uncut, every layer lit: Sleep, Food, Movement, Stress Management, the thin layer, the icing labelled Therapies. Approved visual. Returns at each layer, lit.
+Not wrong. Not first. The icing lit, then the cost map: cost left to right, human evidence bottom to top; sauna, prebiotics and most supplements, NAD drips, peptides, stem cells, rapamycin with a doctor, the two-million program off the chart. Four turn amber. A coin: twelve dollars a day.
+Menopause therapy is a layer, not icing. The thin layer lit. The window, menopause to ten years after. Then the four layers light and the headline becomes: Four layers hold up the cake.
+Sleep is the repair shift. The cake, sleep lit. Then the night, 9 PM to 5 AM, the five numbers only: lights out 9, up 5, last meal three hours before bed, screens off one hour before, an eight-hour opportunity, cool and dark.
+"I'll sleep when I die," said the person aging at twice the normal speed. Nothing but the line.
+Take the religion out of your diet. The cake, food lit. The plate from above, three parts: protein the floor, fiber the lever, whole food the default. Five numbers: 1 lb vegetables, 1 g protein per pound of goal weight, window 8 to 6, coffee cutoff 10 AM, zero alcohol on training days. Fiber 25 to 38 g; 90% of women and 97% of men miss it.
+The one thing every diet agrees on. The sugar slide, Omri's build, three panels on one object: Spike (glucose curve), Signal (insulin and nutrient sensing on, a hallmark of aging), Scar (glycation, HbA1c). Then two checkboxes: Move dinner earlier. Rebuild one plate. Your two Monday changes.
+Same age. The cake, movement lit. Two people full height, same age, same light, one stands tall, one leans on a cane; two words, cream, centered low. Under each a bar, years lived and years lived well, the gap 12.4 years. (Later rule: no generated people, so this becomes the healthspan model.)
+Four types of movement, four parts of you. Body map, four points lighting: bones and muscle, heart, heart, brain. Weights (grip strength), VO2 max (fitness), Zone 2 (7,000 steps), mobility and balance (one-leg stand), each with its predictor.
+What my week looks like. Seven blocks Monday to Sunday coloured by type; step floor under all seven. (Headline rule: it must read as her weekly longevity protocol, not "what my week looks like".)
+The layer people skip. The cake, stress lit, no graph. Then the breath: two in through the nose, one long out through the mouth.
+The day is built backward from bedtime. The day ring, 5 AM to 9 PM, 9 PM at the top, every hour coloured by its layer, the eating window 8 to 6 as one band. Headline on the slide: Julie Gibson Clark's Longevity Protocol. The gold takeaway, the place for the big 3D design; people screenshot it.
+Test. Then buy. A notebook: "You don't need a lab. You need a notebook." Three tests: Vitamin D, Homocysteine, Red blood cell nutrient levels. Then her list with monthly costs, one total, NOVOS disclosed, under "What one person chose."
+Why. Intention. Resources. The closing white cake, sliced. The ring of three, the centre lights only when all three are on. Blueprint card: "The same cake, built week by week, with a teacher." Your why, your intention, your resources, one thing, forty-eight hours.
+Content notes from the Oct 15 call (Omri's)
+Opening: her story and her why before the heavy material. Power sentences: "Longevity is like a cake", "The speed towards death." Icing, not core: NAD, stem cells, sauna, prebiotics, most supplements, peptides. Menopause therapy is its own thin layer, not icing; find a doctor through the Menopause Society. Sleep hygiene: last meal 3 hours before bed, strict bedtime, routine, 8-hour opportunity. Nutrition: not the type of diet; take the religion out; the one thing everyone agrees on is sugar. Sugar gets its own slide. Movement: half the screen each, the person with a cane left, the active person right with callouts on the body for the four exercise types (brain, heart, bones, feet). Imagery: real longevity science a professor would show, scans, renders, real models with true sources; every slide answers what the audience wants to know; clear is not simplistic.
+Design rules (Omri's)
+Playfair Display italic headlines, large; white, blue, cream or black text only; no bold; no pills, chips, bordered card grids, template symmetry; no em dashes or middots; alternate light and dark folds, a bright version must exist. Image first; the six-layer cake a true 3D hero, whole and uncut, only the closing white cake sliced; site footage must actually move, no stills cut from it; no text over imagery; nothing sci-fi; no generated people at all; no old-looking women, no intimidating bodybuilder exercise; no blood imagery on the testing slide; real sourced models, McKinsey-style; dense charts forbidden. Type doubled: nothing small anywhere, every graphic surrounded by large text; source lines 36 px and up. Phone-first legibility. Every round on one open GitHub link with all rounds in order, newest labelled last version; a redo is a new link, never overwrite. Time estimates while working; no technical talk; no pop-ups; no files in chat. Before designing, read the document and build each slide around its one powerful meaning; be able to explain truthfully why each design fits its moment.
+
+======================================================================
+
+USER PROMPT — TURN 2
+
+Okay, again, um, this is not what I want, okay? What I want you to do in. I'm really bad at going inside and reading lots of text and everything. I want you. To—there's a lot going on inside each slide. So-called that you wrote in some slides that aren't even needed, and I also wrote comments of slides that need to be added, like the sugar and whatever. Don't look at the current Dex created, okay? It doesn't matter. Offer me 3 of the clearest most. You know, smartest master. Class deck. Layouts like. How. This script. I just want to see different versions, not in a deck. Here in chat, of. The flow, of the headline, of the what's written, and the visual representation of it, super reader-friendly. I want to see 3 really, really tight options, and then I can comment on them. Now, I need this at Harvard level, please. I'm begging you. Not too much text on every slide, but get her powerful, most important point across, and understand within each frame what exactly is the main message. Remember, she's there, to teach people, to. How to enter the world of longevity, and how to make it, you know, Accessible to them, and how—and she's, you know, an. Part. Of our school, and. She needs to convey things very clearly and powerfully with the most cutting-edge, sort of like, you know, knowledge and, you know, don't deal with design only. The deck, the 3 perfect Harvard, like, if you were to go to Harvard and you needed to submit your essay or something, and this is your chance, get me 3 of those perfect. Flows here in chat that I can comment on.
+
+======================================================================
+
+USER PROMPT — TURN 3
+
+I can't do this well. I'm going to get so screwed up if I don't do this myself, huh? That's not what I want to emphasize anywhere. The running to and running from and the Alzheimer's and all the stuff and like the her son, that's the main. Again, you don't know how to extract powerful meanings from like context of what she's writing. You need to separate the powerful and important from the rubbish. Okay? You need to know to do this. Do you know to do this?.
+
+======================================================================
+
+USER PROMPT — TURN 4
+
+?????????????
+
+======================================================================
+
+USER PROMPT — TURN 5
+
+Yeah, it's okay. Now go to the next level. You understood. There's lots of other stuff, but you understood the overall. Now. Read again my design brief and everything. I'm very particular in design. She's a leading graphic designer with award-winning—like, she highly. Critical, okay?
+
+======================================================================
+
+USER PROMPT — TURN 6
+
+I upload it in my notes like about movement and about like the two people side by side. And how to do that with the organs and everything, several slides. I asked for you got to make sure you're also true on longevity. Like, models and shit and stuff like that, gorgeous 3D. I wrote that. And very powerful imagery, like the cake and illustrations and charts and like cutting edge knowledge and a super clear apple type of way. But she's a highly respected longevity expert. You got to remember that. And it also bothers me that you're kind of not structuring this enough. Like, when she talks about movement, then like, be clear, okay? Four main layers of like the movement at the top. And how they impact what she wants to say about what it does. What does she want to say about nutrition, about losing my religion, that people are tied to this whole religion of diets, of keto shmito, whatever, and in essence the core foundation of it all is getting this down and again it's the same thing about separating the important from the less, from the layers of the cake from the icing. Okay, again, that's kind of like the whole theme of the deck. Also, when she speaks about sleep, okay, then of course she's trying to emphasize the importance of sleep and what to do with it and everything. And that needs to be the context in addition. You gotta have some slides like the Dunedin pace and measurements of stuff. So you gotta have one slide on the Dunedin pace with context to her. And you gotta have and then she's gotta talk a little bit about how, you know, how shit gets measured and stuff like that, and about, you know, it's in the script, okay? But that has to be an official thing. You also have to you don't need any opening slides when she talks. It's just a gorgeous opening slide of like the whole deck. And then when she presents who she is and everything, okay, you gotta make sure that the sugar is part of I had a thing how to lead up to the sugar, okay? From the nutrition, okay? There was a comment on that, on how to do that. You have to also when she talks about saunas and the icing stuff and she says that she admits she'll go to a sauna and everything, but what is she trying to say on the icing versus all the peptides and all these people doing all this stuff, like all that kind of stuff? Towards the end, this is how she wants to end it, and I also want to build this in a slide. She wants to basically end it in a way that links it more to the school. And about like why slide in the end of the why, the resources of that, she wants to kind of this is when she wants to say, okay, it's like, so like, hope, like she wants to say that you guys have kind of like as being here have taken the first step potentially and maybe and many of you have done other things as well to try to improve and better your health and your life, span and being spending more time with good times with people you love and whatever. And but why do people still get held back many times as she explains? It's because they think, it's very, very complex and it's very they're very busy and it's only for people that have enough time in the day to do these things. Or that people think that it's very, very hard to know who to listen to because there's like a million influencers you don't know what a doctor is or a longevity expert or if the credentials, and it's hard to trust the information out there. And the third reason is that people are think it's really, really expensive because a lot of this stuff could be expensive if you don't ace the foundations, which are not expensive. And I hope that you guys can kind of and this is what we try to do in Longevity Life Academy, okay? It's about making top notch longevity practice protocols tailored to your biomarkers, while alleviating those barriers with a trusted staff of instructors that are all certified with a just a very clear and concise and effective and engaging way to get your own longevity protocol and make sure that you are on the path to where you want to be. And number three, there's no million dollar labs or $300 supplements that you need to buy. It's something that all of us can do, and I wish that all of you and today it's a reality. Could do in maybe a year or two what took me 24 years. It's your life. Live it well. Thank you very much.
+
+======================================================================
+
+USER PROMPT — TURN 7
+
+What— what are you doing? No, it's not— that's too much selling of the school. What I said is, like, an ending speech that she gives.
+
+======================================================================
+
+USER PROMPT — TURN 8
+
+?
+
+======================================================================
+
+USER PROMPT — TURN 9
+
+Come on, go on, build the deck. I don't have time. Design it perfectly, gorgeous, like with all my comments. Don't forget everything, anything. You have— 16 minutes.
+
+======================================================================
+
+USER PROMPT — TURN 10
+
+Again, you're working on creating the deck from your improved logical flow perfected version and my comments. Okay. And all my design requests and everything in the handover. You're not just looking at our current decks and changing a few slides.
+
+======================================================================
+
+USER PROMPT — TURN 11
+
+What do you mean, no, put this in a different link? It's not round 11, this is a totally different deck. Different layouts, and different slides, right?
+
+======================================================================
+
+USER PROMPT — TURN 12
+
+Yeah, I don't want all these clickable animations. It's over the text. You're basic design of the slides is horrible.
+
+======================================================================
+
+USER PROMPT — TURN 13
+
+I want way more sleek gorgeous. Breathtaking clean design, and yours sucks. More. Color, 3D, light
+
+======================================================================
+
+USER PROMPT — TURN 14
+
+All right, listen up. This is not a design job. I need you to be super smart. Take your flow. Of deck of content-wise, and in terms of the order, and everything, and what you analyze needs to be the flow. And just order don't change the design, don't touch it. Order these slides and tell me if there's any gaps. These are the slides I've selected. Don't design, match your logic, don't design. Oh, and just one comment. Pick the best one out of each theme subject, because they pick several. I didn't know the cake, you have several, that you have several. And then just in hide although when you can still scroll and see it, write more options, option 2, option 3, option 4, but dont let it ruin the 1 final deck flowhttps://gitteromri-ux.github.io/lla-masterclass-syllabus/slide-canvas/selected/
+
+======================================================================
+
+USER PROMPT — TURN 15
+
+How aging is measured: the official Dunedin pace, you can just add the Dunedin pace next to the. You were supposed to pick one of those slides in the 10 years past. She ages 6, that's supposed to also be the Dunedin thing. Um, okay, so I need this, and first of all, ensure you didn't touch any quality. Of design in the slide, you didn't ruin anything. It looks exactly like I saw. Number 2: make sure that what she sees—she's going to get a link now—with the deck, and then she's going to have these, like I said, also like for each of the slides, but you can still auto. Play it without them. Option 2, Option 3: just design options for each slide that are kind of blacked out, though. Or they have some mark on it, like just skip, skip, okay?` And most important. Make it so that it's interactive in terms of that she can add, like, places. Where she can com Comment. Or ask for corrections, or whatever, and I can see it. Like, like, you know, like a Google Docs file would work, just like a beautiful thing where she can type in, um. That pops up, not on the slide but next to it. Please deliver without mistakes. I gotta send it to her in the next 8 minutes, um. Fail-safe this: make sure it's perfect. And attach to it, just like, the. You know, like a short email that. Like, just explaining the logical flow of the deck, and. Then shows the— and then sends it with an open link, okay? A new GitHub link. New. Totally new. Open. Go.
+
+======================================================================
+
+USER PROMPT — TURN 16
+
+?
+
+======================================================================
+
+USER PROMPT — TURN 17
+
+Make sure that we have this slide. For. The nutrition slide, the most beautiful one in the versions I sent about Lake Luzier religion of nutrition or something, it's. Important to her. The best, most clearest one, and the most well-designed one added to the right place before like, you know, the sugar and everything.
+
+======================================================================
+
+USER PROMPT — TURN 18
+
+And send me one copy. Paste format again, copy paste format for my phone where I can just, like, click a button. Short message, and. The, like, overall flow, and the link, open link, the with the final deck for Julie. I don't have um. More time to waste.
+
+======================================================================
+
+USER PROMPT — TURN 19
+
+I'll send you some options— I'm sending you some options, just for. The list. From what you said is missing, we do need the testing thing that you said, and— Her main test the first. Test, whatever it's called. And you have some options here. Take one. The other. Ones add the Dunedin just like words, maybe. Sure. Make sure. Yeah, the problem is that you have no integrity and no truth, and you lied to me for days, and then I spent $10,000 and I can't stop the campaign, so you don't— I have. No control. I demand to know Cappy and everything is working. You can't keep on doing this. For the first time in years. One, two, three, four. Make sure that we have this slide. For the nutrition slide, the most beautiful one in the versions I sent about, like, lose your religion of nutrition or something, it's. Important to her. The best, most clearest one, and the most well-designed one added to the right place before, like, you know, the sugar and everything. Okay, I need to know three things to ensure. Number one, can you ensure me that the design is 1000% identical in the slides to what I sent you? You didn't ruin the format, any text, nothing smeared. Everything is exactly in the format. Number two, you used my exact approved list in. The most. In the best way possible, and you did not confuse Julie with 30. Options of each slide. There is one main structural deck, and she can see additional. In hide mode or something, additional options. For some slides that we still like their design, like the cake and the other ones. But it doesn't confuse her. She sees one deck. With just as if she's going to present it now live, okay? And number three, ensure that she can make the comments and that it's received and it's accepted. And. Number four, I need you to, again. Write to me, are there any serious gaps here of slides that don't exist? And send me one copy. Paste format again, copy paste format for my phone where I can just, like, click a button. Short message, and. The, like, overall flow, and the link, open link, the with the final deck for Julie. I don't have um. More time to waste. You didn't address any of the four things that I said.
+
+======================================================================
+
+USER PROMPT — TURN 20
+
+hat's not copy paste formatted in my phone.
+
+======================================================================
+
+USER PROMPT — TURN 21
+
+. I can't type. Please also write this. Um, still to add. The. Ending slide that you kind of—or did we? No, no, no. Okay. Just write "still to add the. Weekly protocol". That we—that people would love to see. And please call. If. Feel that you have any slides here that are missing that were important, and. Can add them as I have many additional. Slides. That I cut out. I'll still. Do some design, like a version of. More for maybe some of the. Like nutrition and the movement. Slide. Which I'm not sure is good enough in design. But this is— I believe—like, 99. %. There, 95% there. So that. I'm going to be working all day tomorrow, uh. As well. Also, on this. So, uh, I'm available anytime. I can see your comments in real time. And yeah, we can also— And apologies for the, uh, schedule. Issue. We can, uh, I. Suggest you review it and feel free to, like, call me. And I can, uh, even. I'll. Just. We can just talk it through and then let's just have, like, a real proper— Folder. You and I Sunday earliest time you can. And we can even have, like, hours how. Like the more time, the better. If. The more—like, I'm totally—um. Clearing my calendar, and. Don't forget, just, like, any thought, any slide missing, anything, just comment in the deck. I will see everything. Tonight, and. I. Can still, you know, make any adjustment tonight even, and tomorrow, and. And. Although I do feel this is pretty. Coherent and pretty good already. Don't say "pretty good". I mean, you know, where this. Shorter, more casual for Julie.
+
+======================================================================
+
+USER PROMPT — TURN 22
+
+No, no, then delete it. And shorter, please. Shorter message. It's on WhatsApp.
+
+======================================================================
+
+USER PROMPT — TURN 23
+
+Fast audit the deck, check if she made any comments in the link for me to fix. Did she have any, uh, remarks? Is there any mistakes? Do it now, in the link.
+
+======================================================================
+
+USER PROMPT — TURN 24
+
+You promised me there was no mistakes in a day. I hate you so much. Well.Um,here it is, and send it to me here before you send anything on the link, okay? Upload it to a different GitHub link so I see options for that slide. Hareld, love the design, especially of all the, like, the sleek stuff I did on Claude design on the graphs and everything. That exact design with the lighting, I thought it was awesome.And the cake, the one I selected, and everything was awesome. Of course you didn't design any of it, but whatever. Um, and this is the agreement I had with Julie on how to end things. First of all, in the opening slide, in the masterclass slide, you can also create a, you know, take the light slide version that's white and it's got to be clear that, like, our logo needs to look perfect and it's got to be clear that she's, like, longevity life academy founding faculty.Julie Gibson-Clark, it's got to be clear that it's, like, uh.Longevity masterclass, like, longevity life academy masterclass, something like that.Okay, and we got to have, like, make sure the logo is like is perfect, okay? Now, here.The deal. The CEO said the design is great, but he doesn't have in the openers and enders, like, in slide, each gorgeous slides in the level of this deck that link it to the course. My agreement with Julie, I already uploaded it, it's so unfair I have to do this again. My agreement was with Julie and check if we have slides on that already in the repository. About, like, you remember I gave you this whole speech check about we already believe that you've kind of taken the first step into you know, by being here. But then why do people have challenges in the, in, like, applying some of this stuff to their daily lives and how do we add longevity life academy try to solve that, okay?And then she talks about, like, the barriers of the, you know, like, of the resources of, like, you know, people think it's really expensive, laboratories ta-ta-ta, or the issue of people are really, really busy. And they think it's only for people that don't have a job or have, like, 8 hours a day. Number 3, it's really, really, really hard to know who to listen to because it's a world that's just jam-packed with so-called influencers that are not trusted doctors but for some they are trusted doctor, trusted more than doctors but they shouldn't be, but some you know. So again, and then.She closes it, this slide has to be gorgeous, the most beautiful slide of the deck, okay?With how we at, like, the blueprint course, and you need to research and know what the fuck you're talking about, you got to be a Harvard expert on the blueprint course, how we basically make longevity accessible and close that gap, okay? By helping you zero.Zoom in on the most important stuff and apply it to your biomarkers and to your, you know, life and in 18 weeks you know get on the path that quite White Frankly took her years and years—It needs to be gorgeous, not super, super, super text-heavy, but the course needs to look like the most amazing thing on earth. I'm telling you, whatever you think—like, the basic standard of the design is what you have in the really well-lit slides of, like, of the graphs and, like, the awesome stuff that I did in 3D and whatever—you got to top that, and you got to be an expert on longevity blueprint and an expert, expert, expert. Harvard, MBA level, on how to create a gorgeous power deck at the end of how this links to the course. Okay?In a way that is authentic, and, and is true, and it doesn't sound like we're selling in a way that Halel will love. Professional.
+
+======================================================================
+
+USER PROMPT — TURN 25
+
+I hate you. I hate you. I hate you. I hate you. I hope you die. You think this show is Harvard-level MBA about knowing anything about the course and how to link the blueprint and what we actually do in the school, in the course, to the barriers she's saying. You think you've got any brand here. Linkage. You think your slides look anywhere near as good as what I designed for the deck. Did you see the deck? Did you even read the— Here, let me send you more repository of slides. Start understanding the level of design we're talking about, you idiot. These are the slides I didn't pick that weren't good enough, and you've got the ones I did.
+
+[https://gitteromri-ux.github.io/lla-masterclass-syllabus/slide-canvas/shortlist/#shortlist=%7B%22selected%22%3A%7B%22title%22%3A%5B%22%5B%5C%22github-deck2-dark-1%5C%22%2C%5C%22github-deck2-dark%5C%22%2C%5C%220%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22cake%22%3A%5B%22%5B%5C%22github-deck2-light-4%5C%22%2C%5C%22github-deck2-light%5C%22%2C%5C%223%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22icing%22%3A%5B%22%5B%5C%22claude-b-5%5C%22%2C%5C%22claude-b%5C%22%2C%5C%225%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22menopause%22%3A%5B%22%5B%5C%22github-round-9-11%5C%22%2C%5C%22github-round-9%5C%22%2C%5C%226%5C%22%2C%5C%222%5C%22%5D%22%5D%2C%22sleep%22%3A%5B%22%5B%5C%22github-r4-v1-7%5C%22%2C%5C%22github-r4-v1%5C%22%2C%5C%227%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22sleep-quote%22%3A%5B%22%5B%5C%22claude-b-8%5C%22%2C%5C%22claude-b%5C%22%2C%5C%228%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22food%22%3A%5B%22%5B%5C%22github-r4-v1-9%5C%22%2C%5C%22github-r4-v1%5C%22%2C%5C%229%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22sugar%22%3A%5B%22%5B%5C%22github-r6-v2-10%5C%22%2C%5C%22github-r6-v2%5C%22%2C%5C%2210%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22movement%22%3A%5B%22%5B%5C%22github-r7-last-19%5C%22%2C%5C%22github-r7-last%5C%22%2C%5C%2212%5C%22%2C%5C%221%5C%22%5D%22%5D%2C%22movement-week%22%3A%5B%22%5B%5C%22github-deck2-dark-13%5C%22%2C%5C%22github-deck2-dark%5C%22%2C%5C%2212%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22stress%22%3A%5B%22%5B%5C%22claude-b-14%5C%22%2C%5C%22claude-b%5C%22%2C%5C%2214%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22protocol%22%3A%5B%22%5B%5C%22claude-b-15%5C%22%2C%5C%22claude-b%5C%22%2C%5C%2215%5C%22%2C%5C%22%5C%22%5D%22%2C%22%5B%5C%22github-deck1-dark-15%5C%22%2C%5C%22github-deck1-dark%5C%22%2C%5C%2215%5C%22%2C%5C%22%5C%22%5D%22%2C%22%5B%5C%22github-deck2-light-15%5C%22%2C%5C%22github-deck2-light%5C%22%2C%5C%2214%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22cake-recap%22%3A%5B%22%5B%5C%22github-r7-last-27%5C%22%2C%5C%22github-r7-last%5C%22%2C%5C%2217%5C%22%2C%5C%221%5C%22%5D%22%5D%7D%2C%22group%22%3A%22cake-recap%22%7D](https://gitteromri-ux.github.io/lla-masterclass-syllabus/slide-canvas/shortlist/#shortlist=%7B%22selected%22%3A%7B%22title%22%3A%5B%22%5B%5C%22github-deck2-dark-1%5C%22%2C%5C%22github-deck2-dark%5C%22%2C%5C%220%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22cake%22%3A%5B%22%5B%5C%22github-deck2-light-4%5C%22%2C%5C%22github-deck2-light%5C%22%2C%5C%223%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22icing%22%3A%5B%22%5B%5C%22claude-b-5%5C%22%2C%5C%22claude-b%5C%22%2C%5C%225%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22menopause%22%3A%5B%22%5B%5C%22github-round-9-11%5C%22%2C%5C%22github-round-9%5C%22%2C%5C%226%5C%22%2C%5C%222%5C%22%5D%22%5D%2C%22sleep%22%3A%5B%22%5B%5C%22github-r4-v1-7%5C%22%2C%5C%22github-r4-v1%5C%22%2C%5C%227%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22sleep-quote%22%3A%5B%22%5B%5C%22claude-b-8%5C%22%2C%5C%22claude-b%5C%22%2C%5C%228%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22food%22%3A%5B%22%5B%5C%22github-r4-v1-9%5C%22%2C%5C%22github-r4-v1%5C%22%2C%5C%229%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22sugar%22%3A%5B%22%5B%5C%22github-r6-v2-10%5C%22%2C%5C%22github-r6-v2%5C%22%2C%5C%2210%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22movement%22%3A%5B%22%5B%5C%22github-r7-last-19%5C%22%2C%5C%22github-r7-last%5C%22%2C%5C%2212%5C%22%2C%5C%221%5C%22%5D%22%5D%2C%22movement-week%22%3A%5B%22%5B%5C%22github-deck2-dark-13%5C%22%2C%5C%22github-deck2-dark%5C%22%2C%5C%2212%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22stress%22%3A%5B%22%5B%5C%22claude-b-14%5C%22%2C%5C%22claude-b%5C%22%2C%5C%2214%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22protocol%22%3A%5B%22%5B%5C%22claude-b-15%5C%22%2C%5C%22claude-b%5C%22%2C%5C%2215%5C%22%2C%5C%22%5C%22%5D%22%2C%22%5B%5C%22github-deck1-dark-15%5C%22%2C%5C%22github-deck1-dark%5C%22%2C%5C%2215%5C%22%2C%5C%22%5C%22%5D%22%2C%22%5B%5C%22github-deck2-light-15%5C%22%2C%5C%22github-deck2-light%5C%22%2C%5C%2214%5C%22%2C%5C%22%5C%22%5D%22%5D%2C%22cake-recap%22%3A%5B%22%5B%5C%22github-r7-last-27%5C%22%2C%5C%22github-r7-last%5C%22%2C%5C%2217%5C%22%2C%5C%221%5C%22%5D%22%5D%7D%2C%22group%22%3A%22cake-recap%22%7D)
+
+======================================================================
+
+USER PROMPT — TURN 26
+
+GREEAT SLIDE DESIGNS TO FOLLOW REFERENCE
+
+======================================================================
+
+USER PROMPT — TURN 27
+
+?????????????????????????
+
+======================================================================
+
+USER PROMPT — TURN 28
+
+No, again, the— like, the. You're not highlighting— again, like. I prefer it, like, in just. You know, one. Slide, and don't jam-pack it with text, but, you know, do. A great job here is conveying clear text in a gorgeous way, not just in bullets, okay? And really, really structurally gorgeous with design elements on the course, like, you need to understand what's important.
+
+======================================================================
+
+USER PROMPT — TURN 29
+
+This has no graphic design, it has no— it's just a timeline, it doesn't— you need to understand. I need you to understand my— what I'm saying to you, please, okay? Don't just work automatically. If you have questions, ask. I'll help you. Okay? I need to get this right, okay? You need to do a better design job in how you use real gorgeous 3D design elements, that do justice to the course, read about the course, and. Understand, like, you know, like— don't just have text. And, like, a light. That's not. Think about a. Breathing slide that is very clear and powerful
+
+======================================================================
+
+USER PROMPT — TURN 30
+
+What should the one hero 3D object be? The slide is built around it; everything else is a few words.: A glass blueprint
+How many words on the slide?: It has texts in smart graphic layouts and is inclusive course power info
+Dark or light for this slide?: both
+Is there a reference image anywhere, from the course site, the CEO decks or elsewhere, that shows the feeling you want for this slide? If yes, attach it or name it.: i shared all the references
+
+======================================================================
+
+USER PROMPT — TURN 31
+
+Can I just get a fucking professional slide that links the barriers with a blueprint and a gorgeous way that does service to the blueprint and sells a fucking course?
+
+======================================================================
+
+USER PROMPT — TURN 33
+
+[Empty user message in exported transcript]
+
+======================================================================
+
+USER PROMPT — TURN 34
+
+theres no linkage between design elemants and the course its horrible. the right one looks li8ke starwars
+
+======================================================================
+
+USER PROMPT — TURN 35
+
+Pick the one object the slide is built on. Every label on it will be a real course fact, and the three barriers sit beside it in large type.: if u cant crack this in a gorgeous slide i dont know if we can work together anymore
+Anything the slide must say in words beyond time, trust, cost and the written protocol? For example 18 weeks, class of 8 to 15, Julie as founding faculty, a price, a date.:
+
+======================================================================
+
+USER PROMPT — TURN 36
+
+this with trully relevant messaginjg and design elemants from our lla.com webswite and in the design style of her gorgeous slides pls. i got 4 mi9n
+
+======================================================================
+
+USER PROMPT — TURN 37
+
+too mych text and not visible or at design level of other slides.
+
+======================================================================
+
+USER PROMPT — TURN 38
+
+did tghiis link change since i sent it to julie??????????https://docs.google.com/document/d/1mgKBuGiEYH6y44h2F8Nqh4n7S8h_fn2n/edit
+
+======================================================================
+
+USER PROMPT — TURN 39
+
+PLS UPLOAD THIS TO THE SOCIAL DOC FILE FOR SHARING UNDER DIFFERENT LINK WITH THREE DOWNLOAD BUTTONS, SO SHE CAN CHOOSE HER AMTERIAL. ONLY IIG!!!SHE CANT SEE NORMAL FILE BUT SAME FORMAT AS NORMAL FILE
+
+I APPROVED THIS WORDING WITH HER
+
+I'm honored, and a little humbled, to be doing this.
+
+When I joined Longevity Life Academy, one idea lit me up: longevity shouldn't belong only to people with private labs and unlimited budgets. It should belong to everyone. To the parent juggling work and kids. To the person who's tired of feeling tired. To everyday Americans, and to people everywhere.
+
+That's why I'm delighted to invite you to join me live on Zoom for the Longevity Life Academy masterclass.
+
+I'll open my notebook for you: what I measured, what I changed, what actually moved the needle, and what didn't. Sleep, food, movement, stress. Real habits, from a real, busy life.
+
+Here's what I believe. We all want to feel strong. We all want energy for the things that matter. And we all want to be here, fully here, for the people we love.
+
+The science already exists. The barrier is turning it into something you can actually live with on a Tuesday night, after a long day.
+
+It doesn't have to be that hard.
+
+Come join me. Take what I've learned, the wins and the mistakes, and make it yours.
+
+Tuesday, October 27, 7:00 PM ET, or Saturday, November 14, 1:00 PM ET.
+
+Save your seat:
+[[www.longevitylifeacademy.com/julie-masterclass\]\(https://www.longevitylifeacademy.com/julie-masterclass/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=julie_masterclass&utm_content=faculty_post\)](http://www.longevitylifeacademy.com/julie-masterclass](https://www.longevitylifeacademy.com/julie-masterclass/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=julie_masterclass&utm_content=faculty_post))
+
+#Longevity #HealthyAging #LongevityLifeAcademy
+Hover over a message to pin it
+
+======================================================================
+
+USER PROMPT — TURN 40
+
+[https://gitteromri-ux.github.io/lla-masterclass-syllabus/slide-canvas/julie/](https://gitteromri-ux.github.io/lla-masterclass-syllabus/slide-canvas/julie/)
+
+OPEN UP TYHE DARK SZLIDES OPTIONS
+
+======================================================================
+
+USER PROMPT — TURN 41
+
+I CANT CLICK ON IT
+
+======================================================================
+
+USER PROMPT — TURN 42
+
+Make the option frames clickable on mobile
+
+======================================================================
+
+USER PROMPT — TURN 43
+
+I GOT SCREAMED AT ON LOGO AGAIN MAKE SURE ITS PERFECT ALLSSLIDES
+
+======================================================================
+
+USER PROMPT — TURN 44
+
+Not cake
+
+======================================================================
+
+USER PROMPT — TURN 45
+
+Okay, here's the deal, okay?The CEO wants a slide, you gotta do this gorgeous at this. This has to be the most gorgeous slides in the deck, and that's a hard bar, okay? The message of what he wants to say is he wants to say, if there's one takeaway from this whole, you know, um, thing, is take action. Okay? Like,Julie's going to say, she's going to bring us that, and you can find some stats on, like, you know, people that, you know, the lack of— no, no, like, that see if you can find something. Like, the stats say that, like, I don't know, 80-something percent of, like, people, even— even if they get motivated or inspired or hear a— they don't take action. So our— what we want for you, uh, like, our mission, our goal is to encourage you in whichever way you can to do what— to take the action you can, but take action. Even if it's one thing. And then the logic is, because we do want to sell the course without sounding that we're selling the course, so we want to give options, okay? And then you want to say, whether it's— you know, Taylor.In your protocol, you know, um, um, whether it's getting your own longevity protocol in our blueprint course, or whether it's starting to take walks, or whether it's just, you know, add Adding um.Walks after your, you know, 5 times a week—no, no, maybe it was just, like, adding a walk, maybe it's—no, adding a walk isn't good.Maybe it's— You know,.What did he say? He said maybe it's, like, he said, like, Maybe like, like, um, like.Maybe it's like, um, like.Starting to, um, exercise and, uh, starting to exercise is one option.Um, um,just, just give me some, like, 3, 4 options. He wants to say, like, whether it's the, like, you know, building the protocols with us and that's where you kind of sneak in a little bit of, like, you know, what you get in the course, but not, not oversell.And then, or start, you know, taking, you know, walks or to, um, you know, watch how you handle sugar, or to.Um,Or to. Or to, um,or to prioritize sleep.I don't know if prioritize is the word, or to.Focus on getting better sleep, or whatever, something like that. Okay, make a— okay, so this is the challenge, okay? It has to be— it can't be a slide with bullets or some bullshit, okay? This has to be the most gorgeous illustrative 3D wow lighting slide in the entire presentation, okay? And the protocol in the blueprint stuff needs to be like, like, the most gorgeous thing you've ever designed in your life. I mean this, okay? And you suck, okay? Look at my deck. My deck is awesome. You suck. Okay?So, uh, and you need to find a way, a smart way, to visually represent the other stuff that you can do. So the main thing of the slide is, like, you know what, let me see several ones, okay? One was like the fork in the road of, like, taking action versus not taking action, but it needs to be like a cinematic, gorgeous deep wow image. Like, like, like 8K, something crazy gorgeous, okay? Um, and then in the role— in the road towards action, in the— if you choose, you know, to go to the right, there you kind of represent the, you know, the elements I discussed earlier, whether it's that or that or that or that, like Like the gorgeous protocol with us, or the.Exercise, or the, you know, watching what you eat, or—like all that, that stuff, okay? And—and then, of course, on that, on the rights side, there comes, like, a longer, better life, sort of like on the horizon, that's like expands more, okay? It's a very visual slide.And on the left, it's—it's kind of just like still, okay? It's like taking no action, which basically leads to eventual decline.For sure.Leads to decline, for sure.So again, you understand what I love about it, okay? I love 3D, and I love lighting, okay? And I love depth and shadows and clarity, and strong contrast between fonts, and it's very, very, very strong imagery—like strong colors, strong—it has to be crazy high resolution, okay? It's those types of images that are super premium, okay?Just something to know in general about our audience: you don't show people that are above 53 years old, you equally represent men and women, 40 to 53, Americans, um.If you show exercises or anything, it's true longevity exercises. If you show nutrition, it's true longevity nutrition, and not some diet; if you show, you know, like all these things, they have to be like that. So this.Has to—this slide has to really, really wow the CEO. One concept is that the fork in the road, he asked to see, but I want to bring something even better, okay? So your main kind of thing is to take action, as like the main takeaway, Deciding to take action, okay? Now, and.There's a lot— and, like, the different actions you can take, whether it's the course with us or whether it's— whether it's— whether it's— whether it's— whether it's— okay? So show me 3 of the most gorgeous award-winning design premium premium premium premium premium premium premium concepts for this slide, with true information about our course and no everything. Go.
+
+======================================================================
+
+USER PROMPT — TURN 46
+
+It's horrible. Especially the— you got to redo all of them. The third one, the last one, of the fork in the road is, is, is almost, almost half the level it should be. It's got to be a much deeper, clearer fork in the road, much larger text and visualization. I need to see two other concepts that really work. This is not— this is like subpar
+
+======================================================================
+
+USER PROMPT — TURN 47
+
+U think you're in space? What the fuck is this laser tag co cents. Stop. I said 3 concepts. I gave one. Give 2 others
+
+======================================================================
+
+USER PROMPT — TURN 48
+
+What the fuckkkkkkkk
+
+======================================================================
+
+USER PROMPT — TURN 49
+
+No. Do it.
