@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Take action. The fork.</title>
+<style>
+@font-face{font-family:Playfair;src:url(PlayfairDisplay-Italic.ttf);font-style:italic}@font-face{font-family:Inter;src:url(Inter.ttf)}
+html,body{margin:0;background:#03070F;font-family:Inter,sans-serif}
+.holder{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden}
+.slide{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:#03070F}
+.bg{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover;object-position:50% 60%}
+.veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,7,15,.72) 0%,rgba(3,7,15,.35) 28%,rgba(3,7,15,0) 48%),linear-gradient(90deg,rgba(3,7,15,.55) 0%,rgba(3,7,15,0) 45%)}
+h1{position:absolute;left:120px;top:96px;margin:0;width:1500px;font:italic 400 136px/1.04 Playfair;color:#F4EFE6;text-shadow:0 6px 60px rgba(0,0,0,.6)}
+h1 span{color:#8AD2FF}
+.sub{position:absolute;left:120px;top:400px;font:300 44px/1.3 Inter;color:#D7E3F5;text-shadow:0 2px 30px rgba(0,0,0,.8)}
+.left{position:absolute;left:120px;top:600px;width:520px}
+.left .t{font:italic 400 60px/1.1 Playfair;color:#9DB3D6;text-shadow:0 2px 30px rgba(0,0,0,.9)}
+.left .d{font:300 36px/1.3 Inter;color:#9DB3D6;margin-top:16px;text-shadow:0 2px 30px rgba(0,0,0,.9)}
+.right{position:absolute;left:1180px;top:520px;width:680px}
+.right .t{font:italic 400 60px/1.1 Playfair;color:#F4EFE6;text-shadow:0 2px 30px rgba(0,0,0,.9)}
+.right .o{display:flex;align-items:center;gap:22px;margin-top:22px;font:italic 400 50px/1.1 Playfair;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.95)}
+.right .o i{display:block;width:16px;height:16px;border-radius:50%;background:#7FE6DC;box-shadow:0 0 22px #7FE6DC,0 0 50px #7FE6DC;flex:none}
+.right .o.b{color:#8AD2FF}.right .o.b i{background:#8AD2FF;box-shadow:0 0 22px #8AD2FF,0 0 50px #8AD2FF}
+.logo{position:absolute;right:100px;top:70px;width:230px}
+.foot{position:absolute;left:120px;bottom:50px;font:300 30px/1 Inter;letter-spacing:.2em;color:rgba(255,255,255,.7)}
+</style></head><body>
+<div class="holder"><section class="slide">
+<img class="bg" src="fork-road.jpg" alt="">
+<div class="veil"></div>
+<h1>Take action.<br><span>Even if it’s one thing.</span></h1>
+<div class="sub">Everything tonight comes down to this road. One side is a choice you make this week.</div>
+<div class="left"><div class="t">Inspired. Then nothing.</div><div class="d">The road most people take after a talk like this.</div></div>
+<div class="right"><div class="t">One thing, this week.</div>
+<div class="o"><i></i>Start moving. A walk counts.</div>
+<div class="o"><i></i>Cut the sugar.</div>
+<div class="o"><i></i>Protect your sleep.</div>
+<div class="o b"><i></i>Build your protocol, with the Blueprint.</div></div>
+<img class="logo" src="logo.png" alt="">
+<div class="foot">THE LONGEVITY MASTERCLASS, JULIE GIBSON CLARK</div>
+</section></div>
+<script>function fit(){document.querySelectorAll('.holder').forEach(h=>{h.querySelector('.slide').style.transform='scale('+h.clientWidth/1920+')'})}addEventListener('resize',fit);fit();addEventListener('load',fit)</script>
+</body></html>
