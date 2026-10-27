@@ -5,7 +5,8 @@ Updated 2026-10-27 (Asia/Jerusalem) to the **26-slide order**, total 50:00. Imag
 Rules: do NOT reorder, remove or redesign any slide listed here. Changes since the first lock (25 slides at `71a14bf`), all on Omri's orders:
 - added slide 16, `n28-sugar-limit.jpg` (new sugar / CGM slide after the crème brûlée; the brûlée now has 0:30 and the sugar slide 0:30);
 - the original Movement Week `n14-movement-week.jpg` (was slide 18) was removed from the deck; `n27-movement-week-julie.jpg` (Julie's version with mobility & balance) is now slide 19 and takes its 1:30 and its notes (the file `n14-movement-week.jpg` is still in the repo, md5 `c9116248607ca939c879a25e1dd618a1`, unused);
-- the protocol slide `n16-protocol.jpg` was edited in place (md5 was `1cbb460fed15df5098ac5b70073fdecd`).
+- the protocol slide `n16-protocol.jpg` was edited in place (md5 was `1cbb460fed15df5098ac5b70073fdecd`);
+- the sleep slide `n08-sleep.jpg` had its blue line 'TARGET WINDOW · 9 PM – 5 AM' removed (md5 was `8dd09b02848c69bbf92008a674efbf77`).
 
 | # | image file | headline | time | running total | md5 |
 |---|---|---|---|---|---|
@@ -18,7 +19,7 @@ Rules: do NOT reorder, remove or redesign any slide listed here. Changes since t
 | 7 | n23-bluezones.jpg | The Blue Zones. | 1:00 | 13:00 | 5b2e2cbcf7c7995d423e329f13b27ce6 |
 | 8 | n06-menopause.jpg | Menopause therapy is a layer, not icing. | 1:30 | 14:30 | df38793e81d372a9d9d67d275d2a1c61 |
 | 9 | n07-bridge.jpg | Four layers hold up the cake. | 1:00 | 15:30 | 956e77986f2095e7e9ac7cf5955770ba |
-| 10 | n08-sleep.jpg | I'll sleep when I die. | 2:45 | 18:15 | 8dd09b02848c69bbf92008a674efbf77 |
+| 10 | n08-sleep.jpg | I'll sleep when I die. | 2:45 | 18:15 | 471a1d49a36c4b72e8068a31035c22e2 |
 | 11 | n26-religion.jpg | Take the religion out of your diet. | 0:40 | 18:55 | af6d80ea36ca17bfed50c47eb87ee718 |
 | 12 | n09-food.jpg | Food. | 2:45 | 21:40 | 1c009189bbf69cc46275c5b0d5c82a6c |
 | 13 | n10-plate.jpg | What does it look like in real life? | 1:20 | 23:00 | f564afddacf55ce25b6c22df0229104c |
