@@ -31,7 +31,7 @@ src=im.copy()
 def wipe(img,box,thr=40,dil=5):
     x0,y0,x1,y1=box;m=cv2.dilate(ink(img[y0:y1,x0:x1],thr).astype(np.uint8)*255,np.ones((2*dil+1,2*dil+1),np.uint8))
     full=np.zeros(img.shape[:2],np.uint8);full[y0:y1,x0:x1]=m;return cv2.inpaint(img,full,5,cv2.INPAINT_TELEA)
-im=wipe(im,hb);im=wipe(im,sb,thr=30)
+im=wipe(im,hb)   # sub-line is NOT touched (stays at its original position)
 # crop the ink bbox of the headline
 x0,y0,x1,y1=hb;sub=src[y0:y1,x0:x1];m=ink(sub).astype(np.uint8)
 ys,xs=np.where(m>0);bx0,bx1,by0,by1=xs.min()-6,xs.max()+6,ys.min()-6,ys.max()+6;print('headline bbox',x0+bx0,x0+bx1,y0+by0,y0+by1)
@@ -43,13 +43,6 @@ fg=np.where(a_>1e-3,inkimg/np.maximum(a_,1e-3),0)
 NX=985;NY=y0+by0-8
 reg=im[NY:NY+nh,NX:NX+nw].astype(np.float32);im[NY:NY+nh,NX:NX+nw]=np.clip(reg*(1-a_)+fg*a_,0,255).astype(np.uint8)
 print('new headline',NX,NX+nw,NY,NY+nh)
-# sub line moves left with it so both stay left-aligned
-x0,y0,x1,y1=sb;ss=src[y0:y1,x0:x1];sm=ink(ss,30).astype(np.uint8);sal=cv2.GaussianBlur(cv2.dilate(sm,np.ones((3,3),np.uint8)).astype(np.float32),(0,0),0.8)[...,None]
-ys,xs=np.where(sm>0);print('sub bbox',x0+xs.min(),x0+xs.max())
-dx=NX-(x0+xs.min()-0)+0;dx=NX-(x0+xs.min())+4
-dy=(NY+nh+60)-(y0+ys.min())     # keep ~60px gap under the larger headline
-print('sub shift',dx,dy)
-X0,Y0=x0+dx,y0+dy
-reg=im[Y0:Y0+ss.shape[0],X0:X0+ss.shape[1]].astype(np.float32);im[Y0:Y0+ss.shape[0],X0:X0+ss.shape[1]]=np.clip(reg*(1-sal)+ss.astype(np.float32)*sal,0,255).astype(np.uint8)
+x0,y0,x1,y1=sb;ss=src[y0:y1,x0:x1];sm=ink(ss,30).astype(np.uint8);ys,xs=np.where(sm>0);print('sub (unchanged) bbox x',x0+xs.min(),x0+xs.max(),'y',y0+ys.min(),y0+ys.max())
 cv2.imwrite('assets/n07-bridge.jpg',im,[cv2.IMWRITE_JPEG_QUALITY,95])
 cv2.imwrite('/workspace/r5/s9_v6a.png',im[100:900,100:1920])
