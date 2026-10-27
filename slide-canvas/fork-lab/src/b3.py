@@ -35,7 +35,8 @@ R*=(1-0.55*sh[...,None])
 # bevel: top highlight edge, bottom darker edge
 edge=mk-cv2.erode(mk,np.ones((3,3),np.uint8))
 top=np.clip(1-yy/(hh*0.6),0,1)
-glass=glass+ (edge*top*34)[...,None]+ (edge*(1-top)*8)[...,None]
+rim=np.array([200,190,90],np.float32)*(edge*top*0.32)[...,None]
+glass=glass+rim+ (edge*top*14)[...,None]+ (edge*(1-top)*8)[...,None]
 inner=cv2.GaussianBlur(mk,(0,0),10);glass*= (0.92+0.08*inner)[...,None]
 roi=R[CY0:CY1,CX0:CX1];A=mk[...,None]
 R[CY0:CY1,CX0:CX1]=roi*(1-A)+glass*A
@@ -61,6 +62,7 @@ cm=mk[WY-CY0:WY-CY0+wm.shape[0],WX-CX0:WX-CX0+wm.shape[1]]
 fade=np.clip((wm.shape[0]-np.arange(wm.shape[0]))/60,0,1)[:,None]
 wm[...,3]*=cm*fade
 T=np.zeros((H,W),np.float32);T[382:382+int(290*SC),TX:TX+int(472*SC)]=st[:,:,3].max() and 0
+wm[...,:3]=np.clip(wm[...,:3]*1.18+6,0,255)
 paste(R,wm,WX,WY)
 print('woman',WX,WY,wm.shape,'text right',TX+int((560-88)*SC))
 # ---- protect Blueprint region: original pixels

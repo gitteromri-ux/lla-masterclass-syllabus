@@ -31,7 +31,7 @@ om=np.zeros((H,W),np.uint8);L={}
 for n,(ox,oy) in cuts.items():
     c=np.array(Image.open('c_%s.png'%n)).astype(np.float32);L[n]=(c,ox,oy)
     al=(c[...,3]>8).astype(np.uint8)*255;h,w=al.shape
-    m=dil(al,11);sh=np.zeros_like(m);sh[10:,:w-12]=m[:-10,12:];m=m|dil(sh,9)
+    m=dil(al,15);sh=np.zeros_like(m);sh[16:,:w-20]=m[:-16,20:];m=m|dil(sh,21)
     om[oy:oy+h,ox:ox+w]|=m
 fill=cv2.inpaint(np.clip(P,0,255).astype(np.uint8),om,9,cv2.INPAINT_TELEA).astype(np.float32)
 # real asphalt texture from clean patch
@@ -50,8 +50,7 @@ def matte(x0,y0,x1,y1,mask):
     al=np.clip((lum-bl)/np.maximum(tl-bl,25),0,1)*m
     col=np.clip((s-b*(1-al[...,None]))/np.maximum(al[...,None],0.08),0,255)
     return col,al
-TX=1300
-HD=[(1385,244,1800,302,265-249,TX-1394),(1300,365,1700,428,365-372,TX-1307),(1250,548,1700,608,565-556,TX-1257)]
+HD=[(1385,244,1800,302,248-249,0),(1300,365,1700,428,378-372,1304-1307),(1250,548,1700,608,638-556,1250-1257)]
 for x0,y0,x1,y1,dy,dx in HD:
     col,al=matte(x0,y0,x1,y1,tm);A=al[...,None]
     R[y0+dy:y1+dy,x0+dx:x1+dx]=R[y0+dy:y1+dy,x0+dx:x1+dx]*(1-A)+col*A
@@ -66,9 +65,9 @@ def obj(n,sc):
     c,ox,oy=L[n];h,w=c.shape[:2];c=cv2.resize(c,(int(round(w*sc)),int(round(h*sc))),interpolation=cv2.INTER_AREA)
     a=(c[...,3]>20);ys,xs=np.where(a);return c,xs.min(),ys.min(),xs.max(),ys.max()
 GAP=36
-rows=[('clock',1.0,285),('dumb',58/129,385),('cgm',58/120,585)]
-for n,sc,cy in rows:
-    c,a0,b0,a1,b1=obj(n,sc);x=int(1236-(a0+a1)/2);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
+rows=[('clock',1.0,272,1394),('dumb',1.0,402,1304),('cgm',1.0,662,1250)]
+for n,sc,cy,tl in rows:
+    c,a0,b0,a1,b1=obj(n,sc);x=int(tl-GAP-a1);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
 # ---- veg headline
 pf=F+'PlayfairDisplay-Italic.ttf'
 f=ImageFont.truetype(pf,49)
@@ -77,7 +76,7 @@ except Exception as e:print('var',e)
 bb=f.getbbox('Watch your sugar.');print('wys bbox',bb)
 # green color from Start moving headline
 s=O[370:412,1305:1600];g=s[((s[...,1]-s[...,2])>60)];gc=np.median(g[g[:,1]>np.percentile(g[:,1],80)],0);print('green',gc)
-VT=465; VX=1300
+VT=508; VX=1262
 txt=Image.new('L',(600,140),0);d=ImageDraw.Draw(txt)
 # position so glyph top aligns like sugar headline: sugar glyph top 555 for left 1262
 d.text((10-bb[0]+ (1262-1257) ,20-bb[1]),'Add a vegetable.',font=f,fill=255)
@@ -87,14 +86,14 @@ R[y0:y0+140,x0:x0+600]=R[y0:y0+140,x0:x0+600]*(1-A)+gc*A
 vb=np.where(al>0.3);print('veg',x0+vb[1].min(),y0+vb[0].min(),x0+vb[1].max(),y0+vb[0].max())
 # ---- broccoli
 bc=np.array(Image.open('c_broc.png').convert('RGBA')).astype(np.float32)
-bc=bc[225:731,249:785];bc[...,3]=np.clip((bc[...,3]-60)/170,0,1)*255;th=58;sc=th/bc.shape[0]
+bc=bc[225:731,249:785];bc[...,3]=np.clip((bc[...,3]-60)/170,0,1)*255;th=78;sc=th/bc.shape[0]
 bc=cv2.resize(bc,(int(bc.shape[1]*sc),th),interpolation=cv2.INTER_AREA)
 bc[...,:3]=bc[...,:3]*0.62;g=bc[...,:3].mean(2,keepdims=True);bc[...,:3]=g+(bc[...,:3]-g)*0.8
 bc[...,2]*=1.04  # (RGB order here: slight cool)  
 bc[...,0]*=0.97
 bc=np.pad(bc,((20,20),(20,20),(0,0)))
 vcy=(VT+VT+48)/2
-bx=int(1236-bc.shape[1]/2);by=int(485-bc.shape[0]/2)
+bx=int(VX-GAP-bc.shape[1]+20);by=int(532-bc.shape[0]/2)
 put(R,bc,bx,by,sh_op=0.6);print('broc',bx,by,bx+bc.shape[1],by+th)
 np.save('R_right.npy',R)
 np.save('plate.npy',plate);np.save('tm.npy',tm)
