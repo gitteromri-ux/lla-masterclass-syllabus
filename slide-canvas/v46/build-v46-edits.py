@@ -91,7 +91,7 @@ def bubble_clone(im,src_c,dst_c,core=37.5,Rg=96,Rb=(100,112)):
     im[dy-E:dy+E+1,dx-E:dx+E+1]=np.clip(out,0,255).astype(np.uint8);return im
 
 # ---- 8a. slide 5: add hyperbaric oxygen (same amber bubble + label style as NAD drips / Stem cells)
-if want('5'):
+if False:  # slide 5 hyperbaric bubble reverted (Omri 05:48); n05 stays pristine
     im=rd('n05-icing.jpg');im=bubble_clone(im,(1229,661),(1450,497))
     f=F(INTER,31,[14,400]);im=T(im,[(1507,508,'Hyperbaric oxygen',f,(250,254,255),'ls')],blur=0.0);wr(im,'n05-icing.jpg')
 
@@ -136,15 +136,15 @@ def wipe_text(im,box,thr=95,dil=4):
 if want('21'):
     im=rd('n21-takeaway.png')
     for b in ((1392,300,1868,426),(1374,440,1868,580),(1356,590,1868,728)):im=wipe_text(im,b)
-    H=F(PFI,46.2,[400]);S=F(INTER,25.2,[14,340]);sc=(189,214,233)
-    def blk(x,hs,htop,ss,tops,hc,old_h,old_s):
-        o=[(x,base_for(H,old_h,htop),hs,H,hc,'ls')]
-        for s,t,os_ in zip(ss,tops,old_s):o.append((x,base_for(S,os_,t),s,S,sc,'ls'))
+    S=F(INTER,25.2,[14,340]);sc=(189,214,233)
+    def blk(x,dot_y,ss,olds):
+        o=[]
+        for k,s_ in enumerate(ss):o.append((x,dot_y+9+36*k,s_,S,sc,'ls'))
         return o
     it=[]
-    it+=blk(1400,'Take five.',305,['Commit to a 5-minute','movement break.'],[365,401],(201,179,234),'Protect your sleep.',['Last meal three hours','before bed.'])
-    it+=blk(1380,'Eat your greens.',446,['Add one green vegetable','to dinner.'],[507,544],(94,234,212),'Start moving.',['A brisk walk after your biggest meal.','Strength twice a week.'])
-    it+=blk(1362,'Start tracking.',595,['Track your sleep, monitor your glucose,','or sign up for our Academy class.'],[652,688],(138,210,255),'Watch your sugar.',['Protein and fiber first. Fewer spikes.','See your glucose response with a CGM.'])
+    it+=blk(1400,325,['Track your sleep, monitor','your glucose, or sign up for','our Academy class.'],0)      # moon
+    it+=blk(1380,465,['Commit to a 5-minute','movement break.'],0)                                      # kettlebell
+    it+=blk(1362,614,['Add one green vegetable','to dinner.'],0)                                         # glucose sensor (closest art)
     im=T(im,it,blur=0.0);wr(im,'n21-takeaway.png')
 
 # ---- 8b. slide 18: add "Nicotinamide riboside" as the FIRST item of card 3 (card grows by one list row = 44 px)
@@ -203,7 +203,7 @@ if want('14'):
         im=vfill(im,(x0+14,y0+22,x0+TW-14,y0+h-12),k=6,sx=1.0)
         return T(im,[(x0+20,y0+49,t1,TF,c1,'ls'),(x0+20,y0+82,t2,SF,c2,'ls')],blur=0.4)
     # sauna / mobility / balance tiles out (rebuild the dark photo background behind them)
-    for x0,h in ((COLX[0],78),(COLX[1],78),(COLX[3],78),(COLX[5],111)):
+    for x0,h in ((COLX[0],78),(COLX[1],78),(COLX[3],78)):
         im=bg_restore(im,(x0-8,Y2-6,x0+TW+8,Y2+h+8))
     # row 1
     im=tile_copy(im,P,COLX[1],Y1,COLX[0],Y1)                      # Mon: VO2 max (the existing VO2 tile)
@@ -215,7 +215,7 @@ if want('14'):
     im=sub(im,COLX[4],Y1,111,'upper body',WS)                     # Fri
     im=both(im,COLX[5],Y1,111,'Hike or walk','with a friend',DT,DTS)   # Sat
     # row 2: Zone 2 or HIIT cardio on Wed and Fri (the existing teal Zone 2 tile)
-    for x0 in (COLX[2],COLX[4]):
+    for x0 in (COLX[4],):
         im=tile_copy(im,P,COLX[3],Y1,x0,Y2)
         im=both(im,x0,Y2,111,'Zone 2 or HIIT','cardio',DT,DTS)
     # claim line
@@ -223,5 +223,5 @@ if want('14'):
     NF=F(PFR,96,[400]);CF=F(OUTFIT,30,[300])
     nb=918;nw=NF.getlength('Twice')
     im=T(im,[(125-NF.getbbox('T',anchor='ls')[0],nb,'Twice',NF,(198,244,254),'ls'),
-             (125+nw+37,892,'as effective as a 30-minute workout: short movement breaks',CF,(220,232,249),'ls')],blur=0.5)
+             (125+NF.getbbox('Twice',anchor='ls')[2]+22-CF.getbbox('a',anchor='ls')[0],892,'as effective as a 30-minute workout: short movement breaks',CF,(220,232,249),'ls')],blur=0.5)
     wr(im,'n14-movement-week.jpg')
