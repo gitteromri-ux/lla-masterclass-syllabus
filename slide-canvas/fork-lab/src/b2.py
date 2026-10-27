@@ -65,7 +65,7 @@ def obj(n,sc):
     c,ox,oy=L[n];h,w=c.shape[:2];c=cv2.resize(c,(int(round(w*sc)),int(round(h*sc))),interpolation=cv2.INTER_AREA)
     a=(c[...,3]>20);ys,xs=np.where(a);return c,xs.min(),ys.min(),xs.max(),ys.max()
 GAP=36
-rows=[('clock',1.0,272,1394),('dumb',1.0,402,1304),('cgm',1.0,662,1250)]
+rows=[('clock',1.0,272,1394),('dumb',0.9,402,1304),('cgm',0.9,662,1250)]
 for n,sc,cy,tl in rows:
     c,a0,b0,a1,b1=obj(n,sc);x=int(tl-GAP-a1);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
 # ---- veg headline
@@ -86,7 +86,7 @@ R[y0:y0+140,x0:x0+600]=R[y0:y0+140,x0:x0+600]*(1-A)+gc*A
 vb=np.where(al>0.3);print('veg',x0+vb[1].min(),y0+vb[0].min(),x0+vb[1].max(),y0+vb[0].max())
 # ---- broccoli
 bc=np.array(Image.open('c_broc.png').convert('RGBA')).astype(np.float32)
-bc=bc[225:731,249:785];bc[...,3]=np.clip((bc[...,3]-60)/170,0,1)*255;th=78;sc=th/bc.shape[0]
+bc=bc[225:731,249:785];bc[...,3]=np.clip((bc[...,3]-60)/170,0,1)*255;th=70;sc=th/bc.shape[0]
 bc=cv2.resize(bc,(int(bc.shape[1]*sc),th),interpolation=cv2.INTER_AREA)
 bc[...,:3]=bc[...,:3]*0.62;g=bc[...,:3].mean(2,keepdims=True);bc[...,:3]=g+(bc[...,:3]-g)*0.8
 bc[...,2]*=1.04  # (RGB order here: slight cool)  
