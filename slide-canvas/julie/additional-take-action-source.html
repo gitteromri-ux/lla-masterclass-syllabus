@@ -9,7 +9,8 @@
 html,body{background:#04122a}
 .slide{position:relative;width:1920px;height:1080px;overflow:hidden;color:#d9eaf6;font:300 29px/1.3 Inter,sans-serif;-webkit-font-smoothing:antialiased}
 .art{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}
-.logo{position:absolute;right:80px;top:32px;width:240px;height:auto}
+.logo-backdrop{position:absolute;right:0;top:0;width:440px;height:220px;background:radial-gradient(ellipse at 57% 35%,rgba(1,7,20,.97) 8%,rgba(2,10,26,.9) 45%,rgba(3,14,34,.3) 68%,transparent 84%)}
+.logo{position:absolute;right:80px;top:24px;width:300px;height:auto}
 h1{position:absolute;left:92px;top:88px;font:400 100px/1.08 Playfair,serif;letter-spacing:-.014em;color:#f4f1ec;white-space:nowrap}
 h1 i{font-style:italic;color:#66e8f1}
 .payoff{position:absolute;left:92px;top:204px;font:italic 400 88px/1.08 Playfair,serif;color:#b4b4f4}
@@ -29,7 +30,7 @@ h1 i{font-style:italic;color:#66e8f1}
 .move h2{color:#8cebdc}
 .sugar{left:1333px;top:527px;width:545px}
 .sugar h2{color:#8ad2ff}
-.sugar p{font-size:28px}
+.sugar p{font-size:28px;text-shadow:0 2px 5px #020b1d,0 0 9px #020b1d}
 .course{left:1425px;top:691px;width:455px}
 .course h2{font-size:48px;color:#9ceef1}
 .course p{font-size:33px;line-height:1.24;margin-top:15px}
@@ -39,6 +40,7 @@ h1 i{font-style:italic;color:#66e8f1}
 </style></head><body>
 <main class="slide">
 <img class="art" src="closing-graphics/native-fonts-objects-base.png" alt="">
+<div class="logo-backdrop" aria-hidden="true"></div>
 <img class="logo" src="closing-graphics/lla-logo-original.png" alt="Longevity Life Academy by eTeacher Group">
 <h1>One takeaway. <i>Take action.</i></h1>
 <div class="payoff">A longer, better life.</div>
