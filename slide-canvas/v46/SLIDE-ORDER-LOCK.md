@@ -21,9 +21,9 @@ Rules: do NOT reorder, remove or redesign any slide listed here. Changes since t
 | 7 | n23-bluezones.jpg | The Blue Zones. | 1:00 | 13:00 | 5b2e2cbcf7c7995d423e329f13b27ce6 |
 | 8 | n06-menopause.jpg | Menopause therapy is a layer, not icing. | 1:30 | 14:30 | df38793e81d372a9d9d67d275d2a1c61 |
 | 9 | n07-bridge.jpg | Four layers hold up the cake. | 1:00 | 15:30 | 956e77986f2095e7e9ac7cf5955770ba |
-| 10 | n08-sleep.jpg | I'll sleep when I die. | 2:45 | 18:15 | 471a1d49a36c4b72e8068a31035c22e2 |
+| 10 | n08-sleep.jpg | I'll sleep when I die. | 2:45 | 18:15 | 50ff920ff96becc96abafa6b37690c8d |
 | 11 | n26-religion.jpg | Take the religion out of your diet. | 0:40 | 18:55 | af6d80ea36ca17bfed50c47eb87ee718 |
-| 12 | n09-food.jpg | Food. | 2:45 | 21:40 | 1c009189bbf69cc46275c5b0d5c82a6c |
+| 12 | n09-food.jpg | Food. | 2:45 | 21:40 | 453f53ec1840c43de378965ba795fe2c |
 | 13 | n10-plate.jpg | What does it look like in real life? | 1:20 | 23:00 | f564afddacf55ce25b6c22df0229104c |
 | 14 | n11-sugar.jpg | The one thing every diet agrees on. | 2:45 | 25:45 | 5901d38105622b9d812cd236790d97e5 |
 | 15 | n24-brulee.jpg | Crème brûlée and wrinkles. | 0:30 | 26:15 | cb42af57f6c0f3e02d5f480f8cb120db |
@@ -31,12 +31,12 @@ Rules: do NOT reorder, remove or redesign any slide listed here. Changes since t
 | 17 | n12-sameage.jpg | Same age. | 0:30 | 27:15 | 0040935e452c006656a5aed03965918b |
 | 18 | n13-movement.jpg | Four types of movement, four parts of you. | 3:00 | 30:15 | 8a9446c92882c7999935fc762137f96e |
 | 19 | n27-movement-week-julie.jpg | Julie Gibson Clark’s Movement Week. | 1:30 | 31:45 | 09dae6d4a701e4b8732533dc54abd564 |
-| 20 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | 3dec755e453419b20d890791ebc6f579 |
-| 21 | n16-protocol.jpg | Julie Gibson Clark's Longevity Protocol. | 4:00 | 38:30 | b42386860fd0e3ea89f4756c64bf7ecb |
+| 20 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | 97416ddeb22d530d093b93b128be1ddf |
+| 21 | n16-protocol.jpg | Julie Gibson Clark's Longevity Protocol. | 4:00 | 38:30 | e7a0de63c02c150d2ff90db6b632af45 |
 | 22 | n17-notebook.jpg | You don't need a lab. You need a notebook. | 1:30 | 40:00 | 4bf3abd73003b2df0d02b7736a57f973 |
 | 23 | n18-testing.jpg | Test. Then buy. | 2:00 | 42:00 | 54e77f2892b1af51208d1a56ad9275ee |
 | 24 | n19-cake.jpg | That's the cake. | 1:00 | 43:00 | 236625b31c7388765ade39251d180a7b |
-| 25 | n20-why.jpg | Why. Intention. Resources. | 3:00 | 46:00 | ffbd112bf0fd1298cc3799fd1abdfb04 |
+| 25 | n20-why.jpg | Why. Intention. Resources. | 3:00 | 46:00 | fe5e9345aa8571ccf49dfebb6b54fdb9 |
 | 26 | n25-fork.png | One takeaway. Take action. (closing) | 4:00 | 50:00 | 092ff063179d8300d773ad5a517b5fd3 |
 
 Review-page ids in order: s1, s2, s3, sx-risks, s4, s5, sx-bz, s6, s7, s8, sx-religion, s10-food, s10, s11, sx-brulee, sx-sugar, s13, s14, sx-mw-julie, s16, s17, s18, s19, s20, s21, sx-fork
