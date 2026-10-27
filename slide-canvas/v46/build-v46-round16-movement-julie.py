@@ -53,10 +53,10 @@ for x in XS:
 OUT=np.clip(B,0,255).astype(np.uint8)
 # text (Outfit, same family as the tiles)
 OF='file:///usr/share/fonts/truetype/sand-box/google/Outfit/Outfit-VariableFont_wght.ttf'
-# text quoted from the Movement Week script notes (para 206-212): "Mobility while waiting the tea kettle to boil" / "Balance while brushing my teeth"
-tiles_html=''.join('<div class="t" style="left:%dpx"><b>Mobility</b><span>tea kettle to boil</span><b>Balance</b><span>brushing my teeth</span></div>'%(x+20) for x in XS)
+# Omri: each tile contains ONLY the words "Mobility & balance", bold, same size (27px Outfit 700) as the other tiles' headline line
+tiles_html=''.join('<div class="t" style="left:%dpx"><b>Mobility &amp;</b><b>balance</b></div>'%(x+20) for x in XS)
 html='''<html><head><style>@font-face{font-family:OF;font-weight:100 900;src:url(%s)}html,body{margin:0;background:transparent}
-.t{position:absolute;top:%dpx;height:%dpx;display:flex;flex-direction:column;justify-content:center;white-space:nowrap;font-family:OF;font-size:22px;line-height:25px;color:#06122B}.t b{font-weight:700}.t span{font-weight:400}</style></head><body>%s</body></html>'''%(OF,BAND_Y,BAND_H,tiles_html)
+.t{position:absolute;top:%dpx;height:%dpx;display:flex;flex-direction:column;justify-content:center;white-space:nowrap;font-family:OF;font-size:27px;line-height:34px;color:#06122B}.t b{font-weight:700}.t span{font-weight:400}</style></head><body>%s</body></html>'''%(OF,BAND_Y,BAND_H,tiles_html)
 open('/tmp/mw.html','w').write(html)
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox','--allow-file-access-from-files']);pg=b.new_page(viewport={'width':W,'height':H});pg.goto('file:///tmp/mw.html');pg.wait_for_timeout(700)
