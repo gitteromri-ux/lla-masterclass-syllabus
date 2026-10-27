@@ -40,6 +40,11 @@ atop_i=np.interp(np.arange(W),good,atop[good]).astype(np.float32)
 
 atop_s=cv2.GaussianBlur(atop_i[None,:],(0,0),8)[0]
 print('cap lower edge at drip-free columns: min %.0f max %.0f'%(atop[good].min(),atop[good].max()))
+_Wr=cv2.warpAffine(cv2.imread(G+'/slide-canvas/images/github-round-9-12.jpg'),np.load('/workspace/r5/M.npy')*1.5,(1920,1080),flags=cv2.INTER_CUBIC);_hw=cv2.cvtColor(_Wr,cv2.COLOR_BGR2HSV)
+Zw=(Z&(((_hw[...,0]<=35)|(_hw[...,0]>=165))&(_hw[...,2]>150)&(_hw[...,1]<95))).astype(np.uint8)
+Zw=cv2.morphologyEx(Zw,cv2.MORPH_CLOSE,np.ones((5,5),np.uint8));Zw[420:]=Z[420:]
+Zdf=cv2.GaussianBlur(cv2.dilate(Zw,np.ones((7,7),np.uint8)).astype(np.float32),(0,0),1.0)
+icD=(yy<(atop[None,:]+4))&(yy<420)&np.ones((H,W),bool)
 B=A.copy()
 # --- outside the cake edges: cap lip + side drips below the dome become backdrop (fade over 25 px)
 zz=cv2.dilate((M|extra).astype(np.uint8),np.ones((7,7),np.uint8))>0
@@ -128,13 +133,21 @@ def fill(i):
         if len(xs_)==0:continue
         xa,xb=xs_.min(),xs_.max();Lv=Rv=None
         for o in ((26,12,6) if yv<425 else (12,6)):
-            if Lv is None and xa-o>=XL+1 and not Dcur[yv,xa-o:xa-o+8].any():Lv=np.median(B[yv,xa-o:xa-o+8].astype(np.float32),0)
-            if Rv is None and xb+o+1<=XR-4 and not Dcur[yv,xb+o-7:xb+o+1].any():Rv=np.median(B[yv,xb+o-7:xb+o+1].astype(np.float32),0)
+            if Lv is None and xa-o>=XL+1 and not (Dcur|icD)[yv,xa-o:xa-o+8].any():Lv=np.median(B[yv,xa-o:xa-o+8].astype(np.float32),0)
+            if Rv is None and xb+o+1<=XR-4 and not (Dcur|icD)[yv,xb+o-7:xb+o+1].any():Rv=np.median(B[yv,xb+o-7:xb+o+1].astype(np.float32),0)
         if Lv is None and Rv is None:
-            low[yv,xa:xb+1]=cv2.GaussianBlur(shc[yv:yv+1],(0,0),sigmaX=4)[0][xa:xb+1];continue
+            LR[yv]=(xa,xb,None,None);continue
         if Lv is None:Lv=Rv
         if Rv is None:Rv=Lv
         LR[yv]=(xa,xb,Lv,Rv)
+    _val=[k for k in sorted(LR) if LR[k][2] is not None]
+    for k in sorted(LR):
+        if LR[k][2] is None:
+            if _val:
+                kk=min(_val,key=lambda q:(abs(q-k)+(0 if q>k else 3)))
+                LR[k]=(LR[k][0],LR[k][1],LR[kk][2],LR[kk][3])
+            else:
+                xa,xb=LR[k][:2];low[k,xa:xb+1]=cv2.GaussianBlur(shc[k:k+1],(0,0),sigmaX=4)[0][xa:xb+1];del LR[k]
     ks=sorted(LR)
     if ks:
         from scipy.ndimage import gaussian_filter1d
@@ -146,7 +159,8 @@ def fill(i):
     cand_=np.clip(low+np.roll(hpimg,-d,axis=1)*gain,0,255)
     al=cv2.GaussianBlur(cv2.erode(comp.astype(np.uint8),np.ones((5,5),np.uint8)).astype(np.float32),(0,0),1.2)
     ramp=np.clip((np.arange(H)[:,None]-(atop_s[None,:]-10))/25.0,0,1);ramp=ramp*ramp*(3-2*ramp)
-    al=(al*ramp)[...,None]
+    al=al*ramp
+    _f=np.clip((yy-346)/6.0,0,1);al=(al*(Zdf*(1-_f)+_f))[...,None]
     out=(out.astype(np.float32)*(1-al)+cand_*al).astype(np.uint8)
     if (x>700) or (x<230 and y>=390):
         nar=cv2.dilate(D0.astype(np.uint8),np.ones((7,71),np.uint8),anchor=(14,3))>0
@@ -216,22 +230,35 @@ def stripe_fix(xl,xr,xa,xb):
     return np.clip(res,0,255).astype(np.uint8)
 out=stripe_fix(238,331,246,324)
 res=CUR.copy();res[:, :1000]=out[:, :1000]
-# right arch: the drip fill left row-bands + a dark blob; replace the interior with real sponge texture from the neighbouring clean arch (Poisson blended)
-_m=np.zeros(res.shape[:2],np.uint8)
-cv2.fillConvexPoly(_m,np.array([[726,312],[782,312],[792,352],[714,352]],np.int32),255)
-_src=np.roll(res,235,axis=1)       # content of x-235 lands at x
-_bx,_by,_bw,_bh=cv2.boundingRect(_m)
-res=cv2.seamlessClone(_src,res,_m.copy(),(_bx+_bw//2,_by+_bh//2),cv2.NORMAL_CLONE)
-# left: dark crumb band along the stripe top and a dark notch in the first peak -> real sponge texture from clean neighbours (Poisson blended)
-def _clone(poly,dx,dy):
-    global res
-    m=np.zeros(res.shape[:2],np.uint8);cv2.fillConvexPoly(m,np.array(poly,np.int32),255)
-    src=np.roll(np.roll(res,-dx,axis=1),-dy,axis=0)
-    bx,by,bw,bh=cv2.boundingRect(m)
-    res=cv2.seamlessClone(src,res,m.copy(),(bx+bw//2,by+bh//2),cv2.NORMAL_CLONE)
-_m=np.zeros(res.shape[:2],np.float32);_m[339:350,208:298]=1;_m=cv2.GaussianBlur(_m,(0,0),2.5)[...,None]
-_s=np.roll(res,-140,axis=1).astype(np.float32);res=(res*(1-_m)+_s*_m).astype(np.uint8)
-_clone([[222,282],[243,282],[243,304],[222,304]],0,24)
+res=out.copy();res[:, :1000]=out[:, :1000]
+res=CUR.copy();res[:, :1000]=out[:, :1000]
+# brown outline along the sponge/icing edges (shadow line of the photo): lift the thin dark band toward the local sponge colour, keep the grain
+res=res.astype(np.float32)
+Zh=Zw.copy();Zh[:,1000:]=0
+dist=cv2.distanceTransform((1-Zh).astype(np.uint8),cv2.DIST_L2,5)
+spong=((cv2.dilate(Zh,np.ones((15,15),np.uint8))==0)&(yy<346)&(yy>150)&(np.arange(W)[None,:]>XL+2)&(np.arange(W)[None,:]<XR-2)).astype(np.float32)
+num=cv2.GaussianBlur(res*spong[...,None],(0,0),9);den=cv2.GaussianBlur(spong,(0,0),9)
+ref=num/np.maximum(den[...,None],1e-3)
+lp=cv2.GaussianBlur(res,(0,0),2.5);hp=res-lp
+lumr=ref.mean(2);lum1=cv2.GaussianBlur(res,(0,0),1.0).mean(2)
+din=cv2.distanceTransform(Zh.astype(np.uint8),cv2.DIST_L2,5)
+band=((dist<=9)&(dist>0))|((din<=3)&(din>0))
+band=band&(yy<346)&(yy>150)&(np.arange(W)[None,:]>XL+2)&(np.arange(W)[None,:]<XR-2)&(den>0.02)
+wd=np.clip((0.88*lumr-lum1)/(0.22*np.maximum(lumr,1)),0,1)*band
+wd=cv2.GaussianBlur(wd.astype(np.float32),(0,0),1.3)[...,None]
+tgt=ref+hp*0.8
+res=np.clip(res*(1-wd)+tgt*wd,0,255)
+res=res.astype(np.uint8)
+res2=CUR.copy();res2[:, :1000]=res[:, :1000];res=res2
+# faint dark vertical line (old drip edge shadow) crossing the upper cream stripe at x~452: bridge it from both sides, keep grain
+_f=res.astype(np.float32);_y0,_y1=350,398
+_L=_f[_y0:_y1,441:446].mean(1);_R=_f[_y0:_y1,463:468].mean(1)
+_t=((np.arange(447,462)-446)/16.0)[None,:,None]
+_fill=_L[:,None,:]*(1-_t)+_R[:,None,:]*_t
+_hp=_f[_y0:_y1,420:435]-cv2.GaussianBlur(_f,(0,0),2.5)[_y0:_y1,420:435]
+_w=np.ones((1,15,1),np.float32);_w[0,:3,0]=np.linspace(0.2,1,3);_w[0,-3:,0]=np.linspace(1,0.2,3)
+_f[_y0:_y1,447:462]=_f[_y0:_y1,447:462]*(1-_w)+(_fill+_hp*0.6)*_w
+res=np.clip(_f,0,255).astype(np.uint8)
 OUT=sys.argv[1] if len(sys.argv)>1 else 'assets/n07-bridge.jpg'
 cv2.imwrite(OUT,res,[cv2.IMWRITE_JPEG_QUALITY,95])
 cv2.imwrite('/workspace/s9_r13_c.png',res[90:800,100:1920])

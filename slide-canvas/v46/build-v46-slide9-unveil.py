@@ -1,6 +1,6 @@
 # builds the UN-VEILED photo base for slide 9 (x<1000): bg + sponge/stripe layers in true brightness, icing cap stays dark
 import cv2,numpy as np
-def build_U(N,R='/workspace/lla-masterclass-syllabus/slide-canvas/',MM='/workspace/r5/M.npy',ICE='/workspace/r5/icing_mask.png'):
+def build_U(N,tone=0.80,R='/workspace/lla-masterclass-syllabus/slide-canvas/',MM='/workspace/r5/M.npy',ICE='/workspace/r5/icing_mask.png'):
     A=cv2.imread(R+'images/github-round-9-12.jpg');M=np.load(MM)*1.5
     W=cv2.warpAffine(A,M,(1920,1080),flags=cv2.INTER_CUBIC)
     Ws=cv2.addWeighted(W,1.6,cv2.GaussianBlur(W,(0,0),2.2),-0.6,0)
@@ -33,7 +33,13 @@ def build_U(N,R='/workspace/lla-masterclass-syllabus/slide-canvas/',MM='/workspa
     # cake (non-icing) pixels and background both come from the clean photo in the top rows
     wgt=Sil*(1-Ic)*Zc+(1-Sil)*Zb*1.0
     wgt=np.clip(wgt,0,1)
-    U=Nf*(1-wgt)+Wf*wgt
+    # white icing cap: real (undimmed) photo icing, gently toned down; whole top region comes from the clean photo (no dark mask-edge pixels)
+    icm=cv2.dilate(icing,np.ones((3,3),np.uint8)).astype(np.float32)
+    T=1-(1-tone)*cv2.GaussianBlur(icm,(0,0),1.5)[...,None]
+    Wt=Wf*T
+    wgtI=np.clip(Sil*Ic*Zc,0,1)
+    wgt=np.clip(wgt,0,1-wgtI)
+    U=Nf*(1-wgt-wgtI)+Wf*wgt+Wt*wgtI
     # bottom: stretch the abrupt bottom veil step into a long smooth fade (clean photo -> original dark base)
     wbv=np.interp(ys,[800,815,975],[0,1,0]).astype(np.float32)[:,None,None]*np.clip((1000-np.arange(1920))/60.0,0,1)[None,:,None]
     U=U*(1-wbv)+Wf*wbv
@@ -56,7 +62,7 @@ def build_U(N,R='/workspace/lla-masterclass-syllabus/slide-canvas/',MM='/workspa
     Wbg=num2/np.maximum(den2[...,None],1e-3)
     rim=capsm*captone+(1-capsm)*Wbg
     nm=cv2.GaussianBlur(near.astype(np.float32),(0,0),1.5)[...,None]
-    U=U*(1-nm)+rim*nm
+    U=U*(1-nm*0)+rim*nm*0
     # right edge of the photo block: fade into the slide background so there is no vertical seam at x~1000
     tgt=cv2.GaussianBlur(Nf[:,1002:1022].mean(1)[:,None,:].astype(np.float32),(0,0),sigmaX=0.1,sigmaY=5)
     tx=np.arange(1920);tt=np.clip((tx-880)/120.0,0,1);tt=(tt*tt*(3-2*tt))[None,:,None]
