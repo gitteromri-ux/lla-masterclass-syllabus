@@ -31,7 +31,7 @@ Rules: do NOT reorder, remove or redesign any slide listed here. Changes since t
 | 17 | n12-sameage.jpg | Same age. | 0:30 | 27:15 | 0040935e452c006656a5aed03965918b |
 | 18 | n13-movement.jpg | Four types of movement, four parts of you. | 3:00 | 30:15 | 8a9446c92882c7999935fc762137f96e |
 | 19 | n27-movement-week-julie.jpg | Julie Gibson Clark’s Movement Week. | 1:30 | 31:45 | 09dae6d4a701e4b8732533dc54abd564 |
-| 20 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | 97416ddeb22d530d093b93b128be1ddf |
+| 20 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | 90e87e6996ac4e2d7b9235cb320f9c5d |
 | 21 | n16-protocol.jpg | Julie Gibson Clark's Longevity Protocol. | 4:00 | 38:30 | e7a0de63c02c150d2ff90db6b632af45 |
 | 22 | n17-notebook.jpg | You don't need a lab. You need a notebook. | 1:30 | 40:00 | 4bf3abd73003b2df0d02b7736a57f973 |
 | 23 | n18-testing.jpg | Test. Then buy. | 2:00 | 42:00 | 54e77f2892b1af51208d1a56ad9275ee |
