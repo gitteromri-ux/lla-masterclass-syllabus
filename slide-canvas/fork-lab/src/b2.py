@@ -51,8 +51,10 @@ def matte(x0,y0,x1,y1,mask):
     col=np.clip((s-b*(1-al[...,None]))/np.maximum(al[...,None],0.08),0,255)
     return col,al
 HD=[(1385,244,1800,302,248-249,0),(1300,365,1700,428,378-372,1304-1307),(1250,548,1700,608,638-556,1250-1257)]
-for x0,y0,x1,y1,dy,dx in HD:
+HC=[np.array([255,165,180],np.float32),np.array([255,190,110],np.float32),None]
+for (x0,y0,x1,y1,dy,dx),hc in zip(HD,HC):
     col,al=matte(x0,y0,x1,y1,tm);A=al[...,None]
+    if hc is not None: col=col*0+hc
     R[y0+dy:y1+dy,x0+dx:x1+dx]=R[y0+dy:y1+dy,x0+dx:x1+dx]*(1-A)+col*A
 def put(R,rgba,x,y,shadow=True,sh_op=0.5):
     h,w=rgba.shape[:2];A=rgba[...,3:]/255;rgb=rgba[...,2::-1] if rgba.shape[2]==4 else None
@@ -65,9 +67,19 @@ def obj(n,sc):
     c,ox,oy=L[n];h,w=c.shape[:2];c=cv2.resize(c,(int(round(w*sc)),int(round(h*sc))),interpolation=cv2.INTER_AREA)
     a=(c[...,3]>20);ys,xs=np.where(a);return c,xs.min(),ys.min(),xs.max(),ys.max()
 GAP=36
-rows=[('clock',1.0,272,1394),('dumb',0.9,402,1304),('cgm',0.9,662,1250)]
+rows=[('clock',1.0,272,1394),('dumb',0.9,402,1304),]
 for n,sc,cy,tl in rows:
     c,a0,b0,a1,b1=obj(n,sc);x=int(tl-GAP-a1);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
+# CGM bigger, phone smaller
+c,ox,oy=L['cgm'];sen=c[:,:98].copy();ph=c[:,98:].copy()
+def bb(a):
+    ys,xs=np.where(a[...,3]>20);return xs.min(),ys.min(),xs.max(),ys.max()
+def sc_(a,s):return cv2.resize(a,(int(a.shape[1]*s),int(a.shape[0]*s)),interpolation=cv2.INTER_CUBIC if s>1 else cv2.INTER_AREA)
+ph=sc_(ph,0.68);sen=sc_(sen,1.35)
+cy=662;tl=1250
+a0,b0,a1,b1=bb(ph);px=int(tl-GAP-a1);py=int(cy-(b0+b1)/2);put(R,ph,px,py)
+s0,t0,s1,t1=bb(sen);sx=int(px+a0-10-s1);sy=int(cy+8-(t0+t1)/2);put(R,sen,sx,sy)
+print('sensor',sx+s0,sy+t0,sx+s1,sy+t1,'phone',px+a0,py+b0,px+a1,py+b1)
 # ---- veg headline
 pf=F+'PlayfairDisplay-Italic.ttf'
 f=ImageFont.truetype(pf,49)

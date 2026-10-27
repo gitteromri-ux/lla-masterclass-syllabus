@@ -7,23 +7,22 @@ def feather(x0,y0,x1,y1,f):
 a=feather(1228,228,1385,352,8);R=R*(1-a)+O*a
 # 6 footer label left
 a=feather(30,1010,420,1065,6);R=R*(1-a)+plate*a
-# 2 laptop zoom gallery from base plate
-src=np.float32([[912,716],[1160,716],[1160,880],[912,880]])
-dst=np.float32([[880,762],[1182,762],[1182,958],[880,958]])
-M=cv2.getPerspectiveTransform(src,dst)
-g=cv2.warpPerspective(B,M,(W,H),flags=cv2.INTER_CUBIC)
+# 2 laptop: real Zoom mockup (lla-masterclass-assets/zoom-meeting-ui-chat.jpg)
+Z=cv2.imread('zmu.jpg').astype(np.float32)
 x0,y0,x1,y1=880,762,1182,958
-R[y0:y1,x0:x1]=g[y0:y1,x0:x1]
-# logo tile = bottom-right tile (3 cols x 2 rows within top ~85% of screen)
-th=int((y1-y0)*0.83/2);tw=(x1-x0)//3
-tx0=1083;ty0=882-36;tx1=1179;ty1=934
-R[ty0:ty1,tx0:tx1]=np.array([70,36,16],np.float32)
+sw,sh_=x1-x0,y1-y0
+crop=Z[:,515:1938]
+s_=sh_/crop.shape[0];zw=int(round(crop.shape[1]*s_))
+zr=cv2.resize(crop,(zw,sh_),interpolation=cv2.INTER_AREA)
+bgc=Z[1040:1075,520:1900].reshape(-1,3).mean(0)
+scr=np.zeros((sh_,sw,3),np.float32)+bgc
+ox=(sw-zw)//2;scr[:,ox:ox+zw]=zr
+R[y0:y1,x0:x1]=scr
 L=cv2.imread('/workspace/lla-masterclass-syllabus/slide-canvas/v46/assets/src/fork-v46/closing-graphics/lla-logo-original.png',-1).astype(np.float32)
 def putlogo(R,cx,cy,w):
     l=cv2.resize(L,(w,int(L.shape[0]*w/L.shape[1])),interpolation=cv2.INTER_AREA)
     h=l.shape[0];x=int(cx-w/2);y=int(cy-h/2);A=l[...,3:]/255
     R[y:y+h,x:x+w]=R[y:y+h,x:x+w]*(1-A)+l[...,:3]*A
-putlogo(R,(tx0+tx1)/2,(ty0+ty1)/2,int((tx1-tx0)*0.84))
 # 3 phone logo: clear & paste sharp
 bgc=O[786:792,1240:1300].reshape(-1,3).mean(0)
 R[790:834,1226:1318]=bgc

@@ -1,5 +1,5 @@
 import cv2,numpy as np
-from PIL import Image
+from PIL import Image,ImageDraw
 O=cv2.imread('o.png').astype(np.float32);R=np.load('R_right.npy');plate=np.load('plate.npy');tm=np.load('tm.npy')
 H,W=O.shape[:2]
 def dil(m,k):return cv2.dilate(m,cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(k,k)))
@@ -38,14 +38,27 @@ top=np.clip(1-yy/(hh*0.6),0,1)
 rim=np.array([200,190,90],np.float32)*(edge*top*0.32)[...,None]
 glass=glass+rim+ (edge*top*14)[...,None]+ (edge*(1-top)*8)[...,None]
 inner=cv2.GaussianBlur(mk,(0,0),10);glass*= (0.92+0.08*inner)[...,None]
-roi=R[CY0:CY1,CX0:CX1];A=mk[...,None];glass=roi*0.38+np.array([40,26,14],np.float32)*0.62
-R[CY0:CY1,CX0:CX1]=roi*(1-A)+glass*A
-inner2=cv2.erode(mask,np.ones((5,5),np.uint8));brd=((mask>0)&(inner2==0)).astype(np.float32)
-t2=np.clip(1.0-yy/hh,0.45,1)
-ring=cv2.erode(mask,np.ones((3,3),np.uint8));e1=((mask>0)&(ring==0)).astype(np.float32);e2=((ring>0)&(inner2==0)).astype(np.float32)
-R[CY0:CY1,CX0:CX1]+= (e1*t2*95+e2*t2*28)[...,None]
-R[CY1:CY1+2,CX0+RAD:CX1-RAD]*=0.6
-R[CY1+2:CY1+4,CX0+RAD:CX1-RAD]*=0.82
+def rrmask(x0,y0,x1,y1,r,S=4):
+    w,h=x1-x0,y1-y0;m=Image.new('L',(w*S,h*S),0);ImageDraw.Draw(m).rounded_rectangle((0,0,w*S-1,h*S-1),radius=r*S,fill=255)
+    return np.array(m.resize((w,h),Image.LANCZOS)).astype(np.float32)/255
+def ring(x0,y0,x1,y1,r,t=1.6):
+    a=rrmask(x0,y0,x1,y1,r);k=int(round(t));Sm=cv2.erode(a,np.ones((2*k+1,2*k+1),np.uint8))
+    return np.clip(a-Sm,0,1)
+def glass(N,box,r,tint,tint_a,edge_a,blur=16):
+    x0,y0,x1,y1=box;sub=N[y0:y1,x0:x1];bl=cv2.GaussianBlur(sub,(0,0),blur)
+    m=rrmask(x0,y0,x1,y1,r)[...,None]
+    t=np.array(tint[::-1],np.float32)
+    fill=bl*(1-tint_a)+t*tint_a*0.55+bl*0.0
+    # gentle vertical sheen
+    g=np.linspace(1.12,0.9,y1-y0)[:,None,None];fill=fill*g
+    out=sub*(1-m)+fill*m
+    e=ring(x0,y0,x1,y1,r)[...,None]*edge_a;out=out*(1-e)+(t*0.55+np.array([255,255,255],np.float32)*0.45)*e
+    N[y0:y1,x0:x1]=out;return N
+TINT=(226,170,80)
+R*=(1-0.5*sh[...,None])
+gm=np.zeros((H,W),np.float32);gm[CY0:CY1,CX0:CX1]=ring(CX0,CY0,CX1,CY1,RAD,3)
+gl=cv2.GaussianBlur(gm,(0,0),9)*ramp;R+=gl[...,None]*np.array(TINT[::-1],np.float32)[None,None]*0.9
+R=glass(R,(CX0,CY0,CX1,CY1),RAD,TINT,0.34,0.6)
 # ---- text: stat block scaled 1.07, change nothing 1.0
 def paste(R,lay,x,y,sc=1.0):
     if sc!=1.0:lay=cv2.resize(lay,(int(round(lay.shape[1]*sc)),int(round(lay.shape[0]*sc))),interpolation=cv2.INTER_CUBIC)
