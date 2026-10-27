@@ -54,12 +54,12 @@ def glass(N,box,r,tint,tint_a,edge_a,blur=16):
     out=sub*(1-m)+fill*m
     e=ring(x0,y0,x1,y1,r)[...,None]*edge_a;out=out*(1-e)+(t*0.55+np.array([255,255,255],np.float32)*0.45)*e
     N[y0:y1,x0:x1]=out;return N
-TINT=(226,170,80)
+TINT=(210,220,235)
 R*=(1-0.5*sh[...,None])
 gm=np.zeros((H,W),np.float32);gm[CY0:CY1,CX0:CX1]=ring(CX0,CY0,CX1,CY1,RAD,3)
-gl=(cv2.GaussianBlur(gm,(0,0),14)*1.6+cv2.GaussianBlur(gm,(0,0),4)*0.8)*ramp;R+=gl[...,None]*np.array(TINT[::-1],np.float32)[None,None]*0.9
+
 R[CY0:CY1,CX0:CX1]=R[CY0:CY1,CX0:CX1]*(1-mk[...,None]*0.55)+np.array([46,22,10],np.float32)*mk[...,None]*0.55
-R=glass(R,(CX0,CY0,CX1,CY1),RAD,TINT,0.10,0.95)
+R=glass(R,(CX0,CY0,CX1,CY1),RAD,TINT,0.06,0.35)
 # ---- text: stat block scaled 1.07, change nothing 1.0
 def paste(R,lay,x,y,sc=1.0):
     if sc!=1.0:lay=cv2.resize(lay,(int(round(lay.shape[1]*sc)),int(round(lay.shape[0]*sc))),interpolation=cv2.INTER_CUBIC)

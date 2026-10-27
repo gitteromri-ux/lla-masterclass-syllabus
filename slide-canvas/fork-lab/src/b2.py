@@ -52,8 +52,10 @@ def matte(x0,y0,x1,y1,mask):
     return col,al
 HD=[(1385,244,1800,302,248-249,0),(1300,365,1700,428,378-372,1304-1307),(1250,548,1700,608,638-556,1250-1257)]
 HC=[np.array([255,165,180],np.float32),np.array([255,190,110],np.float32),None]
-for (x0,y0,x1,y1,dy,dx),hc in zip(HD,HC):
+ROWC=[310,428,664]
+for (x0,y0,x1,y1,dy,dx),hc,rc in zip(HD,HC,ROWC):
     col,al=matte(x0,y0,x1,y1,tm);A=al[...,None]
+    ys=np.where((al>0.3).any(1))[0];dy=int(round(rc-(y0+(ys.min()+ys.max())/2)));print('head',rc,dy)
     if hc is not None: col=col*0+hc
     R[y0+dy:y1+dy,x0+dx:x1+dx]=R[y0+dy:y1+dy,x0+dx:x1+dx]*(1-A)+col*A
 def put(R,rgba,x,y,shadow=True,sh_op=0.5):
@@ -67,17 +69,17 @@ def obj(n,sc):
     c,ox,oy=L[n];h,w=c.shape[:2];c=cv2.resize(c,(int(round(w*sc)),int(round(h*sc))),interpolation=cv2.INTER_AREA)
     a=(c[...,3]>20);ys,xs=np.where(a);return c,xs.min(),ys.min(),xs.max(),ys.max()
 GAP=36
-rows=[('clock',1.0,272,1394),('dumb',0.9,402,1304),]
+rows=[('dumb',0.63,428,1304),]
 for n,sc,cy,tl in rows:
-    c,a0,b0,a1,b1=obj(n,sc);x=int(tl-GAP-a1);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
+    c,a0,b0,a1,b1=obj(n,sc);x=int(tl-88-(a0+a1)/2);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
 # CGM bigger, phone smaller
 c,ox,oy=L['cgm'];sen=c[:,:98].copy();ph=c[:,98:].copy()
 def bb(a):
     ys,xs=np.where(a[...,3]>20);return xs.min(),ys.min(),xs.max(),ys.max()
 def sc_(a,s):return cv2.resize(a,(int(a.shape[1]*s),int(a.shape[0]*s)),interpolation=cv2.INTER_CUBIC if s>1 else cv2.INTER_AREA)
 ph=sc_(ph,0.68);sen=sc_(sen,1.35)
-cy=662;tl=1250
-a0,b0,a1,b1=bb(ph);px=int(tl-GAP-a1);py=int(cy-(b0+b1)/2);put(R,ph,px,py)
+cy=664;tl=1250
+a0,b0,a1,b1=bb(ph);s0_,t0_,s1_,t1_=bb(sen);gw=(s1_-s0_)+10+(a1-a0);px=int(tl-30-a1);py=int(cy-(b0+b1)/2);put(R,ph,px,py)
 s0,t0,s1,t1=bb(sen);sx=int(px+a0-10-s1);sy=int(cy+8-(t0+t1)/2);put(R,sen,sx,sy)
 print('sensor',sx+s0,sy+t0,sx+s1,sy+t1,'phone',px+a0,py+b0,px+a1,py+b1)
 # ---- veg headline
@@ -88,7 +90,7 @@ except Exception as e:print('var',e)
 bb=f.getbbox('Watch your sugar.');print('wys bbox',bb)
 # green color from Start moving headline
 s=O[370:412,1305:1600];g=s[((s[...,1]-s[...,2])>60)];gc=np.median(g[g[:,1]>np.percentile(g[:,1],80)],0);print('green',gc)
-VT=508; VX=1262
+VT=546-24; VX=1262
 txt=Image.new('L',(600,140),0);d=ImageDraw.Draw(txt)
 # position so glyph top aligns like sugar headline: sugar glyph top 555 for left 1262
 d.text((10-bb[0]+ (1262-1257) ,20-bb[1]),'Add a vegetable.',font=f,fill=255)
@@ -98,14 +100,14 @@ R[y0:y0+140,x0:x0+600]=R[y0:y0+140,x0:x0+600]*(1-A)+gc*A
 vb=np.where(al>0.3);print('veg',x0+vb[1].min(),y0+vb[0].min(),x0+vb[1].max(),y0+vb[0].max())
 # ---- broccoli
 bc=np.array(Image.open('c_broc.png').convert('RGBA')).astype(np.float32)
-bc=bc[225:731,249:785];bc[...,3]=np.clip((bc[...,3]-60)/170,0,1)*255;th=70;sc=th/bc.shape[0]
+bc=bc[225:731,249:785];bc[...,3]=np.clip((bc[...,3]-60)/170,0,1)*255;th=88;sc=th/bc.shape[0]
 bc=cv2.resize(bc,(int(bc.shape[1]*sc),th),interpolation=cv2.INTER_AREA)
 bc[...,:3]=bc[...,:3]*0.62;g=bc[...,:3].mean(2,keepdims=True);bc[...,:3]=g+(bc[...,:3]-g)*0.8
 bc[...,2]*=1.04  # (RGB order here: slight cool)  
 bc[...,0]*=0.97
 bc=np.pad(bc,((20,20),(20,20),(0,0)))
 vcy=(VT+VT+48)/2
-bx=int(VX-GAP-bc.shape[1]+20);by=int(532-bc.shape[0]/2)
+bx=int(VX-88-bc.shape[1]/2);by=int(546-bc.shape[0]/2)
 put(R,bc,bx,by,sh_op=0.6);print('broc',bx,by,bx+bc.shape[1],by+th)
 np.save('R_right.npy',R)
 np.save('plate.npy',plate);np.save('tm.npy',tm)
