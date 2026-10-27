@@ -14,7 +14,7 @@ mf=cv2.GaussianBlur(m.astype(np.float32)/255,(0,0),1.5)[...,None];R=R*(1-mf)+inp
 sc=0.82
 L2=cv2.resize(lap,(int(w*sc),int(h*sc)),interpolation=cv2.INTER_AREA)
 # anchor bottom-right of laptop bbox
-nx=int(round(ox+rgt-rgt*sc));ny=int(round(oy+bot-bot*sc))
+nx=int(round(ox+rgt-rgt*sc));ny=int(round(oy+bot-bot*sc))-20
 hh,ww=L2.shape[:2];A=L2[...,3:]/255
 R[ny:ny+hh,nx:nx+ww]=R[ny:ny+hh,nx:nx+ww]*(1-A)+L2[...,:3]*A
 print('laptop new bbox',nx+int(lft*sc),ny+int(top*sc),nx+int(rgt*sc),ny+int(bot*sc))
