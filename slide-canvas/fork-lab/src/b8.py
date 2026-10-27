@@ -15,7 +15,7 @@ def bb(c):
     ys,xs=np.where(c[...,3]>40);return xs.min(),ys.min(),xs.max(),ys.max()
 # measure headlines on rendered pixels
 rows=[]
-for y0,y1,x0 in [(265,360,1290),(385,480,1290),(500,595,1250),(620,712,1240)]:
+for y0,y1,x0 in [(265,360,1290),(385,480,1280),(500,595,1225),(620,712,1225)]:
     s=R[y0:y1,x0:1900];mk=((s.max(2)-s.min(2))>60)&(s.max(2)>140)
     cnt=mk.sum(1);good=np.where(cnt>0.45*cnt.max())[0]
     rows.append((y0+(good.min()+good.max())/2,x0+np.where(mk.any(0))[0].min()))

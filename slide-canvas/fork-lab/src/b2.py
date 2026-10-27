@@ -50,14 +50,16 @@ def matte(x0,y0,x1,y1,mask):
     al=np.clip((lum-bl)/np.maximum(tl-bl,25),0,1)*m
     col=np.clip((s-b*(1-al[...,None]))/np.maximum(al[...,None],0.08),0,255)
     return col,al
-HD=[(1385,244,1800,302,248-249,0),(1300,365,1700,428,378-372,1304-1307),(1250,548,1700,608,638-556,1250-1257)]
-HC=[np.array([255,165,180],np.float32),np.array([255,190,110],np.float32),None]
+HD=[(1385,244,1800,302,0,1315-1390),(1300,365,1700,428,0,1303-1301+(1304-1307)),(1250,548,1700,608,0,1250-1253+(1250-1257))]
+HC=[np.array([255,175,195],np.float32),np.array([255,200,110],np.float32),np.array([140,130,255],np.float32)]
 ROWC=[310,428,664]
 for (x0,y0,x1,y1,dy,dx),hc,rc in zip(HD,HC,ROWC):
     col,al=matte(x0,y0,x1,y1,tm);A=al[...,None]
     ys=np.where((al>0.3).any(1))[0];dy=int(round(rc-(y0+(ys.min()+ys.max())/2)));print('head',rc,dy)
     if hc is not None:
         l=col.max(2,keepdims=True);col=np.clip(l/np.percentile(l[al>0.9],60)*hc,0,255)
+    sh=cv2.GaussianBlur(cv2.warpAffine(al,np.float32([[1,0,2],[0,1,3]]),(al.shape[1],al.shape[0])),(0,0),2.2)[...,None]
+    R[y0+dy:y1+dy,x0+dx:x1+dx]*=1-0.65*np.clip(sh*1.4,0,1)
     R[y0+dy:y1+dy,x0+dx:x1+dx]=R[y0+dy:y1+dy,x0+dx:x1+dx]*(1-A)+col*A
 def put(R,rgba,x,y,shadow=True,sh_op=0.5):
     h,w=rgba.shape[:2];A=rgba[...,3:]/255;rgb=rgba[...,2::-1] if rgba.shape[2]==4 else None
@@ -92,12 +94,15 @@ except Exception as e:print('var',e)
 bb=f.getbbox('Watch your sugar.');print('wys bbox',bb)
 # green color from Start moving headline
 s=O[370:412,1305:1600];g=s[((s[...,1]-s[...,2])>60)];gc=np.median(g[g[:,1]>np.percentile(g[:,1],80)],0);print('green',gc)
-VT=546-24; VX=1262
+VT=546-24; VX=1249
 txt=Image.new('L',(600,140),0);d=ImageDraw.Draw(txt)
 # position so glyph top aligns like sugar headline: sugar glyph top 555 for left 1262
 d.text((10-bb[0]+ (1262-1257) ,20-bb[1]),'Add a vegetable.',font=f,fill=255)
 al=np.array(txt).astype(np.float32)/255;A=al[...,None]
 y0=VT-20;x0=VX-10
+sh=cv2.GaussianBlur(cv2.warpAffine(al,np.float32([[1,0,2],[0,1,3]]),(600,140)),(0,0),2.2)[...,None]
+R[y0:y0+140,x0:x0+600]*=1-0.65*np.clip(sh*1.4,0,1)
+gc=np.array([120,255,150],np.float32)
 R[y0:y0+140,x0:x0+600]=R[y0:y0+140,x0:x0+600]*(1-A)+gc*A
 vb=np.where(al>0.3);print('veg',x0+vb[1].min(),y0+vb[0].min(),x0+vb[1].max(),y0+vb[0].max())
 # ---- broccoli

@@ -22,8 +22,10 @@ tile=np.tile(hf2,(H//280+1,W//320+1,1))[:H,:W]
 mf=cv2.GaussianBlur(m.astype(np.float32)/255,(0,0),1.5)[...,None]
 C=cv2.GaussianBlur(C,(0,0),1.2)*mf+C*(1-mf);C=C+tile*mf*1.0
 reg=np.zeros((H,W),np.float32);reg[228:738,1000:1900]=1
-for cy,xl in [(312,1390),(432,1301),(547,1263),(666,1253)]:
-    reg[int(cy-31):int(cy+31),xl-6:]=0
+for cy,xl in [(312,1315),(432,1303),(547,1250),(666,1250)]:
+    bandF=F[int(cy-31):int(cy+31),xl-4:];st_=((bandF.max(2)-bandF.min(2))>45)&(bandF.max(2)>100)
+    st_=cv2.dilate(st_.astype(np.uint8),np.ones((11,11),np.uint8))
+    reg[int(cy-31):int(cy+31),xl-4:]*=1-st_
 reg=cv2.GaussianBlur(reg,(0,0),1.5)[...,None]
 out=F*(1-reg)+C*reg
 np.save('C.npy',C);cv2.imwrite('new6.png',np.clip(out,0,255).astype(np.uint8))
