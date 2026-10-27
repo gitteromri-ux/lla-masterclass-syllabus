@@ -78,9 +78,19 @@ from scipy.ndimage import median_filter
 _py=median_filter(_py,size=9).astype(np.float32)
 _px=np.concatenate([[0],_px,[1000]]);_py=np.concatenate([[_py[0]],_py,[_py[-1]]]);print('stripe curve pts',len(_px),_py[::40])
 def yt(x):return np.interp(x,_px,_py)
-def shifted(img,d,align=True):
+_hs=cv2.cvtColor(A,cv2.COLOR_BGR2HSV);_cm=(_hs[...,1]<60)&(_hs[...,2]>170)
+_qx=[];_qy=[]
+for _x in range(XL+3,XR-6):
+    if _dc[_x]:continue
+    _c=_cm[330:410,_x-2:_x+3].mean(1)>0.6;_r=np.where(_c)[0]
+    if len(_r):_qx.append(_x);_qy.append(330+_r[-1])
+_qy=median_filter(np.array(_qy,np.float32),size=9).astype(np.float32);_qx=np.array(_qx,np.float32)
+_qx=np.concatenate([[0],_qx,[1000]]);_qy=np.concatenate([[_qy[0]],_qy,[_qy[-1]]]);print('upper stripe bottom curve',_qy[::40])
+def yt2(x):return np.interp(x,_qx,_qy)
+def shifted(img,d,align=True,curve=None):
+    curve=curve or yt
     gx,gy=np.meshgrid(np.arange(W,dtype=np.float32),np.arange(H,dtype=np.float32))
-    xs_=np.clip(gx+d,0,W-1).astype(np.float32);off=((yt(xs_)-yt(gx)) if align else np.zeros_like(gx)).astype(np.float32)
+    xs_=np.clip(gx+d,0,W-1).astype(np.float32);off=((curve(xs_)-curve(gx)) if align else np.zeros_like(gx)).astype(np.float32)
     return cv2.remap(img,xs_,(gy+off).astype(np.float32),cv2.INTER_LINEAR,borderMode=cv2.BORDER_REPLICATE)
 def fin(comp):
     global B,Dcur,hpimg
@@ -112,6 +122,7 @@ def fill(i):
     if best is None:return False
     d=best[1];print('comp',x,y,w,h,'shift',d,'err %.1f'%best[0])
     low=np.zeros((H,W,3),np.float32);shc=np.roll(B,-d,axis=1).astype(np.float32)
+    LR={}
     for yv in range(y,y+h):
         xs_=np.where(comp[yv])[0]
         if len(xs_)==0:continue
@@ -123,7 +134,13 @@ def fill(i):
             low[yv,xa:xb+1]=cv2.GaussianBlur(shc[yv:yv+1],(0,0),sigmaX=4)[0][xa:xb+1];continue
         if Lv is None:Lv=Rv
         if Rv is None:Rv=Lv
-        t=np.linspace(0,1,xb-xa+1)[:,None];low[yv,xa:xb+1]=Lv[None]*(1-t)+Rv[None]*t
+        LR[yv]=(xa,xb,Lv,Rv)
+    ks=sorted(LR)
+    if ks:
+        from scipy.ndimage import gaussian_filter1d
+        LL=gaussian_filter1d(np.array([LR[k][2] for k in ks]),3.0,axis=0,mode='nearest');RR=gaussian_filter1d(np.array([LR[k][3] for k in ks]),3.0,axis=0,mode='nearest')
+        for i,yv in enumerate(ks):
+            xa,xb=LR[yv][:2];t=np.linspace(0,1,xb-xa+1)[:,None];low[yv,xa:xb+1]=LL[i][None]*(1-t)+RR[i][None]*t
     low=cv2.GaussianBlur(low,(0,0),sigmaX=0.1,sigmaY=0.7)
     gain=1.0 if (x==250 and w==71) else 1.0
     cand_=np.clip(low+np.roll(hpimg,-d,axis=1)*gain,0,255)
@@ -159,6 +176,15 @@ def fill(i):
                 wgt=cv2.GaussianBlur((mk>0).astype(np.float32),(0,0),1.5)[...,None]*keep
                 grain=np.clip(lowc+hs,0,255)
                 out=(out.astype(np.float32)*(1-wgt)+grain*wgt).astype(np.uint8)
+    if (x>700):
+        mk2=cv2.dilate(comp.astype(np.uint8),np.ones((1,61),np.uint8))>0;mk2[:346]=False;mk2[398:]=False;mk2[:,XR-12:]=False;mk2[:,:XL+3]=False
+        mk2&=(yy>=atop_s[None,:]+20)
+        mk2=(mk2*255).astype(np.uint8)
+        if mk2.sum()>255*200:
+            ys_,xs2=np.where(mk2>0);cx2=(xs2.min()+xs2.max())//2;cy2=(ys_.min()+ys_.max())//2
+            cl=cv2.seamlessClone(shifted(B,d,align=True,curve=yt2),out,mk2.copy(),(int(cx2),int(cy2)),cv2.NORMAL_CLONE)
+            a_=np.clip(cv2.GaussianBlur(mk2.astype(np.float32)/255,(0,0),1.0)[...,None],0,1)
+            out=(out.astype(np.float32)*(1-a_)+cl.astype(np.float32)*a_).astype(np.uint8)
     fin(comp);return True
 
 for _p in range(4):
