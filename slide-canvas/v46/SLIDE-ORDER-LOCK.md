@@ -1,8 +1,11 @@
 # V46 SLIDE ORDER LOCK
 
-Locked by Omri's order at 2026-10-27 16:40 (Asia/Jerusalem). State of the live deck at commit `71a14bf` (25 slides, total 50:00). Image md5s are of the live files.
+Updated 2026-10-27 (Asia/Jerusalem) to the **26-slide order**, total 50:00. Image md5s are of the files in the deck.
 
-Rules from now on: do NOT reorder, remove or redesign any existing slide. Only allowed additions: (1) Julie's option-B duplicates, each inserted immediately after its original; (2) ONE new sugar/CGM slide immediately after the crème brûlée slide.
+Rules: do NOT reorder, remove or redesign any slide listed here. Changes since the first lock (25 slides at `71a14bf`), all on Omri's orders:
+- added slide 16, `n28-sugar-limit.jpg` (new sugar / CGM slide after the crème brûlée; the brûlée now has 0:30 and the sugar slide 0:30);
+- the original Movement Week `n14-movement-week.jpg` (was slide 18) was removed from the deck; `n27-movement-week-julie.jpg` (Julie's version with mobility & balance) is now slide 19 and takes its 1:30 and its notes (the file `n14-movement-week.jpg` is still in the repo, md5 `c9116248607ca939c879a25e1dd618a1`, unused);
+- the protocol slide `n16-protocol.jpg` was edited in place (md5 was `1cbb460fed15df5098ac5b70073fdecd`).
 
 | # | image file | headline | time | running total | md5 |
 |---|---|---|---|---|---|
@@ -20,16 +23,17 @@ Rules from now on: do NOT reorder, remove or redesign any existing slide. Only a
 | 12 | n09-food.jpg | Food. | 2:45 | 21:40 | 1c009189bbf69cc46275c5b0d5c82a6c |
 | 13 | n10-plate.jpg | What does it look like in real life? | 1:20 | 23:00 | f564afddacf55ce25b6c22df0229104c |
 | 14 | n11-sugar.jpg | The one thing every diet agrees on. | 2:45 | 25:45 | 5901d38105622b9d812cd236790d97e5 |
-| 15 | n24-brulee.jpg | Crème brûlée and wrinkles. | 1:00 | 26:45 | cb42af57f6c0f3e02d5f480f8cb120db |
-| 16 | n12-sameage.jpg | Same age. | 0:30 | 27:15 | 0040935e452c006656a5aed03965918b |
-| 17 | n13-movement.jpg | Four types of movement, four parts of you. | 3:00 | 30:15 | 8a9446c92882c7999935fc762137f96e |
-| 18 | n14-movement-week.jpg | Julie Gibson Clark’s Movement Week. | 1:30 | 31:45 | c9116248607ca939c879a25e1dd618a1 |
-| 19 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | dee60d600841c3704533ff43bd5cb849 |
-| 20 | n16-protocol.jpg | Julie Gibson Clark's Longevity Protocol. | 4:00 | 38:30 | 1cbb460fed15df5098ac5b70073fdecd |
-| 21 | n17-notebook.jpg | You don't need a lab. You need a notebook. | 1:30 | 40:00 | 4bf3abd73003b2df0d02b7736a57f973 |
-| 22 | n18-testing.jpg | Test. Then buy. | 2:00 | 42:00 | 54e77f2892b1af51208d1a56ad9275ee |
-| 23 | n19-cake.jpg | That's the cake. | 1:00 | 43:00 | 236625b31c7388765ade39251d180a7b |
-| 24 | n20-why.jpg | Why. Intention. Resources. | 3:00 | 46:00 | ffbd112bf0fd1298cc3799fd1abdfb04 |
-| 25 | n25-fork.png | One takeaway. Take action. (closing) | 4:00 | 50:00 | 092ff063179d8300d773ad5a517b5fd3 |
+| 15 | n24-brulee.jpg | Crème brûlée and wrinkles. | 0:30 | 26:15 | cb42af57f6c0f3e02d5f480f8cb120db |
+| 16 | n28-sugar-limit.jpg | Six teaspoons: the daily limit for added sugar. | 0:30 | 26:45 | 94c49d0198a6a7be1d94b8d31ed48b1b |
+| 17 | n12-sameage.jpg | Same age. | 0:30 | 27:15 | 0040935e452c006656a5aed03965918b |
+| 18 | n13-movement.jpg | Four types of movement, four parts of you. | 3:00 | 30:15 | 8a9446c92882c7999935fc762137f96e |
+| 19 | n27-movement-week-julie.jpg | Julie Gibson Clark’s Movement Week. | 1:30 | 31:45 | 32050755fdf213fef0de8a6dec4d4c6e |
+| 20 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | dee60d600841c3704533ff43bd5cb849 |
+| 21 | n16-protocol.jpg | Julie Gibson Clark's Longevity Protocol. | 4:00 | 38:30 | b42386860fd0e3ea89f4756c64bf7ecb |
+| 22 | n17-notebook.jpg | You don't need a lab. You need a notebook. | 1:30 | 40:00 | 4bf3abd73003b2df0d02b7736a57f973 |
+| 23 | n18-testing.jpg | Test. Then buy. | 2:00 | 42:00 | 54e77f2892b1af51208d1a56ad9275ee |
+| 24 | n19-cake.jpg | That's the cake. | 1:00 | 43:00 | 236625b31c7388765ade39251d180a7b |
+| 25 | n20-why.jpg | Why. Intention. Resources. | 3:00 | 46:00 | ffbd112bf0fd1298cc3799fd1abdfb04 |
+| 26 | n25-fork.png | One takeaway. Take action. (closing) | 4:00 | 50:00 | 092ff063179d8300d773ad5a517b5fd3 |
 
-Total: 50:00 net, 25 slides. Review-page ids in order: s1, s2, s3, sx-risks, s4, s5, sx-bz, s6, s7, s8, sx-religion, s10-food, s10, s11, sx-brulee, s13, s14, s15, s16, s17, s18, s19, s20, s21, sx-fork.
+Review-page ids in order: s1, s2, s3, sx-risks, s4, s5, sx-bz, s6, s7, s8, sx-religion, s10-food, s10, s11, sx-brulee, sx-sugar, s13, s14, sx-mw-julie, s16, s17, s18, s19, s20, s21, sx-fork
