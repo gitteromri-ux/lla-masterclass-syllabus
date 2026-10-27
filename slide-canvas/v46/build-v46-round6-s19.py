@@ -15,5 +15,5 @@ im=warped.copy()
 # upper labels: two-line items move down DN; the single-line items (Dinner, Kitchen closes, Lights out) move DN + one text line (37 px) so every label ends at the same distance from the line
 LINE=37
 for box,dy in [((100,368,1040,505),DN),((1040,368,1880,505),DN+LINE)]:
-    a,bg=lift(src,im,box,dy,k=101,thr=26,dil=9);put(src,im,box,dy,a)
+    a,bg=lift(src,im,box,dy,k=101,thr=26,dil=9,inp=True);put(src,im,box,dy,a)
 cv2.imwrite('assets/n16-protocol.jpg',im,[cv2.IMWRITE_JPEG_QUALITY,95])

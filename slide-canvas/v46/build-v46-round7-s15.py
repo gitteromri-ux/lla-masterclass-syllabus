@@ -20,3 +20,25 @@ o[...,2]=np.where(fr,np.maximum(Rr,Gg),Rr);o[...,0]=np.where(fr,np.minimum(Bb,np
 out=np.clip(out,0,255).astype(np.uint8)
 cv2.imwrite('assets/n12-sameage.jpg',out,[cv2.IMWRITE_JPEG_QUALITY,95])
 cv2.imwrite('/workspace/r5/p_new2.png',cv2.resize(out[495:565,1520:1620],None,fx=9,fy=9,interpolation=cv2.INTER_NEAREST))
+# pass 2: remove the remaining 4-px light halo strip left of the 'H' stem (x1556-1565); the H's own top/bottom serifs (rows 520-522, 529-532) are kept
+out=cv2.imread('assets/n12-sameage.jpg').astype(np.float32)
+xa,xb,ya,yb=1554,1566,505,556
+top=out[ya:ya+3,xa:xb].mean(0);bot=out[yb-3:yb,xa:xb].mean(0)
+t=np.linspace(0,1,yb-ya)[:,None,None];bg=top[None]*(1-t)+bot[None]*t
+m=np.ones((yb-ya,xb-xa),np.float32)
+for r0,r1,xmin in [(520,523,1561),(529,533,1563)]:
+    m[r0-ya:r1-ya,xmin-xa:]=0
+Lc=out[ya:yb,xa:xb].max(2);m[Lc>=200]=0
+m=cv2.GaussianBlur(m,(0,0),0.7)
+# keep a soft hold on whatever is bright
+m*=np.clip((220-Lc)/40,0,1)
+out[ya:yb,xa:xb]=out[ya:yb,xa:xb]*(1-m[...,None])+bg*m[...,None]
+cv2.imwrite('assets/n12-sameage.jpg',np.clip(out,0,255).astype(np.uint8),[cv2.IMWRITE_JPEG_QUALITY,95])
+# pass 3: faint light speck just above the H's top serif (rows 511-519, x1562-1580)
+out=cv2.imread('assets/n12-sameage.jpg').astype(np.float32)
+xa,xb,ya,yb=1562,1582,504,522
+top=out[ya:ya+4,xa:xb].mean(0);bg=np.repeat(top[None],yb-ya,0)
+m=np.zeros((yb-ya,xb-xa),np.float32);m[7:15,:]=1;m=cv2.GaussianBlur(m,(0,0),1.5)*0.9
+Lc=out[ya:yb,xa:xb].max(2);m*=np.clip((200-Lc)/40,0,1)
+out[ya:yb,xa:xb]=out[ya:yb,xa:xb]*(1-m[...,None])+bg*m[...,None]
+cv2.imwrite('assets/n12-sameage.jpg',np.clip(out,0,255).astype(np.uint8),[cv2.IMWRITE_JPEG_QUALITY,95])
