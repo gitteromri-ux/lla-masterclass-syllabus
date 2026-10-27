@@ -10,7 +10,7 @@ def matte(x0,y0,x1,y1):
     al=np.clip((lum-bl)/np.maximum(tl-bl,25),0,1)*m
     col=np.clip((s-b*(1-al[...,None]))/np.maximum(al[...,None],0.08),0,255)
     return np.dstack([col,al[...,None]*255])
-CX0,CY0,CX1,CY1=34,318,578,612;RAD=26
+CX0,CY0,CX1,CY1=34,318,578,636;RAD=26
 # card base: text-free plate behind (left), blurred + darkened glass
 P=plate.copy()
 bl=cv2.GaussianBlur(P,(0,0),22)[CY0:CY1,CX0:CX1]
