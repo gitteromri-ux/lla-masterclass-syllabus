@@ -5,6 +5,8 @@ Updated 2026-10-27 (Asia/Jerusalem) to the **26-slide order**, total 50:00. Imag
 Rules: do NOT reorder, remove or redesign any slide listed here. Changes since the first lock (25 slides at `71a14bf`), all on Omri's orders:
 - added slide 16, `n28-sugar-limit.jpg` (new sugar / CGM slide after the crème brûlée; the brûlée now has 0:30 and the sugar slide 0:30);
 - the original Movement Week `n14-movement-week.jpg` (was slide 18) was removed from the deck; `n27-movement-week-julie.jpg` (Julie's version with mobility & balance) is now slide 19 and takes its 1:30 and its notes (the file `n14-movement-week.jpg` is still in the repo, md5 `c9116248607ca939c879a25e1dd618a1`, unused);
+- Omri's later order: `n27-movement-week-julie.jpg` was restored byte for byte to the version from commit `72aca81` (long orange 'Mobility & balance' band on top, tiles below; previous md5 `32050755fdf213fef0de8a6dec4d4c6e`);
+- the stress slide `n15-stress.jpg` (now slide 20) had only its glass box ('A free five-minute tool / The physiological sigh' with the three bars and '5 min') removed, background filled (md5 was `dee60d600841c3704533ff43bd5cb849`);
 - the protocol slide `n16-protocol.jpg` was edited in place (md5 was `1cbb460fed15df5098ac5b70073fdecd`);
 - the sleep slide `n08-sleep.jpg` had its blue line 'TARGET WINDOW · 9 PM – 5 AM' removed (md5 was `8dd09b02848c69bbf92008a674efbf77`).
 
@@ -28,8 +30,8 @@ Rules: do NOT reorder, remove or redesign any slide listed here. Changes since t
 | 16 | n28-sugar-limit.jpg | Six teaspoons: the daily limit for added sugar. | 0:30 | 26:45 | 94c49d0198a6a7be1d94b8d31ed48b1b |
 | 17 | n12-sameage.jpg | Same age. | 0:30 | 27:15 | 0040935e452c006656a5aed03965918b |
 | 18 | n13-movement.jpg | Four types of movement, four parts of you. | 3:00 | 30:15 | 8a9446c92882c7999935fc762137f96e |
-| 19 | n27-movement-week-julie.jpg | Julie Gibson Clark’s Movement Week. | 1:30 | 31:45 | 32050755fdf213fef0de8a6dec4d4c6e |
-| 20 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | dee60d600841c3704533ff43bd5cb849 |
+| 19 | n27-movement-week-julie.jpg | Julie Gibson Clark’s Movement Week. | 1:30 | 31:45 | 09dae6d4a701e4b8732533dc54abd564 |
+| 20 | n15-stress.jpg | The layer people skip. | 2:45 | 34:30 | 3dec755e453419b20d890791ebc6f579 |
 | 21 | n16-protocol.jpg | Julie Gibson Clark's Longevity Protocol. | 4:00 | 38:30 | b42386860fd0e3ea89f4756c64bf7ecb |
 | 22 | n17-notebook.jpg | You don't need a lab. You need a notebook. | 1:30 | 40:00 | 4bf3abd73003b2df0d02b7736a57f973 |
 | 23 | n18-testing.jpg | Test. Then buy. | 2:00 | 42:00 | 54e77f2892b1af51208d1a56ad9275ee |
