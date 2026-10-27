@@ -10,25 +10,25 @@ function change(n,src,title,note){
 function noOptions(n){slot(n).querySelector('.opts')?.remove();}
 
 // V45 renumbered copies of the original images (only the baked-in counter changed).
-change(2,'assets/n02-why.jpg?v=v46j');
-change(3,'assets/n03-dunedin.jpg?v=v46j');
-change(4,'assets/n04-cake.jpg?v=v46j');
-change(5,'assets/n05-icing.jpg?v=v46j');
-change(6,'assets/n06-menopause.jpg?v=v46j');
-change(7,'assets/n07-bridge.jpg?v=v46j');
-change(11,'assets/n11-sugar.jpg?v=v46j');
-change(20,'assets/n19-cake.jpg?v=v46j');
-change(21,'assets/n20-why.jpg?v=v46j');
-change(1,'assets/n01-title.jpg?v=v46j',null,'Say: “This is not medical advice. Please talk to your doctor.” Then move to the next slide.');
-change(8,'assets/n08-sleep.jpg?v=v46j',"I'll sleep when I die.",'Said the person aging at twice the normal speed. Sleep is the repair shift, followed by the night timeline.');
+change(2,'assets/n02-why.jpg?v=v46k');
+change(3,'assets/n03-dunedin.jpg?v=v46k');
+change(4,'assets/n04-cake.jpg?v=v46k');
+change(5,'assets/n05-icing.jpg?v=v46k');
+change(6,'assets/n06-menopause.jpg?v=v46k');
+change(7,'assets/n07-bridge.jpg?v=v46k');
+change(11,'assets/n11-sugar.jpg?v=v46k');
+change(20,'assets/n19-cake.jpg?v=v46k');
+change(21,'assets/n20-why.jpg?v=v46k');
+change(1,'assets/n01-title.jpg?v=v46k',null,'Say: “This is not medical advice. Please talk to your doctor.” Then move to the next slide.');
+change(8,'assets/n08-sleep.jpg?v=v46k',"I'll sleep when I die.",'Said the person aging at twice the normal speed. Sleep is the repair shift, followed by the night timeline.');
 noOptions(8);
 slot(9).remove();
 slot(12).remove();
-change(10,'assets/n10-plate.jpg?v=v46j',null,'The plate illustrates Julie’s script: protein is the floor, fiber is the lever, whole food is the default. Her five personal rules stay on screen.');
+change(10,'assets/n10-plate.jpg?v=v46k',null,'The plate illustrates Julie’s script: protein is the floor, fiber is the lever, whole food is the default. Her five personal rules stay on screen.');
 const food=slot(10).cloneNode(true);
 food.id='s10-food';
 food.querySelector('.num').textContent='10A';
-food.querySelector('.main').src='assets/n09-food.jpg?v=v46j';food.querySelector('h2').textContent='Food.';food.querySelector('textarea').dataset.t='Food.';
+food.querySelector('.main').src='assets/n09-food.jpg?v=v46k';food.querySelector('h2').textContent='Food.';food.querySelector('textarea').dataset.t='Food.';
 food.querySelector('.why').textContent='Food foundations. Claude B, Protocol, slide 9. Followed by Julie’s plate.';
 food.querySelector('.opts')?.remove();
 food.querySelector('label').htmlFor='c10-food';
@@ -37,24 +37,24 @@ food.querySelector('textarea').dataset.n='10-food';
 food.querySelector('.saved').id='v10-food';
 slot(10).before(food);
 noOptions(10);
-change(13,'assets/n12-sameage.jpg?v=v46j',null,'Selected option 2: the two people, side by side.');
+change(13,'assets/n12-sameage.jpg?v=v46k',null,'Selected option 2: the two people, side by side.');
 noOptions(13);
-change(14,'assets/n13-movement.jpg?v=v46j',null,'Weights, VO2 max, Zone 2 (two people walking and talking), mobility and balance.');
-change(15,'assets/n14-movement-week.jpg?v=v46j',"Julie Gibson Clark’s Movement Week.",'Movement week (option 2), Claude B, Protocol, slide 13. Marked V2. Julie to update. The full protocol follows after the stress slide.');
+change(14,'assets/n13-movement.jpg?v=v46k',null,'Weights, VO2 max, Zone 2 (two people walking and talking), mobility and balance.');
+change(15,'assets/n14-movement-week.jpg?v=v46k',"Julie Gibson Clark’s Movement Week.",'Movement week (option 2), Claude B, Protocol, slide 13. Marked V2. Julie to update. The full protocol follows after the stress slide.');
 noOptions(15);
 
-change(16,'assets/n15-stress.jpg?v=v46j',null,'Layer four. Stress, your cortisol story, and the physiological sigh.');
+change(16,'assets/n15-stress.jpg?v=v46k',null,'Layer four. Stress, your cortisol story, and the physiological sigh.');
 slot(16).querySelector('.why').innerHTML='Layer four. Stress, your cortisol story, and the physiological sigh. The link to our landing page replaces “Let’s do three together”: <a href="'+courseUrl+'" target="_blank" rel="noopener" style="color:#8AD2FF">'+courseUrl+'</a>';
 
-change(17,'assets/n16-protocol.jpg?v=v46j',null,'Selected Claude B, Protocol, slide 15.');
+change(17,'assets/n16-protocol.jpg?v=v46k',null,'Selected Claude B, Protocol, slide 15.');
 noOptions(17);
-change(18,'assets/n17-notebook.jpg?v=v46j');
-change(19,'assets/n18-testing.jpg?v=v46j',null,'Selected option 2, with a testing-related background, three distinctly colored cards and DunedinPACE in the baseline-testing list.');
+change(18,'assets/n17-notebook.jpg?v=v46k');
+change(19,'assets/n18-testing.jpg?v=v46k',null,'Selected option 2, with a testing-related background, three distinctly colored cards and DunedinPACE in the baseline-testing list.');
 noOptions(19);
 const closing=slot(21).cloneNode(true);
 closing.id='s22';
 closing.querySelector('h2').textContent='One takeaway. Take action.';
-closing.querySelector('.main').src='assets/n21-takeaway.png?v=v46j';
+closing.querySelector('.main').src='assets/n21-takeaway.png?v=v46k';
 closing.querySelector('.main').alt='One takeaway. Take action.';
 closing.querySelector('.why').textContent='Closing slide. Exact original image.';
 closing.querySelector('.opts')?.remove();
@@ -64,19 +64,34 @@ closing.querySelector('textarea').dataset.n='22';
 closing.querySelector('textarea').dataset.t='One takeaway. Take action.';
 closing.querySelector('.saved').id='v22';
 slot(21).after(closing);
+// New slides from the Round 13 page (risks, Blue Zones, creme brulee) and the closing fork in the road.
+function newSlot(id,img,title,note,key){
+  const c=slot(21).cloneNode(true);c.id=id;
+  c.querySelector('h2').textContent=title;c.querySelector('.main').src=img;c.querySelector('.main').alt=title;
+  c.querySelector('.why').textContent=note;c.querySelector('.opts')?.remove();
+  c.querySelector('label').htmlFor='c'+key;
+  const t=c.querySelector('textarea');t.id='c'+key;t.dataset.n=key;t.dataset.t=title;t.value='';
+  c.querySelector('.saved').id='v'+key;c.querySelector('.saved').textContent='';
+  return c;
+}
+const sxRisks=newSlot('sx-risks','assets/n22-risks.jpg?v=v46k','The four risks.','Added from the Round 13 page (slide 04, The four risks). Placed after the Dunedin slide, before the cake.','x1');
+const sxBz=newSlot('sx-bz','assets/n23-bluezones.jpg?v=v46k','The Blue Zones.','Added from the Round 13 page (slide 07, The Blue Zones). Placed before the menopause slide.','x2');
+const sxBr=newSlot('sx-brulee','assets/n24-brulee.jpg?v=v46k','Crème brûlée and wrinkles.','Added from the Round 13 page (slide 13, Crème brûlée and wrinkles). Placed after the sugar slide, before Same age.','x3');
+const sxFork=newSlot('sx-fork','assets/n25-fork.jpg?v=v46k','The fork in the road.','Added: the closing fork in the road (Take action. Even if it’s one thing.). Placed last. Drop it if the One takeaway slide is the ending.','x4');
 // The user's original slide references define the order, not inferred numbering.
-const orderedIds=['s1','s2','s3','s4','s5','s6','s7','s8','s10-food','s10','s11','s13','s14','s15','s16','s17','s18','s19','s20','s21','s22'];
+const orderedIds=['s1','s2','s3','sx-risks','s4','s5','sx-bz','s6','s7','s8','s10-food','s10','s11','sx-brulee','s13','s14','s15','s16','s17','s18','s19','s20','s21','s22','sx-fork'];
+document.body.append(sxRisks,sxBz,sxBr,sxFork);
 const allSlots=orderedIds.map(id=>document.getElementById(id));
 const endMarker=document.querySelector('.coming');
 allSlots.forEach(s=>endMarker.before(s));
-const slideRefs=orderedIds.map(id=>id==='s10-food'?'10A':id==='s10'?'10B':id==='s15-v2'?'15 · V2':id.slice(1));
+const slideRefs=orderedIds.map((id,i)=>String(i+1));
 allSlots.forEach((s,i)=>{
   s.dataset.originalSlide=s.id.slice(1);
   s.querySelector('.num').textContent=slideRefs[i];
   s.querySelector('label').textContent='Your comment on slide '+slideRefs[i];
   s.querySelector('textarea').dataset.displayN=slideRefs[i];
 });
-document.querySelector('.lead').textContent='Original slide references are retained. Slides 9 and 12 are removed. Slide 10 is split: 10A Food foundations, then 10B the plate. Slide 15 is Movement week (V2, Julie to update) and the full protocol is slide 17. Play presents the 21 main slides only, ending with One takeaway. Take action.';
+document.querySelector('.lead').textContent='Slides are numbered 1 to 25 in presentation order; the number sits beside each slide, not on it. New: 4 The four risks, 7 The Blue Zones, 14 Crème brûlée and wrinkles, 25 The fork in the road (drop it if One takeaway is the ending). Pillar slides carry the cake icon top left with that pillar lit.';
 const deckLinks=allSlots.map(s=>s.dataset.link||'');
 const variantTag=document.createElement('div');
 variantTag.id='play-variant';
