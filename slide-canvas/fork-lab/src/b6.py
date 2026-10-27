@@ -26,5 +26,5 @@ for cy,xl in [(312,1390),(432,1301),(547,1263),(666,1253)]:
     reg[int(cy-31):int(cy+31),xl-6:]=0
 reg=cv2.GaussianBlur(reg,(0,0),1.5)[...,None]
 out=F*(1-reg)+C*reg
-cv2.imwrite('new6.png',np.clip(out,0,255).astype(np.uint8))
+np.save('C.npy',C);cv2.imwrite('new6.png',np.clip(out,0,255).astype(np.uint8))
 cv2.imwrite('z12.png',np.clip(out,0,255).astype(np.uint8)[220:740,1000:1700])
