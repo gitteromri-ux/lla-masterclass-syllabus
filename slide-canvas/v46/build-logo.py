@@ -8,14 +8,15 @@ G=cv2.cvtColor(L[:,:,:3],cv2.COLOR_BGR2GRAY).astype(np.float32)*A
 EXTRA={}
 # slides whose old logo sat on photo texture under text: clone a clean neighbouring patch instead of smoothing
 CLONE={}
-TOPOPEN={'n15':(50,934,330,1080)}
+TOPOPEN={}   # (n15 bottom-left fill was already applied in the first logo pass)
 def clone(im,b,dx,F=8):
     x0,y0,x1,y1=b;src=im[y0:y1,x0+dx:x1+dx].astype(np.float32);dst=im[y0:y1,x0:x1].astype(np.float32)
     h,w=dst.shape[:2];yy=np.minimum(np.arange(h),np.arange(h)[::-1]);xx=np.minimum(np.arange(w),np.arange(w)[::-1])
     a=np.minimum(np.clip(yy/F,0,1)[:,None],np.clip(xx/F,0,1)[None,:]);a[:F]=np.clip(np.arange(F)/1.5,0,1)[:,None]*np.clip(xx/F,0,1)[None,:]
     im[y0:y1,x0:x1]=(src*a[...,None]+dst*(1-a[...,None])).astype(np.uint8);return im
 SCRIM={'n09':0.88,'n14':0.8,'n18':0.8,'n15':0.45}
-LW,LX,LY=200,1666,39   # at 1920 width: logo width, left, top
+LW,LX,LY=340,1526,28   # at 1920 width: logo width (1.7x the old 200), left, top; right edge stays at x=1866
+OLDLW=200;K=LW/OLDLW
 def find(Gi):
     best=(-1,0,0)
     for w in range(120,300,2):
@@ -62,14 +63,14 @@ for f in sorted(glob.glob('assets/n[0-2][0-9]-*.*')):
         im=darkfill(im,tuple(round(v*s) for v in TOPOPEN[f[7:10]]),round(44*s));m=-m
     if f[7:10] in CLONE:
         b,dx=CLONE[f[7:10]];im=clone(im,tuple(round(v*s) for v in b),round(dx*s));m=-m
-    if m>0.6:
+    if abs(m)>0.6:
         lg=logo_at(round(w*s));x,y=round(x*s),round(y*s);h,ww=lg.shape[:2]
         P=round(8*s);x0,y0,x1,y1=max(0,x-P),max(0,y-P),min(W0,x+ww+P),min(H0,y+h+P)
         im=boxfill(im,(x0,y0,x1,y1),round(10*s))
     for b in EXTRA.get(f[7:10],[]):im=boxfill(im,tuple(round(v*s) for v in b),round(6*s))
     if f[7:10] in SCRIM:   # bright/busy backdrop: soft feathered navy shade so the logo (incl. blue eTeacher) reads
-        Hh,Ww=im.shape[:2];yy,xx=np.mgrid[0:Hh,0:Ww].astype(np.float32);cx,cy=(LX+LW/2)*s,(LY+45)*s
-        d=((xx-cx)/(170*s))**2+((yy-cy)/(95*s))**2;al=(SCRIM[f[7:10]]*np.exp(-d*1.6))[...,None]
+        Hh,Ww=im.shape[:2];yy,xx=np.mgrid[0:Hh,0:Ww].astype(np.float32);cx,cy=(LX+LW/2)*s,(LY+45*K)*s
+        d=((xx-cx)/(170*K*s))**2+((yy-cy)/(95*K*s))**2;al=(SCRIM[f[7:10]]*np.exp(-d*1.6))[...,None]
         im=np.clip(im*(1-al)+np.array([40,18,8],np.float32)*al,0,255).astype(np.uint8)
     lg=logo_at(round(LW*s));h,ww=lg.shape[:2];X,Y=round(LX*s),round(LY*s)
     a=lg[:,:,3:].astype(np.float32)/255

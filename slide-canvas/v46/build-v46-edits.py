@@ -183,6 +183,21 @@ def rr_mask(h,w,r,inf=0):
 def tile_copy(dst,src,sx,sy,dx,dy,w=225,h=111,r=18):
     m=rr_mask(h,w,r);p=src[sy:sy+h,sx:sx+w].astype(np.float32);d=dst[dy:dy+h,dx:dx+w].astype(np.float32)
     dst[dy:dy+h,dx:dx+w]=np.clip(d*(1-m)+p*m,0,255).astype(np.uint8);return dst
+def move_text(src,dst,box,dy,thr=8):
+    x0,y0,x1,y1=box;sub=src[y0:y1,x0:x1];bg=cv2.medianBlur(sub,61).astype(int)
+    m=((np.abs(sub.astype(int)-bg).max(2))>thr).astype(np.uint8)*255;m=cv2.dilate(m,np.ones((5,5),np.uint8))
+    a=cv2.GaussianBlur(m.astype(np.float32)/255,(0,0),1.0)[...,None]
+    reg=dst[y0+dy:y1+dy,x0:x1].astype(np.float32);dst[y0+dy:y1+dy,x0:x1]=np.clip(reg*(1-a)+sub.astype(np.float32)*a,0,255).astype(np.uint8);return dst
+
+def move_title(src,dst,box,sc,to,thr=8):
+    x0,y0,x1,y1=box;sub=src[y0:y1,x0:x1];bg=cv2.medianBlur(sub,61).astype(int)
+    m=((np.abs(sub.astype(int)-bg).max(2))>thr).astype(np.float32)
+    ink=sub.astype(np.float32)*m[...,None]
+    w,h=round((x1-x0)*sc),round((y1-y0)*sc)
+    ink=cv2.resize(ink,(w,h),interpolation=cv2.INTER_AREA);am=cv2.resize(m,(w,h),interpolation=cv2.INTER_AREA)
+    a=am[...,None];fg=np.where(a>1e-3,ink/np.maximum(a,1e-3),0)
+    X,Y=to;reg=dst[Y:Y+h,X:X+w].astype(np.float32);dst[Y:Y+h,X:X+w]=np.clip(reg*(1-a)+fg*a,0,255).astype(np.uint8);return dst
+
 def bg_restore(im,box,rad=12,blur=7):
     x0,y0,x1,y1=box;m=np.zeros(im.shape[:2],np.uint8);m[y0:y1,x0:x1]=255
     f=cv2.inpaint(im,m,rad,cv2.INPAINT_NS).astype(np.float32)
@@ -224,4 +239,28 @@ if want('14'):
     nb=918;nw=NF.getlength('Twice')
     im=T(im,[(125-NF.getbbox('T',anchor='ls')[0],nb,'Twice',NF,(198,244,254),'ls'),
              (125+NF.getbbox('Twice',anchor='ls')[2]+22-CF.getbbox('a',anchor='ls')[0],892,'as effective as a 30-minute workout: short movement breaks',CF,(220,232,249),'ls')],blur=0.5)
+    im=wipe_text(im,(100,150,1650,262),thr=0,dil=4);im=move_text(P,im,(100,150,1650,262),30)   # title 30 px lower so the bigger logo clears it
     wr(im,'n14-movement-week.jpg')
+
+
+# ---- A. slide 4: each layer's text in its cake colour, rows moved to sit level with their cake layer
+if want('4'):
+    im=rd('n04-cake.jpg')
+    S4=im.copy();im=wipe_text(im,(1230,288,1840,845),thr=0,dil=4);im=wipe_text(im,(1230,100,1665,288),thr=0,dil=4)   # title is scaled down so the bigger logo clears it
+    NM=F(PFI,39.8,[400]);DS=F(INTER,23.2,[14,320])
+    rows=[('Icing',['Sauna, peptides, stem','cells, light therapies, the','gadgets on your feed.'],328,(236,150,160)),
+          ('Stress',['The layer people skip.'],446,(226,196,146)),
+          ('Movement',['Four types, four parts of','you.'],548,(170,196,124)),
+          ('Food',['Four pillars, no religion.'],662,(104,140,214)),
+          ('Sleep',['The repair shift. The','bottom of the cake.'],726,(244,236,220)),
+          ('Menopause',['One thin layer at the base,','for half the room.'],800,(226,184,166))]
+    it=[]
+    for nm,ds,b,c in rows:
+        it.append((1240,b,nm,NM,c,'ls'))
+        dc=tuple(int(v*0.92) for v in c)
+        for k,d in enumerate(ds):it.append((1531,b+32*k,d,DS,dc,'ls'))
+    im=T(im,it,blur=0.35)
+    im=move_title(S4,im,(1230,105,1665,272),0.58,(1240,190))
+    for y in (412,482,606,680,765):
+        im[y:y+2,1240:1802]=np.clip(im[y:y+2,1240:1802].astype(int)*0+np.array([66,48,34]),0,255).astype(np.uint8)
+    wr(im,'n04-cake.jpg')
