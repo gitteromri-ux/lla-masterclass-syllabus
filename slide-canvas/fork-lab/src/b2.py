@@ -56,7 +56,8 @@ ROWC=[310,428,664]
 for (x0,y0,x1,y1,dy,dx),hc,rc in zip(HD,HC,ROWC):
     col,al=matte(x0,y0,x1,y1,tm);A=al[...,None]
     ys=np.where((al>0.3).any(1))[0];dy=int(round(rc-(y0+(ys.min()+ys.max())/2)));print('head',rc,dy)
-    if hc is not None: col=col*0+hc
+    if hc is not None:
+        l=col.max(2,keepdims=True);col=np.clip(l/np.percentile(l[al>0.9],60)*hc,0,255)
     R[y0+dy:y1+dy,x0+dx:x1+dx]=R[y0+dy:y1+dy,x0+dx:x1+dx]*(1-A)+col*A
 def put(R,rgba,x,y,shadow=True,sh_op=0.5):
     h,w=rgba.shape[:2];A=rgba[...,3:]/255;rgb=rgba[...,2::-1] if rgba.shape[2]==4 else None
