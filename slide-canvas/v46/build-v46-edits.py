@@ -203,7 +203,7 @@ if want('14'):
         im=vfill(im,(x0+14,y0+22,x0+TW-14,y0+h-12),k=6,sx=1.0)
         return T(im,[(x0+20,y0+49,t1,TF,c1,'ls'),(x0+20,y0+82,t2,SF,c2,'ls')],blur=0.4)
     # sauna / mobility / balance tiles out (rebuild the dark photo background behind them)
-    for x0,h in ((COLX[0],78),(COLX[1],78),(COLX[3],78)):
+    for x0,h in ((COLX[0],78),(COLX[1],78),(COLX[3],78),(COLX[5],111)):
         im=bg_restore(im,(x0-8,Y2-6,x0+TW+8,Y2+h+8))
     # row 1
     im=tile_copy(im,P,COLX[1],Y1,COLX[0],Y1)                      # Mon: VO2 max (the existing VO2 tile)
@@ -215,7 +215,7 @@ if want('14'):
     im=sub(im,COLX[4],Y1,111,'upper body',WS)                     # Fri
     im=both(im,COLX[5],Y1,111,'Hike or walk','with a friend',DT,DTS)   # Sat
     # row 2: Zone 2 or HIIT cardio on Wed and Fri (the existing teal Zone 2 tile)
-    for x0 in (COLX[4],):
+    for x0 in (COLX[2],COLX[4]):
         im=tile_copy(im,P,COLX[3],Y1,x0,Y2)
         im=both(im,x0,Y2,111,'Zone 2 or HIIT','cardio',DT,DTS)
     # claim line
