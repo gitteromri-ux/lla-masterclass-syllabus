@@ -77,7 +77,7 @@ function newSlot(id,img,title,note,key){
 const sxRisks=newSlot('sx-risks','assets/n22-risks.jpg?v=v46y2','The four risks.','Added from the Round 13 page (slide 04, The four risks). Placed after the Dunedin slide, before the cake.','x1');
 const sxBz=newSlot('sx-bz','assets/n23-bluezones.jpg?v=v46y2','The Blue Zones.','Added from the Round 13 page (slide 07, The Blue Zones). Placed before the menopause slide.','x2');
 const sxBr=newSlot('sx-brulee','assets/n24-brulee.jpg?v=v46y2','Crème brûlée and wrinkles.','Added from the Round 13 page (slide 13, Crème brûlée and wrinkles). Placed after the sugar slide, before Same age.','x3');
-const sxFork=newSlot('sx-fork','assets/n25-fork.png?v=v46z6','One takeaway. Take action. (closing)','Closing slide: exactly the Julie deck slide 22 at commit f220cbd, unchanged (image file additional-take-action-20261026.png). It ends the deck.','x4');
+const sxFork=newSlot('sx-fork','assets/n25-fork.png?v=v46z7','One takeaway. Take action. (closing)','Closing slide: exactly the Julie deck slide 22 at commit f220cbd, unchanged (image file additional-take-action-20261026.png). It ends the deck.','x4');
 // The user's original slide references define the order, not inferred numbering.
 const orderedIds=['s1','s2','s3','sx-risks','s4','s5','sx-bz','s6','s7','s8','s10-food','s10','s11','sx-brulee','s13','s14','s15','s16','s17','s18','s19','s20','s21','sx-fork'];
 document.body.append(sxRisks,sxBz,sxBr,sxFork);
