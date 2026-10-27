@@ -53,7 +53,7 @@ def cgmphone():
     d.line([(75*k,40*k),(81*k,32*k),(86*k,37*k),(95*k,24*k)],fill=255,width=3*k,joint='curve')
     return im
 GAP=30
-for (cy,xl,col),fn in zip(rows,[clock,dumbbell,broccoli,cgmphone]):
+for (cy,xl,col),fn in ([] if True else zip(rows,[clock,dumbbell,broccoli,cgmphone])):
     im=fn();im=im.resize((im.width//S,im.height//S),Image.LANCZOS)
     a=np.array(im).astype(np.float32)/255
     ys,xs=np.where(a>0.2);h,w=a.shape
