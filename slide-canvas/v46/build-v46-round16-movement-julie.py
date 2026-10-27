@@ -5,7 +5,7 @@ import cv2,numpy as np
 from playwright.sync_api import sync_playwright
 src=cv2.imread('assets/n14-movement-week.jpg');H,W=src.shape[:2];F=src.astype(np.float32)
 XS=[119,362,604,847,1089,1332,1574];TW=225;ROWS=[(467,109),(592,109)]
-BAND_Y,BAND_H,GAP=467,76,16;SHIFT=BAND_H+GAP;TSHIFT=60
+BAND_Y,BAND_H,GAP=467,109,16;SHIFT=BAND_H+GAP;TSHIFT=72
 def rrect(x,y,w,h,r,pad=0,ss=4):
     m=np.zeros((H*1,W*1),np.uint8)
     big=np.zeros((h*ss+2*pad*ss,w*ss+2*pad*ss),np.uint8)
@@ -44,20 +44,19 @@ for x,y in tiles:
     m=rrect(TW,109,TW,109,16)[...,None]
     patch=F[y:y+109,x:x+TW];yy=y+SHIFT
     B[yy:yy+109,x:x+TW]=B[yy:yy+109,x:x+TW]*(1-m)+patch*m
-# 4) the new band
-BX0,BX1=XS[0],XS[6]+TW
-bw=BX1-BX0;m=rrect(bw,BAND_H,bw,BAND_H,18)[...,None]
+# 4) the new first row: one 'Mobility & balance' tile per day (same size 225x109, radius 16, pitch and look as the tiles)
 t=np.linspace(0,1,BAND_H)[:,None,None];c1=np.array([126,194,247],np.float32);c2=np.array([94,163,240],np.float32)   # BGR: #F7C27E -> #F0A35E
-grad=c1*(1-t)+c2*t;grad=np.broadcast_to(grad,(BAND_H,bw,3))
-sh=np.zeros((H,W),np.float32);cv2.rectangle(sh,(BX0,BAND_Y+10),(BX1,BAND_Y+BAND_H+6),1,-1);sh=cv2.GaussianBlur(sh,(0,0),14)[...,None]
-B=B*(1-0.28*sh)
-B[BAND_Y:BAND_Y+BAND_H,BX0:BX1]=B[BAND_Y:BAND_Y+BAND_H,BX0:BX1]*(1-m)+grad*m
+grad=np.broadcast_to(c1*(1-t)+c2*t,(BAND_H,TW,3))
+for x in XS:
+    m=rrect(TW,BAND_H,TW,BAND_H,16)[...,None]
+    B[BAND_Y:BAND_Y+BAND_H,x:x+TW]=B[BAND_Y:BAND_Y+BAND_H,x:x+TW]*(1-m)+grad*m
 OUT=np.clip(B,0,255).astype(np.uint8)
 # text (Outfit, same family as the tiles)
 OF='file:///usr/share/fonts/truetype/sand-box/google/Outfit/Outfit-VariableFont_wght.ttf'
+# text quoted from the Movement Week script notes (para 206-212): "Mobility while waiting the tea kettle to boil" / "Balance while brushing my teeth"
+tiles_html=''.join('<div class="t" style="left:%dpx"><b>Mobility</b><span>tea kettle to boil</span><b>Balance</b><span>brushing my teeth</span></div>'%(x+20) for x in XS)
 html='''<html><head><style>@font-face{font-family:OF;font-weight:100 900;src:url(%s)}html,body{margin:0;background:transparent}
-.t{position:absolute;left:%dpx;top:%dpx;height:%dpx;display:flex;align-items:center;white-space:nowrap;font-family:OF;font-size:34px;color:#06122B}.t b{font-weight:700;margin-right:16px}.t span{font-weight:400}</style></head><body>
-<div class="t"><b>Mobility &amp; balance</b><span>while tea brews</span></div></body></html>'''%(OF,BX0+30,BAND_Y,BAND_H)
+.t{position:absolute;top:%dpx;height:%dpx;display:flex;flex-direction:column;justify-content:center;white-space:nowrap;font-family:OF;font-size:22px;line-height:25px;color:#06122B}.t b{font-weight:700}.t span{font-weight:400}</style></head><body>%s</body></html>'''%(OF,BAND_Y,BAND_H,tiles_html)
 open('/tmp/mw.html','w').write(html)
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox','--allow-file-access-from-files']);pg=b.new_page(viewport={'width':W,'height':H});pg.goto('file:///tmp/mw.html');pg.wait_for_timeout(700)
