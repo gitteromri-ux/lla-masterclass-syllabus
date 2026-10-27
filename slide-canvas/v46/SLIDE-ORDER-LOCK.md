@@ -21,7 +21,7 @@ Rules: do NOT reorder, remove or redesign any slide listed here. Changes since t
 | 7 | n23-bluezones.jpg | The Blue Zones. | 1:00 | 13:00 | 5b2e2cbcf7c7995d423e329f13b27ce6 |
 | 8 | n06-menopause.jpg | Menopause therapy is a layer, not icing. | 1:30 | 14:30 | df38793e81d372a9d9d67d275d2a1c61 |
 | 9 | n07-bridge.jpg | Four layers hold up the cake. | 1:00 | 15:30 | 956e77986f2095e7e9ac7cf5955770ba |
-| 10 | n08-sleep.jpg | I'll sleep when I die. | 2:45 | 18:15 | 50ff920ff96becc96abafa6b37690c8d |
+| 10 | n08-sleep.jpg | I'll sleep when I die. | 2:45 | 18:15 | c75ee67f7380828de8602eb1fd2dbc57 |
 | 11 | n26-religion.jpg | Take the religion out of your diet. | 0:40 | 18:55 | af6d80ea36ca17bfed50c47eb87ee718 |
 | 12 | n09-food.jpg | Food. | 2:45 | 21:40 | 453f53ec1840c43de378965ba795fe2c |
 | 13 | n10-plate.jpg | What does it look like in real life? | 1:20 | 23:00 | f564afddacf55ce25b6c22df0229104c |
@@ -36,7 +36,7 @@ Rules: do NOT reorder, remove or redesign any slide listed here. Changes since t
 | 22 | n17-notebook.jpg | You don't need a lab. You need a notebook. | 1:30 | 40:00 | 4bf3abd73003b2df0d02b7736a57f973 |
 | 23 | n18-testing.jpg | Test. Then buy. | 2:00 | 42:00 | 54e77f2892b1af51208d1a56ad9275ee |
 | 24 | n19-cake.jpg | That's the cake. | 1:00 | 43:00 | 236625b31c7388765ade39251d180a7b |
-| 25 | n20-why.jpg | Why. Intention. Resources. | 3:00 | 46:00 | fe5e9345aa8571ccf49dfebb6b54fdb9 |
+| 25 | n20-why.jpg | Why. Intention. Resources. | 3:00 | 46:00 | 5d904e4011e47ab455ec7c362730edd0 |
 | 26 | n25-fork.png | One takeaway. Take action. (closing) | 4:00 | 50:00 | 092ff063179d8300d773ad5a517b5fd3 |
 
 Review-page ids in order: s1, s2, s3, sx-risks, s4, s5, sx-bz, s6, s7, s8, sx-religion, s10-food, s10, s11, sx-brulee, sx-sugar, s13, s14, sx-mw-julie, s16, s17, s18, s19, s20, s21, sx-fork
