@@ -69,7 +69,7 @@ def obj(n,sc):
     c,ox,oy=L[n];h,w=c.shape[:2];c=cv2.resize(c,(int(round(w*sc)),int(round(h*sc))),interpolation=cv2.INTER_AREA)
     a=(c[...,3]>20);ys,xs=np.where(a);return c,xs.min(),ys.min(),xs.max(),ys.max()
 GAP=36
-rows=[('dumb',0.63,428,1304),]
+rows=[]
 for n,sc,cy,tl in rows:
     c,a0,b0,a1,b1=obj(n,sc);x=int(tl-88-(a0+a1)/2);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
 # CGM bigger, phone smaller
@@ -79,8 +79,9 @@ def bb(a):
 def sc_(a,s):return cv2.resize(a,(int(a.shape[1]*s),int(a.shape[0]*s)),interpolation=cv2.INTER_CUBIC if s>1 else cv2.INTER_AREA)
 ph=sc_(ph,0.68);sen=sc_(sen,1.35)
 cy=664;tl=1250
-a0,b0,a1,b1=bb(ph);s0_,t0_,s1_,t1_=bb(sen);gw=(s1_-s0_)+10+(a1-a0);px=int(tl-30-a1);py=int(cy-(b0+b1)/2);put(R,ph,px,py)
-s0,t0,s1,t1=bb(sen);sx=int(px+a0-10-s1);sy=int(cy+8-(t0+t1)/2);put(R,sen,sx,sy)
+PUT_SUGAR=False
+a0,b0,a1,b1=bb(ph);s0_,t0_,s1_,t1_=bb(sen);gw=(s1_-s0_)+10+(a1-a0);px=int(tl-30-a1);py=int(cy-(b0+b1)/2);0
+s0,t0,s1,t1=bb(sen);sx=int(px+a0-10-s1);sy=int(cy+8-(t0+t1)/2);0
 print('sensor',sx+s0,sy+t0,sx+s1,sy+t1,'phone',px+a0,py+b0,px+a1,py+b1)
 # ---- veg headline
 pf=F+'PlayfairDisplay-Italic.ttf'
@@ -108,7 +109,7 @@ bc[...,0]*=0.97
 bc=np.pad(bc,((20,20),(20,20),(0,0)))
 vcy=(VT+VT+48)/2
 bx=int(VX-88-bc.shape[1]/2);by=int(546-bc.shape[0]/2)
-put(R,bc,bx,by,sh_op=0.6);print('broc',bx,by,bx+bc.shape[1],by+th)
+0;print('broc',bx,by,bx+bc.shape[1],by+th)
 np.save('R_right.npy',R)
 np.save('plate.npy',plate);np.save('tm.npy',tm)
 cv2.imwrite('v.png',np.clip(R,0,255).astype(np.uint8))

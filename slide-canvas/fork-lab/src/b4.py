@@ -4,7 +4,7 @@ H,W=R.shape[:2]
 def feather(x0,y0,x1,y1,f):
     m=np.zeros((H,W),np.float32);m[y0+f:y1-f,x0+f:x1-f]=1;return cv2.GaussianBlur(m,(0,0),f/2)[...,None]
 # 4 clock: original pixels
-a=feather(1240,250,1372,362,10);R=R*(1-a)+O*a
+
 # 6 footer label left
 a=feather(30,1010,420,1065,6);R=R*(1-a)+plate*a
 # 2 laptop: real Zoom mockup (lla-masterclass-assets/zoom-meeting-ui-chat.jpg)
@@ -28,7 +28,7 @@ bgc=O[786:792,1240:1300].reshape(-1,3).mean(0)
 R[790:834,1226:1318]=bgc
 putlogo(R,1272,812,88)
 out=np.clip(np.round(R),0,255).astype(np.uint8)
-m=np.zeros(out.shape[:2],np.uint8);m[404:424,1112:1190]=255
+m=np.zeros(out.shape[:2],np.uint8);m[404:424,1112:1190]=0
 import numpy as _n
 fix=cv2.inpaint(out,m,5,cv2.INPAINT_TELEA);g=_n.random.default_rng(1).normal(0,5,out.shape).astype(_n.float32)
 fx=_n.clip(fix.astype(_n.float32)+g,0,255).astype(_n.uint8);out[404:424,1112:1190]=fx[404:424,1112:1190]
