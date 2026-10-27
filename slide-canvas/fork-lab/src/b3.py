@@ -10,7 +10,7 @@ def matte(x0,y0,x1,y1):
     al=np.clip((lum-bl)/np.maximum(tl-bl,25),0,1)*m
     col=np.clip((s-b*(1-al[...,None]))/np.maximum(al[...,None],0.08),0,255)
     return np.dstack([col,al[...,None]*255])
-CX0,CY0,CX1,CY1=36,346,852,862;RAD=26
+CX0,CY0,CX1,CY1=34,318,578,612;RAD=26
 # card base: text-free plate behind (left), blurred + darkened glass
 P=plate.copy()
 bl=cv2.GaussianBlur(P,(0,0),22)[CY0:CY1,CX0:CX1]
@@ -45,17 +45,18 @@ def paste(R,lay,x,y,sc=1.0):
     if sc!=1.0:lay=cv2.resize(lay,(int(round(lay.shape[1]*sc)),int(round(lay.shape[0]*sc))),interpolation=cv2.INTER_CUBIC)
     lay=np.clip(lay,0,255);h,w=lay.shape[:2];A=lay[...,3:]/255
     R[y:y+h,x:x+w]=R[y:y+h,x:x+w]*(1-A)+lay[...,:3]*A
-st=matte(88,378,560,668)   # 47% .. intenders never acted
+st=matte(88,378,560,572)
+ci=matte(88,580,560,668)
 cn=matte(88,702,505,838)
-TX=72
-SC=1.03
-paste(R,st,TX,374,SC)       # ends 382+290*1.07=692
-paste(R,cn,TX,708)          # ends 862
+TX=58;SC=0.82
+paste(R,st,TX,340,SC)          # ~ 340..498
+paste(R,cn,TX,340+int(194*SC)+8,SC)
+paste(R,ci,52,955,0.6)
 # ---- woman
 wm=np.array(Image.open('woman.png')).astype(np.float32);wm=wm[...,[2,1,0,3]]
 wm=wm[25:,90:665]
-sc=262/wm.shape[1];wm=cv2.resize(wm,(int(wm.shape[1]*sc),int(wm.shape[0]*sc)),interpolation=cv2.INTER_AREA)
-WX=CX1-16-wm.shape[1];WY=CY0+26
+sc=168/wm.shape[1];wm=cv2.resize(wm,(int(wm.shape[1]*sc),int(wm.shape[0]*sc)),interpolation=cv2.INTER_AREA)
+WX=CX1-10-wm.shape[1];WY=CY0+16
 hcut=CY1-WY;wm=wm[:hcut].copy()
 # clip to card mask & soft fade at bottom
 cm=mk[WY-CY0:WY-CY0+wm.shape[0],WX-CX0:WX-CX0+wm.shape[1]]
