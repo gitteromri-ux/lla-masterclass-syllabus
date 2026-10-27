@@ -40,7 +40,8 @@ def toh(c,h):
 def place(c,cy,right,op=0.5):
     a0,b0,a1,b1=bb(c);x=int(round(right-a1));y=int(round(cy-(b0+b1)/2));put(R,c,x,y,op);return x+a0,y+b0,x+a1,y+b1
 cc=np.array(Image.open('c_clock.png')).astype(np.float32);ox,oy=1250,255;h,w=cc.shape[:2]
-clock=np.dstack([O[oy:oy+h,ox:ox+w][...,::-1],cc[...,3:]])
+ca=cv2.erode(cc[...,3],np.ones((5,5),np.uint8));ca=cv2.GaussianBlur(ca,(0,0),0.8)[...,None]
+clock=np.dstack([O[oy:oy+h,ox:ox+w][...,::-1],ca])
 dumb=np.array(Image.open('c_dumb.png')).astype(np.float32)
 br=np.array(Image.open('c_broc.png').convert('RGBA')).astype(np.float32);br[...,3]=np.clip((br[...,3]-60)/170,0,1)*255
 br[...,:3]*=0.62;g=br[...,:3].mean(2,keepdims=True);br[...,:3]=g+(br[...,:3]-g)*0.8
@@ -48,14 +49,14 @@ cg=np.array(Image.open('c_cgm.png')).astype(np.float32);sen=cg[:,:98];ph=cg[:,98
 for nm,c,(cy,xl) in [('clock',clock,rows[0]),('dumb',dumb,rows[1]),('broc',br,rows[2])]:
     print(nm,place(toh(c,TH),cy,xl-GAP))
 cy,xl=rows[3]
-p=place(toh(ph,70),cy,xl-GAP);print('phone',p)
-print('sensor',place(toh(sen,TH),cy,p[0]-8))
+p=place(toh(ph,70),cy,xl-GAP-20);print('phone',p)
+senR=cv2.rotate(np.ascontiguousarray(sen),cv2.ROTATE_90_CLOCKWISE)
+print('sensor',place(toh(senR,TH),cy,p[0]-8))
 hfS=cv2.imread('base.png').astype(np.float32)[560:700,1300:1460];hfS=hfS-cv2.GaussianBlur(hfS,(0,0),3)
-x0,y0,x1,y1=1286,262,1312,362
+x0,y0,x1,y1=1282,262,1308,362
 sub=R[y0:y1,x0:x1];sat=sub.max(2)-sub.min(2);t=((sat>60)&(sub.max(2)>140))
 mm=np.zeros(R.shape[:2],np.uint8);mm[y0:y1,x0:x1]=(~t)*255
-inp=cv2.inpaint(np.clip(R,0,255).astype(np.uint8),mm,6,cv2.INPAINT_TELEA).astype(np.float32)
-inp[y0:y1,x0:x1]+=hfS[:y1-y0,:x1-x0]
+inp=R.copy();pp=O[y0:y1,1340:1366].copy();ref=np.concatenate([R[y0:y1,x0-6:x0],R[y0:y1,x1:x1+6]],1).mean(1,keepdims=True);pm=pp.mean(1,keepdims=True);gain=cv2.GaussianBlur((ref/np.maximum(pm,1)).astype(np.float32),(0,0),6).reshape(-1,1,3);inp[y0:y1,x0:x1]=pp*gain
 a=cv2.GaussianBlur(mm.astype(np.float32)/255,(0,0),1.2)[...,None];R=R*(1-a)+inp*a
 yy,xx=np.mgrid[0:H,0:W].astype(np.float32)
 g=np.exp(-(((xx-1560)/330)**2+((yy-470)/260)**2));g[:,:1260]*=np.clip((xx[:,:1260]-1180)/80,0,1);g[740:]=0
@@ -63,4 +64,11 @@ g=cv2.GaussianBlur(g,(0,0),20);g[742:]=0
 sat=R.max(2)-R.min(2);tx=cv2.dilate((((sat>60)&(R.max(2)>140))).astype(np.uint8),np.ones((3,3),np.uint8)).astype(np.float32)
 tx=cv2.GaussianBlur(tx,(0,0),0.8)
 dk=1-0.42*g*(1-tx);R=R*dk[...,None]
+x0,y0,x1,y1=1560,780,1920,1080
+sub=R[y0:y1,x0:x1];tm_=(sub.max(2)>110).astype(np.float32);tm_=cv2.dilate(tm_,np.ones((7,7),np.uint8))
+v=1-tm_
+def ncb(img,s_):return cv2.GaussianBlur(img*v[...,None],(0,0),s_)/np.maximum(cv2.GaussianBlur(v,(0,0),s_)[...,None],1e-3)
+new=sub-ncb(sub,8)+ncb(sub,45)
+fe=np.ones((y1-y0,x1-x0),np.float32);fe[:20]*=np.linspace(0,1,20)[:,None];fe[:,:20]*=np.linspace(0,1,20)[None,:]
+fe=(fe*v)[...,None];R[y0:y1,x0:x1]=sub*(1-fe)+new*fe
 cv2.imwrite('z18.png',np.clip(R,0,255).astype(np.uint8)[250:720,1000:1500]);cv2.imwrite('new.png',np.clip(np.round(R),0,255).astype(np.uint8))
