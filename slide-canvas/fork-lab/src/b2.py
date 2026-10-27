@@ -50,7 +50,8 @@ def matte(x0,y0,x1,y1,mask):
     al=np.clip((lum-bl)/np.maximum(tl-bl,25),0,1)*m
     col=np.clip((s-b*(1-al[...,None]))/np.maximum(al[...,None],0.08),0,255)
     return col,al
-for x0,y0,x1,y1,dy in RT:
+HD=[(1385,244,1900,302,285-273),(1300,365,1905,428,405-396),(1250,548,1905,608,525-578)]
+for x0,y0,x1,y1,dy in HD:
     col,al=matte(x0,y0,x1,y1,tm);A=al[...,None]
     R[y0+dy:y1+dy,x0:x1]=R[y0+dy:y1+dy,x0:x1]*(1-A)+col*A
 def put(R,rgba,x,y,shadow=True,sh_op=0.5):
@@ -64,7 +65,7 @@ def obj(n,sc):
     c,ox,oy=L[n];h,w=c.shape[:2];c=cv2.resize(c,(int(round(w*sc)),int(round(h*sc))),interpolation=cv2.INTER_AREA)
     a=(c[...,3]>20);ys,xs=np.where(a);return c,xs.min(),ys.min(),xs.max(),ys.max()
 GAP=36
-rows=[('clock',1.0,1394,(232+317)/2),('dumb',0.88,1307,(347+480)/2),('cgm',0.88,1257,(510+637)/2)]
+rows=[('clock',1.0,1394,285),('dumb',0.8,1307,405),('cgm',0.8,1257,525)]
 for n,sc,tl,cy in rows:
     c,a0,b0,a1,b1=obj(n,sc);x=int(tl-GAP-a1);y=int(cy-(b0+b1)/2);put(R,c,x,y);print(n,x+a0,y+b0,x+a1,y+b1)
 # ---- veg headline
@@ -75,7 +76,7 @@ except Exception as e:print('var',e)
 bb=f.getbbox('Watch your sugar.');print('wys bbox',bb)
 # green color from Start moving headline
 s=O[370:412,1305:1600];g=s[((s[...,1]-s[...,2])>60)];gc=np.median(g[g[:,1]>np.percentile(g[:,1],80)],0);print('green',gc)
-VT=667; VX=1257
+VT=622; VX=1257
 txt=Image.new('L',(640,140),0);d=ImageDraw.Draw(txt)
 # position so glyph top aligns like sugar headline: sugar glyph top 555 for left 1262
 d.text((10-bb[0]+ (1262-1257) ,20-bb[1]),'Add a vegetable.',font=f,fill=255)
